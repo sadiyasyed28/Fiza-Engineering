@@ -60,7 +60,7 @@ export default function CapabilitiesPage() {
         aria-label="Services Navigation"
         className="sticky top-[72px] z-20 bg-earth-black text-iron-white border-b border-slab-grey/25 hidden md:block shadow-sm"
       >
-        <div className="max-w-content mx-auto px-6 md:px-12 flex items-center gap-6 py-3.5 text-xs font-mono uppercase tracking-wider overflow-x-auto scrollbar-none">
+        <div className="max-w-content mx-auto px-6 md:px-12 flex items-center gap-6 py-3.5 text-xs font-mono uppercase tracking-wider overflow-x-auto services-scrollbar">
           <span className="text-oxide-red font-semibold shrink-0">Jump To:</span>
           {CAPABILITIES.map((cap) => (
             <a

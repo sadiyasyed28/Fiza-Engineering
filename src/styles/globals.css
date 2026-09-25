@@ -276,6 +276,40 @@ p {
   scrollbar-width: none;
 }
 
+/* Custom Services Scrollbar */
+.services-scrollbar {
+  scrollbar-width: none;
+  transition: scrollbar-color 300ms ease;
+}
+
+.services-scrollbar::-webkit-scrollbar {
+  height: 6px;
+  background-color: transparent;
+}
+
+.services-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.services-scrollbar::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 4px;
+  transition: background-color 300ms ease;
+}
+
+.services-scrollbar:hover {
+  scrollbar-width: thin;
+  scrollbar-color: var(--oxide-red) transparent;
+}
+
+.services-scrollbar:hover::-webkit-scrollbar-thumb {
+  background-color: var(--oxide-red);
+}
+
+.services-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: var(--earth-black);
+}
+
 /* Fast Subtle Scroll Reveal (350ms, ease-out) */
 @keyframes fadeInUp {
   from {
