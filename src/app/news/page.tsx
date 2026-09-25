@@ -24,7 +24,7 @@ function normalizeTopic(param: string | null): string {
 function NewsContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
-  const topicParam = searchParams.get("topic");
+  const topicParam = searchParams?.get("topic") ?? null;
   const [selectedTopic, setSelectedTopic] = useState("ALL");
 
   useEffect(() => {

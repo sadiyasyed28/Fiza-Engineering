@@ -38,7 +38,7 @@ function ProjectsContent() {
   const [sectorFilter, setSectorFilter] = useState("ALL");
 
   useEffect(() => {
-    const filterParam = searchParams.get("filter");
+    const filterParam = searchParams?.get("filter") ?? null;
     if (filterParam) {
       setStatusFilter(normalizeStatusParam(filterParam));
     }

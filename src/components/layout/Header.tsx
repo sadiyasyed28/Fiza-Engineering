@@ -67,8 +67,8 @@ export function Header() {
           {CONSOLIDATED_NAV.map((link) => {
             const isCompany = link.href === "/company";
             const isActive = isCompany
-              ? pathname === "/company" || pathname.startsWith("/company/") || pathname === "/achievements"
-              : pathname === link.href || (link.href !== "/" && pathname.startsWith(`${link.href}/`));
+              ? pathname === "/company" || pathname?.startsWith("/company/") || pathname === "/achievements"
+              : pathname === link.href || (link.href !== "/" && pathname?.startsWith(`${link.href}/`));
 
             if (isCompany) {
               return (
@@ -173,8 +173,8 @@ export function Header() {
             {CONSOLIDATED_NAV.map((link) => {
               const isCompany = link.href === "/company";
               const isActive = isCompany
-                ? pathname === "/company" || pathname.startsWith("/company/") || pathname === "/achievements"
-                : pathname === link.href || pathname.startsWith(`${link.href}/`);
+                ? pathname === "/company" || pathname?.startsWith("/company/") || pathname === "/achievements"
+                : pathname === link.href || pathname?.startsWith(`${link.href}/`);
 
               return (
                 <div key={link.href} className="border-b border-slab-grey/15 pb-3">

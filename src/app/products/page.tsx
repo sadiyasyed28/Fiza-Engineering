@@ -57,7 +57,7 @@ function normalizeCategory(catParam: string | null): string {
 function ProductsContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
-  const catParam = searchParams.get("category");
+  const catParam = searchParams?.get("category") ?? null;
   const [selectedCategory, setSelectedCategory] = useState("ALL");
 
   useEffect(() => {
