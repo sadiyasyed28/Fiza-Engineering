@@ -119,7 +119,7 @@ export default function CapabilityDetailPage({ params }: Props) {
         <div className="relative z-10 max-w-content mx-auto w-full px-6 md:px-12 pb-14">
           <Link
             href="/capabilities"
-            className="text-label text-dust-tan font-mono uppercase tracking-[0.2em] inline-flex items-center gap-2 mb-3 hover:text-iron-white transition-colors"
+            className="text-label text-dust-tan font-sans uppercase tracking-wide inline-flex items-center gap-2 mb-3 hover:text-iron-white transition-colors font-semibold"
           >
             ← All Services
           </Link>
@@ -132,7 +132,7 @@ export default function CapabilityDetailPage({ params }: Props) {
           <div className="mt-6">
             <Link
               href={`/contact?type=${capability.slug}`}
-              className="btn-primary !bg-oxide-red hover:!bg-earth-black text-iron-white text-xs py-3.5 px-6 font-mono uppercase tracking-wider font-semibold inline-flex items-center gap-2 transition-colors"
+              className="btn-primary !bg-oxide-red hover:!bg-earth-black text-iron-white text-xs py-3.5 px-6 font-sans uppercase tracking-wide font-semibold inline-flex items-center gap-2 transition-colors"
             >
               Enquire about this service →
             </Link>
@@ -145,7 +145,7 @@ export default function CapabilityDetailPage({ params }: Props) {
         <div className="max-w-content mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7">
-              <span className="text-label text-oxide-red font-mono uppercase tracking-widest block mb-3">
+              <span className="text-label text-oxide-red font-sans uppercase tracking-wide block mb-3 font-semibold">
                 Service Overview
               </span>
               <p className="text-body-lg text-quarry-grey leading-relaxed">
@@ -159,7 +159,7 @@ export default function CapabilityDetailPage({ params }: Props) {
                   <span className="text-heading-2 font-medium text-earth-black leading-none mb-1">
                     {metric.value}
                   </span>
-                  <span className="text-[11px] font-mono text-quarry-grey uppercase tracking-wider">
+                  <span className="text-[11px] font-sans text-quarry-grey uppercase tracking-wide font-medium">
                     {metric.label}
                   </span>
                 </div>
@@ -173,7 +173,7 @@ export default function CapabilityDetailPage({ params }: Props) {
       <section className="w-full bg-[#E8E5DD] py-20 md:py-28 border-b border-slab-grey">
         <div className="max-w-content mx-auto px-6 md:px-12">
           <div className="mb-14">
-            <span className="text-label text-oxide-red font-mono uppercase tracking-widest block mb-2">
+            <span className="text-label text-oxide-red font-sans uppercase tracking-wide block mb-2 font-semibold">
               Operational Scope
             </span>
             <h2 className="text-display-lg font-medium text-earth-black leading-[0.95]">
@@ -213,7 +213,7 @@ export default function CapabilityDetailPage({ params }: Props) {
           <div className="max-w-content mx-auto px-6 md:px-12">
             <div className="flex justify-between items-end mb-12">
               <div>
-                <span className="text-label text-oxide-red font-mono uppercase tracking-widest block mb-2">
+                <span className="text-label text-oxide-red font-sans uppercase tracking-wide block mb-2 font-semibold">
                   Field Execution
                 </span>
                 <h2 className="text-heading-1 font-medium text-earth-black">
@@ -222,7 +222,7 @@ export default function CapabilityDetailPage({ params }: Props) {
               </div>
               <Link
                 href="/projects"
-                className="text-label font-bold text-earth-black hover:text-oxide-red uppercase tracking-wider font-mono"
+                className="text-label font-bold text-earth-black hover:text-oxide-red uppercase tracking-wide font-sans"
               >
                 All Projects →
               </Link>
@@ -244,7 +244,7 @@ export default function CapabilityDetailPage({ params }: Props) {
                       className="img-cover transition-transform duration-300 group-hover:scale-[1.02]"
                     />
                   </div>
-                  <span className="font-mono text-xs text-oxide-red uppercase tracking-wider block mb-1">
+                  <span className="font-sans text-xs text-oxide-red uppercase tracking-wide block mb-1 font-medium">
                     {proj.country} · {proj.sector}
                   </span>
                   <h3 className="text-heading-3 font-medium text-earth-black group-hover:text-oxide-red transition-colors mb-2">
@@ -265,7 +265,7 @@ export default function CapabilityDetailPage({ params }: Props) {
         <div className="max-w-content mx-auto px-6 md:px-12">
           <div className="flex justify-between items-end mb-12">
             <div>
-              <span className="text-label text-oxide-red font-mono uppercase tracking-widest block mb-2">
+              <span className="text-label text-oxide-red font-sans uppercase tracking-wide block mb-2 font-semibold">
                 Plant & Equipment
               </span>
               <h2 className="text-heading-1 font-medium text-earth-black">
@@ -274,7 +274,7 @@ export default function CapabilityDetailPage({ params }: Props) {
             </div>
             <Link
               href="/products"
-              className="text-label font-bold text-earth-black hover:text-oxide-red uppercase tracking-wider font-mono"
+              className="text-label font-bold text-earth-black hover:text-oxide-red uppercase tracking-wide font-sans"
             >
               Equipment Catalog →
             </Link>
@@ -296,7 +296,7 @@ export default function CapabilityDetailPage({ params }: Props) {
                     className="img-cover transition-transform duration-300 group-hover:scale-[1.02]"
                   />
                 </div>
-                <span className="font-mono text-xs text-oxide-red uppercase tracking-wider block mb-1">
+                <span className="font-sans text-xs text-oxide-red uppercase tracking-wide block mb-1 font-medium">
                   {prod.category}
                 </span>
                 <h3 className="text-heading-3 font-medium text-earth-black group-hover:text-oxide-red transition-colors mb-2">
@@ -315,7 +315,7 @@ export default function CapabilityDetailPage({ params }: Props) {
       <section className="w-full bg-coal-dark py-16 text-iron-white border-t border-slab-grey/20">
         <div className="max-w-content mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-8">
           <div>
-            <span className="text-label text-dust-tan font-mono uppercase tracking-widest block mb-2">
+            <span className="text-label text-dust-tan font-sans uppercase tracking-wide block mb-2 font-semibold">
               Start an Inquiry
             </span>
             <h2 className="text-heading-1 font-medium text-iron-white">
@@ -327,7 +327,7 @@ export default function CapabilityDetailPage({ params }: Props) {
           </div>
           <Link
             href={`/contact?type=${capability.slug}`}
-            className="btn-primary !bg-oxide-red hover:!bg-iron-white hover:!text-earth-black text-iron-white text-xs py-4 px-8 font-mono uppercase tracking-wider font-semibold whitespace-nowrap transition-colors"
+            className="btn-primary !bg-oxide-red hover:!bg-iron-white hover:!text-earth-black text-iron-white text-xs py-4 px-8 font-sans uppercase tracking-wide font-semibold whitespace-nowrap transition-colors"
           >
             Tell us about your project →
           </Link>

@@ -12,7 +12,7 @@ export function ContactCTA() {
           <div className="lg:col-span-7">
             <div className="flex items-center gap-2 mb-4">
               <span className="w-2 h-2 bg-oxide-red inline-block" />
-              <span className="text-label text-dust-tan font-mono uppercase tracking-widest font-semibold">
+              <span className="text-label text-dust-tan font-sans uppercase tracking-wide font-semibold">
                 Contact
               </span>
             </div>
@@ -28,7 +28,7 @@ export function ContactCTA() {
             <div>
               <Link
                 href="/contact"
-                className="btn-primary !bg-oxide-red hover:!bg-iron-white hover:!text-earth-black text-xs py-4 px-8 font-mono uppercase tracking-wider font-semibold inline-flex items-center gap-2 shadow-sm transition-colors"
+                className="btn-primary !bg-oxide-red hover:!bg-iron-white hover:!text-earth-black text-xs py-4 px-8 font-sans uppercase tracking-wide font-semibold inline-flex items-center gap-2 shadow-sm transition-colors"
               >
                 <span>Contact the team</span>
                 <ArrowRight size={14} />
@@ -38,11 +38,11 @@ export function ContactCTA() {
 
           {/* Quick Direct Contacts Block */}
           <div className="lg:col-span-5 bg-[#1F1F1D] border border-slab-grey/20 p-8 space-y-5">
-            <span className="font-mono text-xs uppercase tracking-wider text-dust-tan font-semibold block border-b border-slab-grey/15 pb-3">
+            <span className="font-sans text-xs uppercase tracking-wide text-dust-tan font-semibold block border-b border-slab-grey/15 pb-3">
               Direct Inquiries
             </span>
 
-            <div className="flex items-start gap-3 text-xs font-mono">
+            <div className="flex items-start gap-3 text-xs font-sans">
               <MapPin size={16} className="text-oxide-red shrink-0 mt-0.5" />
               <div>
                 <span className="text-iron-white block font-medium">Headquarters</span>
@@ -50,7 +50,7 @@ export function ContactCTA() {
               </div>
             </div>
 
-            <div className="flex items-start gap-3 text-xs font-mono">
+            <div className="flex items-start gap-3 text-xs font-sans">
               <Mail size={16} className="text-oxide-red shrink-0 mt-0.5" />
               <div>
                 <span className="text-iron-white block font-medium">Email</span>
@@ -63,7 +63,7 @@ export function ContactCTA() {
               </div>
             </div>
 
-            <div className="flex items-start gap-3 text-xs font-mono">
+            <div className="flex items-start gap-3 text-xs font-sans">
               <Phone size={16} className="text-oxide-red shrink-0 mt-0.5" />
               <div>
                 <span className="text-iron-white block font-medium">Telephone</span>

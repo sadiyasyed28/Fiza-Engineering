@@ -127,7 +127,7 @@ function ProjectsContent() {
 
         <div className="relative z-10 max-w-content mx-auto px-6 md:px-12">
           {/* Breadcrumb */}
-          <nav className="text-label text-oxide-red font-mono uppercase tracking-widest mb-4 flex items-center gap-2">
+          <nav className="text-label text-oxide-red font-sans uppercase tracking-wide mb-4 flex items-center gap-2 font-semibold">
             <Link href="/" className="hover:underline">
               Home
             </Link>
@@ -146,14 +146,14 @@ function ProjectsContent() {
           <div className="mt-10 pt-6 border-t border-slab-grey space-y-6">
             {/* Status Chips */}
             <div className="flex flex-wrap items-center gap-2 sm:gap-3">
-              <span className="text-label font-mono text-earth-black uppercase tracking-wider mr-2 font-semibold">
+              <span className="text-label font-sans text-earth-black uppercase tracking-wide mr-2 font-semibold">
                 Status:
               </span>
               {STATUS_CHIPS.map((chip) => (
                 <button
                   key={chip}
                   onClick={() => handleStatusChange(chip)}
-                  className={`tag cursor-pointer font-mono text-xs transition-colors ${
+                  className={`tag cursor-pointer font-sans text-xs uppercase tracking-wide font-medium transition-colors ${
                     statusFilter === chip
                       ? "tag--active !bg-earth-black !text-iron-white"
                       : "bg-[#EBE8E0] text-earth-black hover:bg-earth-black hover:text-iron-white"
@@ -191,7 +191,7 @@ function ProjectsContent() {
                 <div className="flex items-end">
                   <button
                     onClick={handleClearFilters}
-                    className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-wider text-oxide-red hover:underline py-2.5"
+                    className="inline-flex items-center gap-1.5 text-xs font-sans uppercase tracking-wide text-oxide-red hover:underline py-2.5 font-semibold"
                   >
                     <RotateCcw size={13} /> Clear all filters
                   </button>
@@ -200,7 +200,7 @@ function ProjectsContent() {
             </div>
 
             {/* Result Count */}
-            <div className="text-xs font-mono text-quarry-grey pt-2">
+            <div className="text-xs font-sans text-quarry-grey pt-2 font-medium">
               Showing <span className="font-semibold text-earth-black">{filteredProjects.length}</span> of{" "}
               <span className="font-semibold text-earth-black">{PROJECTS.length}</span> projects
             </div>
@@ -222,7 +222,7 @@ function ProjectsContent() {
               </p>
               <button
                 onClick={handleClearFilters}
-                className="btn-primary !bg-oxide-red hover:!bg-earth-black text-iron-white text-xs py-3 px-6 font-mono uppercase tracking-wider font-semibold inline-flex items-center gap-2"
+                className="btn-primary !bg-oxide-red hover:!bg-earth-black text-iron-white text-xs py-3 px-6 font-sans uppercase tracking-wide font-semibold inline-flex items-center gap-2"
               >
                 <RotateCcw size={13} /> Clear filters
               </button>
@@ -253,12 +253,12 @@ function ProjectsContent() {
                         
                         {/* Hover Overlay */}
                         <div className="absolute inset-0 bg-earth-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
-                          <span className="text-iron-white font-mono text-xs font-bold tracking-[0.15em] uppercase flex items-center gap-1.5">
+                          <span className="text-iron-white font-sans text-xs font-bold tracking-wide uppercase flex items-center gap-1.5">
                             View Project <ArrowRight size={14} />
                           </span>
                         </div>
 
-                        <div className="absolute top-3 left-3 bg-earth-black text-iron-white font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 z-20">
+                        <div className="absolute top-3 left-3 bg-earth-black text-iron-white font-sans text-[10px] uppercase tracking-wide px-2 py-0.5 z-20 font-semibold">
                           {project.country}
                         </div>
                       </div>
@@ -268,13 +268,13 @@ function ProjectsContent() {
                         <Tag active={project.status === "ACTIVE"}>
                           {project.status === "IN_DEVELOPMENT" ? "IN DEVELOPMENT" : project.status}
                         </Tag>
-                        <span className="font-mono text-xs text-quarry-grey">
+                        <span className="font-sans text-xs text-quarry-grey font-medium">
                           {years}
                         </span>
                       </div>
 
                       {/* Sector */}
-                      <span className="text-label text-oxide-red font-mono uppercase tracking-wider block mb-2 font-semibold">
+                      <span className="text-label text-oxide-red font-sans uppercase tracking-wide block mb-2 font-semibold">
                         {project.sector}
                       </span>
 
@@ -294,16 +294,16 @@ function ProjectsContent() {
                     {/* Card Footer: One Key Figure + View project */}
                     <div className="pt-4 border-t border-slab-grey flex items-center justify-between">
                       {keyFig && (
-                        <div className="font-mono text-xs">
-                          <span className="font-bold text-earth-black">{keyFig.value}</span>
-                          <span className="text-[10px] text-quarry-grey block uppercase tracking-wider">
+                        <div className="font-sans text-xs">
+                          <span className="font-semibold text-earth-black">{keyFig.value}</span>
+                          <span className="text-[10px] text-quarry-grey block uppercase tracking-wide font-medium">
                             {keyFig.label}
                           </span>
                         </div>
                       )}
                       <Link
                         href={`/projects/${project.slug}`}
-                        className="text-label font-bold text-oxide-red uppercase tracking-wider font-mono inline-flex items-center gap-1 hover:underline ml-auto"
+                        className="text-label font-bold text-oxide-red uppercase tracking-wide font-sans inline-flex items-center gap-1 hover:underline ml-auto"
                       >
                         View project <ArrowRight size={13} />
                       </Link>
@@ -323,7 +323,7 @@ export default function ProjectsPage() {
   return (
     <Suspense
       fallback={
-        <div className="min-h-screen pt-[100px] text-center font-mono text-xs text-quarry-grey">
+        <div className="min-h-screen pt-[100px] text-center font-sans text-xs text-quarry-grey font-medium">
           Loading project portfolio...
         </div>
       }

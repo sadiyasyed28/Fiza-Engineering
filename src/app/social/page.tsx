@@ -19,7 +19,7 @@ export default function SocialPage() {
       {/* Editorial Header */}
       <section className="bg-iron-white py-20 md:py-24 border-b border-slab-grey">
         <div className="max-w-content mx-auto px-6 md:px-12">
-          <span className="text-label text-oxide-red font-mono uppercase tracking-[0.2em] block mb-3">
+          <span className="text-label text-oxide-red font-sans uppercase tracking-wide block mb-3 font-semibold">
             Real-Time Operations
           </span>
           <h1 className="text-display-lg sm:text-[3.5rem] md:text-display-xl font-medium text-earth-black leading-[0.95] mb-6">
@@ -31,7 +31,7 @@ export default function SocialPage() {
 
           {/* Filter Bar */}
           <div className="flex flex-wrap items-center gap-3 mt-10 pt-6 border-t border-slab-grey">
-            <span className="text-label font-mono text-earth-black uppercase tracking-wider mr-2">
+            <span className="text-label font-sans text-earth-black uppercase tracking-wide mr-2 font-semibold">
               Region Hub:
             </span>
             {PLATFORMS.map((plat) => (
@@ -59,8 +59,8 @@ export default function SocialPage() {
                 className="bg-iron-white border border-slab-grey p-6 flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-4 text-xs font-mono">
-                    <span className="bg-earth-black text-iron-white px-2 py-0.5 uppercase tracking-wider font-semibold">
+                  <div className="flex items-center justify-between mb-4 text-xs font-sans">
+                    <span className="bg-earth-black text-iron-white px-2 py-0.5 uppercase tracking-wide font-semibold">
                       {post.platform}
                     </span>
                     <span className="text-quarry-grey">{post.date}</span>
@@ -79,7 +79,7 @@ export default function SocialPage() {
                     sizes="(max-width: 768px) 100vw, 33vw"
                     className="img-cover"
                   />
-                  <div className="absolute bottom-2 left-2 bg-earth-black/85 text-iron-white font-mono text-[9px] px-2 py-0.5 uppercase">
+                  <div className="absolute bottom-2 left-2 bg-earth-black/85 text-iron-white font-sans text-[9px] px-2 py-0.5 uppercase tracking-wide font-medium">
                     FIELD DISPATCH VERIFIED
                   </div>
                 </div>

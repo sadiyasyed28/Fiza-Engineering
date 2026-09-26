@@ -42,7 +42,7 @@ export function TurnkeyPlantStrip() {
       <div className="max-w-content mx-auto px-6 md:px-12 py-20 md:py-28">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
           <div>
-            <span className="text-label text-oxide-red font-mono uppercase tracking-widest block mb-2">
+            <span className="text-label text-oxide-red font-sans uppercase tracking-wide block mb-2 font-semibold">
               Modular Plant EPC
             </span>
             <h2 className="text-display-lg font-medium text-earth-black leading-[0.95]">
@@ -51,7 +51,7 @@ export function TurnkeyPlantStrip() {
           </div>
           <Link
             href="/capabilities/turnkey-plants"
-            className="text-label font-bold text-earth-black hover:text-oxide-red uppercase tracking-wider inline-flex items-center gap-2 font-mono transition-colors"
+            className="text-label font-bold text-earth-black hover:text-oxide-red uppercase tracking-wide inline-flex items-center gap-2 font-sans transition-colors"
           >
             All Modular Plants <span>→</span>
           </Link>
@@ -74,7 +74,7 @@ export function TurnkeyPlantStrip() {
                   className="img-cover transition-transform duration-300 group-hover:scale-[1.03]"
                 />
               </div>
-              <span className="font-mono text-[10px] text-quarry-grey uppercase tracking-wider block mb-1">
+              <span className="font-sans text-[10px] text-quarry-grey uppercase tracking-wide block mb-1 font-medium">
                 {plant.category}
               </span>
               <h3 className="text-body-sm font-medium text-earth-black leading-snug group-hover:text-oxide-red transition-colors">

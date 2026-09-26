@@ -37,7 +37,7 @@ export default function MiningPage() {
       {/* Editorial Header */}
       <section className="bg-iron-white py-20 md:py-28 border-b border-slab-grey">
         <div className="max-w-content mx-auto px-6 md:px-12">
-          <span className="text-label text-oxide-red font-mono uppercase tracking-[0.2em] block mb-3">
+          <span className="text-label text-oxide-red font-sans uppercase tracking-wide block mb-3 font-semibold">
             Open-Pit Extraction & Processing
           </span>
           <h1 className="text-display-lg sm:text-[3.5rem] md:text-display-xl font-medium text-earth-black leading-[0.95] mb-6">
@@ -53,7 +53,7 @@ export default function MiningPage() {
       <section className="w-full bg-[#EBE8E0] py-20 md:py-28 border-b border-slab-grey">
         <div className="max-w-content mx-auto px-6 md:px-12">
           <div className="mb-12">
-            <span className="text-label text-oxide-red font-mono uppercase tracking-widest block mb-2">
+            <span className="text-label text-oxide-red font-sans uppercase tracking-wide block mb-2 font-semibold">
               Interactive Concession Matrix
             </span>
             <h2 className="text-display-lg font-medium text-earth-black leading-[0.95]">
@@ -69,7 +69,7 @@ export default function MiningPage() {
       <section className="w-full bg-iron-white py-20 md:py-28 border-b border-slab-grey">
         <div className="max-w-content mx-auto px-6 md:px-12">
           <div className="mb-16">
-            <span className="text-label text-oxide-red font-mono uppercase tracking-widest block mb-2">
+            <span className="text-label text-oxide-red font-sans uppercase tracking-wide block mb-2 font-semibold">
               Territorial Breakdown
             </span>
             <h2 className="text-display-lg font-medium text-earth-black leading-[0.95]">
@@ -83,7 +83,7 @@ export default function MiningPage() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div className="lg:col-span-7">
                   <div className="flex items-center gap-3 mb-3">
-                    <span className="font-mono text-xs text-oxide-red uppercase tracking-wider font-bold">
+                    <span className="font-sans text-xs text-oxide-red uppercase tracking-wide font-semibold">
                       JURISDICTION 01 · WEST AFRICA
                     </span>
                     <Tag active>ACTIVE EXTRACTION</Tag>
@@ -94,7 +94,7 @@ export default function MiningPage() {
                   <p className="text-body text-quarry-grey leading-relaxed mb-6">
                     Anchored by the Falea bauxite deposit and our 35,000 m² heavy machinery rebuild depot in Bamako. Over 145 heavy machines deployed across continuous overburden stripping, haul road maintenance, and river barge loading logistics along the Niger waterway.
                   </p>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 font-mono text-xs border-t border-slab-grey pt-4">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 font-sans text-xs border-t border-slab-grey pt-4">
                     <div>
                       <span className="text-quarry-grey block uppercase text-[10px]">Primary Mineral</span>
                       <span className="text-earth-black font-semibold text-sm">Bauxite DSO (Al₂O₃ 48%)</span>
@@ -126,7 +126,7 @@ export default function MiningPage() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div className="lg:col-span-7">
                   <div className="flex items-center gap-3 mb-3">
-                    <span className="font-mono text-xs text-oxide-red uppercase tracking-wider font-bold">
+                    <span className="font-sans text-xs text-oxide-red uppercase tracking-wide font-semibold">
                       JURISDICTION 02 · CENTRAL AFRICA
                     </span>
                     <Tag active>ACTIVE EXTRACTION</Tag>
@@ -137,7 +137,7 @@ export default function MiningPage() {
                   <p className="text-body text-quarry-grey leading-relaxed mb-6">
                     Operating inside the Kolwezi mining district with over 220 heavy pieces. We operate turnkey 1,500 TPH primary crushing stations and are constructing the 180 km Manono critical minerals access route to connect hard-rock lithium deposits to regional rail.
                   </p>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 font-mono text-xs border-t border-slab-grey pt-4">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 font-sans text-xs border-t border-slab-grey pt-4">
                     <div>
                       <span className="text-quarry-grey block uppercase text-[10px]">Key Commodities</span>
                       <span className="text-earth-black font-semibold text-sm">Grade-A Copper & Cobalt</span>
@@ -169,7 +169,7 @@ export default function MiningPage() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div className="lg:col-span-7">
                   <div className="flex items-center gap-3 mb-3">
-                    <span className="font-mono text-xs text-oxide-red uppercase tracking-wider font-bold">
+                    <span className="font-sans text-xs text-oxide-red uppercase tracking-wide font-semibold">
                       JURISDICTION 03 · EAST AFRICA MARITIME
                     </span>
                     <Tag status="COMPLETED">RAIL OPERATIONAL</Tag>
@@ -180,7 +180,7 @@ export default function MiningPage() {
                   <p className="text-body text-quarry-grey leading-relaxed mb-6">
                     A completed 42-kilometer heavy-haul narrow-gauge railway modernization connecting inland mineral tailings directly to deep-water bulk export berths. Upgraded to 25-tonne axle load ratings with automated mechanized track tamping.
                   </p>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 font-mono text-xs border-t border-slab-grey pt-4">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 font-sans text-xs border-t border-slab-grey pt-4">
                     <div>
                       <span className="text-quarry-grey block uppercase text-[10px]">Track Upgraded</span>
                       <span className="text-earth-black font-semibold text-sm">42 Kilometers Heavy Rail</span>
@@ -215,7 +215,7 @@ export default function MiningPage() {
         <div className="max-w-content mx-auto px-6 md:px-12">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-14 gap-4">
             <div>
-              <span className="text-label text-oxide-red font-mono uppercase tracking-widest block mb-2">
+              <span className="text-label text-oxide-red font-sans uppercase tracking-wide block mb-2 font-semibold">
                 Physical Commodities
               </span>
               <h2 className="text-display-lg font-medium text-earth-black leading-[0.95]">
@@ -224,7 +224,7 @@ export default function MiningPage() {
             </div>
             <Link
               href="/capabilities/mineral-trading"
-              className="text-label font-bold text-earth-black hover:text-oxide-red uppercase tracking-wider font-mono inline-flex items-center gap-2"
+              className="text-label font-semibold text-earth-black hover:text-oxide-red uppercase tracking-wide font-sans inline-flex items-center gap-2"
             >
               Commodity Trading Desk <span>→</span>
             </Link>
@@ -234,19 +234,19 @@ export default function MiningPage() {
             {MINERALS.map((min) => (
               <div
                 key={min.id}
-                className="bg-iron-white border border-slab-grey p-8 flex flex-col justify-between font-mono"
+                className="bg-iron-white border border-slab-grey p-8 flex flex-col justify-between font-sans"
               >
                 <div>
                   <div className="flex items-baseline justify-between mb-4 pb-3 border-b border-slab-grey">
-                    <span className="text-2xl font-bold text-oxide-red">
+                    <span className="text-2xl font-bold text-oxide-red font-heading">
                       {min.chemicalSymbol}
                     </span>
-                    <span className="text-xs text-quarry-grey uppercase">
+                    <span className="text-xs text-quarry-grey uppercase font-sans">
                       Annual: {min.annualVolume}
                     </span>
                   </div>
 
-                  <h3 className="text-heading-3 font-medium text-earth-black font-sans mb-2">
+                  <h3 className="text-heading-3 font-medium text-earth-black mb-2">
                     {min.name}
                   </h3>
 
@@ -274,7 +274,7 @@ export default function MiningPage() {
                   </span>
                   <Link
                     href="/contact"
-                    className="text-label font-bold text-oxide-red uppercase tracking-wider hover:underline"
+                    className="text-label font-semibold text-oxide-red uppercase tracking-wide hover:underline font-sans"
                   >
                     Inquire Assay Sheet →
                   </Link>

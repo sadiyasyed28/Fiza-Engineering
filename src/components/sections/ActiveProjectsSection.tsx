@@ -16,7 +16,7 @@ export function ActiveProjectsSection() {
           <div>
             <div className="flex items-center gap-2 mb-3">
               <span className="w-2 h-2 bg-oxide-red inline-block" />
-              <span className="text-label text-earth-black font-mono tracking-widest font-semibold">
+              <span className="text-label text-earth-black font-sans tracking-wide uppercase font-semibold">
                 Execution on the ground
               </span>
             </div>
@@ -26,7 +26,7 @@ export function ActiveProjectsSection() {
           </div>
           <Link
             href="/projects"
-            className="text-label font-bold text-earth-black hover:text-oxide-red uppercase tracking-wider inline-flex items-center gap-2 transition-colors font-mono"
+            className="text-label font-semibold text-earth-black hover:text-oxide-red uppercase tracking-wide inline-flex items-center gap-2 transition-colors font-sans"
           >
             Browse all projects <ArrowRight size={14} />
           </Link>
@@ -60,15 +60,15 @@ export function ActiveProjectsSection() {
                       className="img-cover transition-transform duration-500 group-hover:scale-[1.03]"
                     />
                     <div className="absolute top-3.5 left-3.5 flex items-center gap-2">
-                      <span className="bg-earth-black text-iron-white font-mono text-[10px] uppercase font-bold tracking-wider px-2 py-0.5">
+                      <span className="bg-earth-black text-iron-white font-sans text-[10px] uppercase font-semibold tracking-wide px-2 py-0.5">
                         {project.country}
                       </span>
-                      <span className="bg-oxide-red text-iron-white font-mono text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 flex items-center gap-1">
+                      <span className="bg-oxide-red text-iron-white font-sans text-[10px] uppercase font-semibold tracking-wide px-2 py-0.5 flex items-center gap-1">
                         <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
                         {project.status}
                       </span>
                     </div>
-                    <div className="absolute bottom-2.5 right-2.5 bg-earth-black/85 text-dust-tan font-mono text-[10px] px-2 py-0.5">
+                    <div className="absolute bottom-2.5 right-2.5 bg-earth-black/85 text-dust-tan font-sans text-[10px] uppercase tracking-wide px-2 py-0.5">
                       {project.sector}
                     </div>
                   </div>
@@ -76,7 +76,7 @@ export function ActiveProjectsSection() {
                   {/* Content */}
                   <div className="p-6 md:p-7">
                     {/* Country only - removed unverified region lines */}
-                    <span className="font-mono text-xs uppercase tracking-wider text-oxide-red font-semibold block mb-1">
+                    <span className="font-sans text-xs uppercase tracking-wide text-oxide-red font-semibold block mb-1">
                       {project.country}
                     </span>
                     <h3 className="text-heading-2 font-medium text-earth-black mb-3 group-hover:text-oxide-red transition-colors leading-snug">
@@ -89,7 +89,7 @@ export function ActiveProjectsSection() {
                     {/* Highlights from safe verified stats */}
                     <div className="space-y-2 border-t border-slab-grey/40 pt-4">
                       {safeStats.map((stat, idx) => (
-                        <div key={idx} className="flex items-start gap-2 text-xs text-earth-black font-mono">
+                        <div key={idx} className="flex items-start gap-2 text-xs text-earth-black font-sans">
                           <CheckCircle2 size={13} className="text-oxide-red mt-0.5 shrink-0" />
                           <span>
                             <strong className="font-semibold">{stat.label}:</strong> {stat.value}
@@ -104,7 +104,7 @@ export function ActiveProjectsSection() {
                 <div className="p-6 md:p-7 pt-0">
                   <Link
                     href={`/projects/${project.slug}`}
-                    className="w-full bg-[#EAE7DF] border border-slab-grey hover:bg-earth-black hover:text-iron-white hover:border-earth-black transition-colors font-mono text-xs uppercase font-semibold py-3 px-4 flex items-center justify-between text-earth-black group-hover:bg-oxide-red group-hover:text-iron-white group-hover:border-oxide-red"
+                    className="w-full bg-[#EAE7DF] border border-slab-grey hover:bg-earth-black hover:text-iron-white hover:border-earth-black transition-colors font-sans text-xs uppercase font-semibold tracking-wide py-3 px-4 flex items-center justify-between text-earth-black group-hover:bg-oxide-red group-hover:text-iron-white group-hover:border-oxide-red"
                   >
                     <span>Inspect project specifications</span>
                     <ArrowRight size={14} />

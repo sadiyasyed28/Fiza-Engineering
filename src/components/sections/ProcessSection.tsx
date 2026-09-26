@@ -30,7 +30,7 @@ export function ProcessSection() {
       <div className="max-w-content mx-auto px-6 md:px-12">
         {/* Header */}
         <div className="max-w-xl mb-14">
-          <span className="text-label text-earth-black font-mono uppercase tracking-widest font-semibold block mb-2">
+          <span className="text-label text-earth-black font-sans uppercase tracking-wide font-semibold block mb-2">
             Process
           </span>
           <h2 className="text-display-lg sm:text-[2.75rem] font-medium text-earth-black leading-[1.0] mb-3">
@@ -50,7 +50,7 @@ export function ProcessSection() {
             >
               <div>
                 <div className="flex items-center justify-between mb-6">
-                  <span className="font-mono text-sm font-bold text-oxide-red tracking-wider">
+                  <span className="font-sans text-sm font-bold text-oxide-red tracking-wide">
                     {step.number}
                   </span>
                   {idx < 3 && (
@@ -70,7 +70,7 @@ export function ProcessSection() {
               </div>
 
               <div className="mt-8 pt-4 border-t border-slab-grey/40">
-                <span className="text-[10px] font-mono uppercase text-quarry-grey tracking-wider">
+                <span className="text-[10px] font-sans uppercase text-quarry-grey tracking-wide font-medium">
                   Phase {step.number}
                 </span>
               </div>

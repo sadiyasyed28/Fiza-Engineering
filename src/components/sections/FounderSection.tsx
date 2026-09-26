@@ -22,14 +22,14 @@ export function FounderSection() {
 
           {/* Right: Leadership Profile & Quote */}
           <div className="lg:col-span-8">
-            <span className="text-label text-earth-black font-mono uppercase tracking-widest font-semibold block mb-2">
+            <span className="text-label text-earth-black font-sans uppercase tracking-wide font-semibold block mb-2">
               Executive Leadership
             </span>
 
             <h2 className="text-display-lg sm:text-[2.5rem] font-medium text-earth-black leading-[1.05] mb-2">
               Muhammed Farooghuddin
             </h2>
-            <span className="font-mono text-xs uppercase tracking-wider text-oxide-red font-semibold block mb-5">
+            <span className="font-sans text-xs uppercase tracking-wide text-oxide-red font-semibold block mb-5">
               Founder & Chief Executive Officer
             </span>
 
@@ -43,7 +43,7 @@ export function FounderSection() {
               <p className="font-heading text-lg md:text-xl italic text-earth-black leading-snug font-normal">
                 &ldquo;Our purpose is to build partnerships that strengthen local capability, create lasting value and help ambitious projects move forward.&rdquo;
               </p>
-              <cite className="block text-xs font-mono text-quarry-grey uppercase tracking-wider mt-2.5 not-italic">
+              <cite className="block text-xs font-sans text-quarry-grey uppercase tracking-wide mt-2.5 not-italic font-medium">
                 — Muhammed Farooghuddin, Founder & CEO
               </cite>
             </blockquote>
@@ -51,7 +51,7 @@ export function FounderSection() {
             <div className="mt-6 flex items-center gap-4">
               <Link
                 href="/company#leadership"
-                className="btn-primary text-xs py-3 px-6 font-mono uppercase tracking-wider font-semibold"
+                className="btn-primary text-xs py-3 px-6 font-sans uppercase tracking-wide font-semibold"
               >
                 Read leadership profile
               </Link>
@@ -59,8 +59,8 @@ export function FounderSection() {
 
             {/* Strategic Partners Row - Hidden behind SHOW_PARTNERS until confirmed */}
             {SHOW_PARTNERS && (
-              <div className="mt-8 pt-5 border-t border-slab-grey/80 flex flex-wrap items-center gap-3 text-xs font-mono text-quarry-grey">
-                <span className="font-bold text-earth-black uppercase tracking-wider">Partners:</span>
+              <div className="mt-8 pt-5 border-t border-slab-grey/80 flex flex-wrap items-center gap-3 text-xs font-sans text-quarry-grey">
+                <span className="font-bold text-earth-black uppercase tracking-wide">Partners:</span>
                 <span className="text-earth-black font-medium">AELMET (USA)</span>
                 <span>·</span>
                 <span className="text-earth-black font-medium">Eliixir Traintech (India)</span>

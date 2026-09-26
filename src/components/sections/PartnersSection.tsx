@@ -11,7 +11,7 @@ export function PartnersSection() {
           <div>
             <div className="flex items-center gap-2 mb-3">
               <span className="w-2 h-2 bg-oxide-red inline-block" />
-              <span className="text-label text-earth-black font-mono uppercase tracking-widest font-semibold">
+              <span className="text-label text-earth-black font-sans uppercase tracking-wide font-semibold">
                 Strategic Alliances & Associations
               </span>
             </div>
@@ -36,13 +36,13 @@ export function PartnersSection() {
                   <span className="font-heading text-2xl font-bold tracking-tight text-earth-black group-hover:text-oxide-red transition-colors">
                     {partner.name}
                   </span>
-                  <span className="bg-[#EAE7DF] border border-slab-grey px-2.5 py-1 font-mono text-[11px] uppercase tracking-wider text-earth-black">
+                  <span className="bg-[#EAE7DF] border border-slab-grey px-2.5 py-1 font-sans text-[11px] uppercase tracking-wide text-earth-black font-medium">
                     {partner.country}
                   </span>
                 </div>
 
                 <div className="mb-4">
-                  <span className="text-xs font-mono uppercase text-oxide-red font-semibold block mb-1">
+                  <span className="text-xs font-sans uppercase text-oxide-red font-semibold tracking-wide block mb-1">
                     Specialized Domain
                   </span>
                   <h3 className="text-heading-3 font-medium text-earth-black leading-snug">
@@ -55,7 +55,7 @@ export function PartnersSection() {
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-slab-grey/50 flex items-center gap-2 text-xs font-mono text-quarry-grey">
+              <div className="pt-4 border-t border-slab-grey/50 flex items-center gap-2 text-xs font-sans text-quarry-grey font-medium">
                 <ShieldCheck size={14} className="text-oxide-red" />
                 <span>Verified Strategic Agreement</span>
               </div>

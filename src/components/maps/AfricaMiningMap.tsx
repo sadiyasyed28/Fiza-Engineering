@@ -134,7 +134,7 @@ export function AfricaMiningMap() {
                   {/* Square marker (Zero border-radius) */}
                   <div
                     className={cn(
-                      "w-5 h-5 flex items-center justify-center font-mono text-[10px] font-bold transition-all duration-200",
+                      "w-5 h-5 flex items-center justify-center font-sans text-[10px] font-bold transition-all duration-200",
                       isSelected
                         ? "bg-oxide-red text-iron-white ring-4 ring-oxide-red/30 scale-110"
                         : "bg-earth-black text-iron-white hover:bg-oxide-red"
@@ -145,7 +145,7 @@ export function AfricaMiningMap() {
                   {/* Location label */}
                   <span
                     className={cn(
-                      "absolute top-6 left-1/2 -translate-x-1/2 whitespace-nowrap font-mono text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 pointer-events-none transition-all",
+                      "absolute top-6 left-1/2 -translate-x-1/2 whitespace-nowrap font-sans text-[11px] font-bold uppercase tracking-wide px-2 py-0.5 pointer-events-none transition-all",
                       isSelected
                         ? "bg-earth-black text-iron-white"
                         : "bg-iron-white/90 text-earth-black border border-slab-grey"
@@ -158,7 +158,7 @@ export function AfricaMiningMap() {
             );
           })}
 
-          <div className="absolute bottom-3 right-3 font-mono text-[10px] text-quarry-grey uppercase tracking-widest bg-iron-white/80 px-2 py-1 border border-slab-grey">
+          <div className="absolute bottom-3 right-3 font-sans text-[10px] text-quarry-grey uppercase tracking-wide bg-iron-white/80 px-2 py-1 border border-slab-grey font-medium">
             FIG. 04 — CONTINENTAL EXTRACTION HUBS
           </div>
         </div>
@@ -167,10 +167,10 @@ export function AfricaMiningMap() {
         <div className="lg:col-span-5 flex flex-col justify-between">
           <div>
             <div className="flex items-center gap-3 mb-2">
-              <span className="text-label text-oxide-red font-mono uppercase tracking-widest">
+              <span className="text-label text-oxide-red font-sans uppercase tracking-wide font-semibold">
                 Active Operations Hub
               </span>
-              <span className="text-xs font-mono text-quarry-grey">
+              <span className="text-xs font-sans text-quarry-grey font-medium">
                 {activePin.country.toUpperCase()}
               </span>
             </div>
@@ -185,7 +185,7 @@ export function AfricaMiningMap() {
 
             {/* Mineral Commodity Tags */}
             <div className="mb-6">
-              <span className="block text-label text-earth-black mb-2 uppercase font-mono">
+              <span className="block text-label text-earth-black mb-2 uppercase font-sans font-semibold">
                 Key Minerals Extracted:
               </span>
               <div className="flex flex-wrap gap-2">
@@ -198,7 +198,7 @@ export function AfricaMiningMap() {
             </div>
 
             {/* Industrial Specs Grid */}
-            <div className="grid grid-cols-2 gap-4 py-4 border-t border-b border-slab-grey font-mono text-xs mb-6">
+            <div className="grid grid-cols-2 gap-4 py-4 border-t border-b border-slab-grey font-sans text-xs mb-6">
               <div>
                 <span className="block text-quarry-grey uppercase text-[11px] mb-1">
                   Fleet Allocated
@@ -219,12 +219,12 @@ export function AfricaMiningMap() {
           </div>
 
           <div className="flex items-center justify-between pt-2">
-            <span className="text-xs text-quarry-grey font-mono">
+            <span className="text-xs text-quarry-grey font-sans">
               Click pins to inspect concessions
             </span>
             <a
               href="/mining"
-              className="text-label font-bold text-oxide-red hover:underline uppercase tracking-wider"
+              className="text-label font-semibold text-oxide-red hover:underline uppercase tracking-wide font-sans"
             >
               Full Concession Data →
             </a>

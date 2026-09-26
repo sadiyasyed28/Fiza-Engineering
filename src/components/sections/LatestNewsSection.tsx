@@ -15,7 +15,7 @@ export function LatestNewsSection() {
       <div className="max-w-content mx-auto px-6 md:px-12 py-20 md:py-28">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
           <div>
-            <span className="text-label text-oxide-red font-mono uppercase tracking-widest block mb-2">
+            <span className="text-label text-oxide-red font-sans uppercase tracking-wide block mb-2 font-semibold">
               Operational Updates
             </span>
             <h2 className="text-display-lg font-medium text-earth-black leading-[0.95]">
@@ -24,7 +24,7 @@ export function LatestNewsSection() {
           </div>
           <Link
             href="/news"
-            className="text-label font-bold text-earth-black hover:text-oxide-red uppercase tracking-wider inline-flex items-center gap-2 font-mono transition-colors"
+            className="text-label font-bold text-earth-black hover:text-oxide-red uppercase tracking-wide inline-flex items-center gap-2 font-sans transition-colors"
           >
             Visit The Newsroom <span>→</span>
           </Link>
@@ -44,12 +44,12 @@ export function LatestNewsSection() {
                 fill
                 className="img-cover transition-transform duration-300 group-hover:scale-[1.02]"
               />
-              <div className="absolute top-3 left-3 bg-earth-black text-iron-white text-[10px] font-mono uppercase tracking-widest px-2.5 py-1">
+              <div className="absolute top-3 left-3 bg-earth-black text-iron-white text-[10px] font-sans uppercase tracking-wide px-2.5 py-1 font-semibold">
                 FEATURED DISPATCH
               </div>
             </div>
 
-            <div className="flex items-center gap-4 text-xs font-mono text-quarry-grey mb-3">
+            <div className="flex items-center gap-4 text-xs font-sans text-quarry-grey mb-3">
               <span>{formatDate(featured.date)}</span>
               <span>·</span>
               <span className="text-oxide-red font-semibold">{featured.category}</span>
@@ -78,7 +78,7 @@ export function LatestNewsSection() {
                 </div>
 
                 <div>
-                  <div className="flex items-center gap-3 text-xs font-mono text-quarry-grey mb-2">
+                  <div className="flex items-center gap-3 text-xs font-sans text-quarry-grey mb-2">
                     <span>{formatDate(article.date)}</span>
                     <span>·</span>
                     <span className="text-earth-black font-semibold uppercase text-[10px]">
@@ -91,7 +91,7 @@ export function LatestNewsSection() {
                   </h4>
                 </div>
 
-                <span className="mt-4 text-label text-oxide-red font-mono font-bold uppercase tracking-wider inline-flex items-center gap-1">
+                <span className="mt-4 text-label text-oxide-red font-sans font-semibold uppercase tracking-wide inline-flex items-center gap-1">
                   Read Dispatch →
                 </span>
               </Link>

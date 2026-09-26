@@ -24,7 +24,7 @@ export function FeaturedProjectBleed() {
         <div className="max-w-2xl">
           <div className="flex items-center gap-3 mb-4">
             <Tag active>FEATURED PROJECT</Tag>
-            <span className="text-iron-white font-mono text-xs uppercase tracking-widest">
+            <span className="text-iron-white font-sans text-xs uppercase tracking-wide font-semibold">
               {featured.country}
             </span>
           </div>
@@ -37,10 +37,10 @@ export function FeaturedProjectBleed() {
             {featured.summary}
           </p>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 py-6 border-t border-b border-slab-grey/30 mb-8 font-mono">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 py-6 border-t border-b border-slab-grey/30 mb-8 font-sans">
             {featured.stats.map((s, idx) => (
               <div key={idx}>
-                <span className="block text-quarry-grey text-[11px] uppercase tracking-wider">
+                <span className="block text-quarry-grey text-[11px] uppercase tracking-wide font-medium">
                   {s.label}
                 </span>
                 <span className="text-iron-white text-base md:text-lg font-semibold">

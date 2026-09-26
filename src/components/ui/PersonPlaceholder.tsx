@@ -38,7 +38,7 @@ export function PersonPlaceholder({ name, title, className }: PersonPlaceholderP
 
       {/* Clean Monogram Circle / Tile */}
       <div className="relative z-10 w-20 h-20 bg-[#1F1F1D] border border-slab-grey/30 flex items-center justify-center mb-3 shadow-inner">
-        <span className="font-mono text-2xl font-bold tracking-widest text-iron-white">
+        <span className="font-sans text-2xl font-bold tracking-wide text-iron-white">
           {initials}
         </span>
       </div>
@@ -48,7 +48,7 @@ export function PersonPlaceholder({ name, title, className }: PersonPlaceholderP
         {name}
       </span>
       {title && (
-        <span className="relative z-10 text-[11px] font-mono text-dust-tan line-clamp-1 mt-0.5">
+        <span className="relative z-10 text-[11px] font-sans text-dust-tan line-clamp-1 mt-0.5">
           {title}
         </span>
       )}

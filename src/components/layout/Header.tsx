@@ -106,7 +106,7 @@ export function Header() {
             </div>
             <span
               className={cn(
-                "font-mono text-[9px] md:text-[10px] tracking-[0.2em] uppercase leading-tight mt-0.5",
+                "font-sans text-[9px] md:text-[10px] tracking-wide uppercase font-semibold leading-tight mt-0.5",
                 scrolled || !isHome ? "text-quarry-grey" : "text-slab-grey"
               )}
             >
@@ -135,7 +135,7 @@ export function Header() {
                     href="/company"
                     onClick={handleCloseDropdown}
                     className={cn(
-                      "text-body-sm font-medium tracking-[0.05em] uppercase transition-colors duration-200 flex items-center gap-1 relative py-1",
+                      "text-body-sm font-medium tracking-wide uppercase transition-colors duration-200 flex items-center gap-1 relative py-1",
                       isActive
                         ? "text-oxide-red font-semibold"
                         : scrolled || !isHome
@@ -159,13 +159,13 @@ export function Header() {
                   {/* Dropdown for About / Company Section */}
                   {companyDropdownOpen && (
                     <div className="absolute top-full left-0 pt-2 z-50 animate-fade-in min-w-[240px]">
-                      <div className="bg-iron-white border border-slab-grey shadow-lg p-2 font-mono">
+                      <div className="bg-iron-white border border-slab-grey shadow-lg p-2 font-sans">
                         <Link
                           href="/company"
                           onClick={handleCloseDropdown}
                           className="block px-3 py-2 text-xs text-earth-black hover:bg-[#EBE8E0] hover:text-oxide-red transition-colors"
                         >
-                          <span className="font-semibold block uppercase">Company Overview</span>
+                          <span className="font-semibold block uppercase tracking-wide">Company Overview</span>
                           <span className="text-[10px] text-quarry-grey font-sans block mt-0.5">
                             Profile, leadership & footprint
                           </span>
@@ -175,7 +175,7 @@ export function Header() {
                           onClick={handleCloseDropdown}
                           className="block px-3 py-2 text-xs text-earth-black hover:bg-[#EBE8E0] hover:text-oxide-red transition-colors border-t border-slab-grey/40"
                         >
-                          <span className="font-semibold block uppercase">Certifications & Awards</span>
+                          <span className="font-semibold block uppercase tracking-wide">Certifications & Awards</span>
                           <span className="text-[10px] text-quarry-grey font-sans block mt-0.5">
                             ISO accreditations & milestones
                           </span>
@@ -192,7 +192,7 @@ export function Header() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "text-body-sm font-medium tracking-[0.05em] uppercase transition-colors duration-200 relative py-1",
+                  "text-body-sm font-medium tracking-wide uppercase transition-colors duration-200 relative py-1",
                   isActive
                     ? "text-oxide-red font-semibold"
                     : scrolled || !isHome
@@ -213,7 +213,7 @@ export function Header() {
         <div className="hidden lg:flex items-center gap-4">
           <Link
             href="/contact"
-            className="bg-oxide-red text-iron-white text-xs font-semibold uppercase tracking-wider py-2.5 px-5 hover:bg-earth-black transition-colors duration-200 shadow-sm inline-flex items-center gap-1.5"
+            className="bg-oxide-red text-iron-white text-xs font-semibold uppercase tracking-wide py-2.5 px-5 hover:bg-earth-black transition-colors duration-200 shadow-sm inline-flex items-center gap-1.5 font-sans"
           >
             Get in Touch
           </Link>
@@ -236,7 +236,7 @@ export function Header() {
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-40 bg-coal-dark text-iron-white flex flex-col justify-between p-8 pt-28 lg:hidden animate-fade-in overflow-y-auto">
           <div className="flex flex-col space-y-4">
-            <span className="text-label text-dust-tan tracking-widest uppercase font-mono mb-2">
+            <span className="text-label text-dust-tan tracking-wide uppercase font-sans mb-2 font-semibold">
               Corporate Directory
             </span>
             {CONSOLIDATED_NAV.map((link) => {
@@ -261,7 +261,7 @@ export function Header() {
 
                   {/* Sub-item for Certifications & Awards under Company/About */}
                   {isCompany && (
-                    <div className="pl-3 pt-2 font-mono text-sm">
+                    <div className="pl-3 pt-2 font-sans text-sm">
                       <Link
                         href="/achievements"
                         onClick={() => setMobileMenuOpen(false)}
@@ -271,7 +271,7 @@ export function Header() {
                         )}
                       >
                         <span className="text-oxide-red">↳</span>
-                        <span className="uppercase text-xs tracking-wider">Certifications & Awards</span>
+                        <span className="uppercase text-xs tracking-wide">Certifications & Awards</span>
                       </Link>
                     </div>
                   )}
@@ -284,12 +284,12 @@ export function Header() {
             <Link
               href="/contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full bg-oxide-red text-iron-white text-center text-sm font-semibold uppercase tracking-wider py-3.5 block hover:bg-white hover:text-earth-black transition-colors"
+              className="w-full bg-oxide-red text-iron-white text-center text-sm font-semibold uppercase tracking-wide py-3.5 block hover:bg-white hover:text-earth-black transition-colors font-sans"
             >
               Get in Touch
             </Link>
 
-            <div className="text-xs font-mono text-quarry-grey space-y-1">
+            <div className="text-xs font-sans text-quarry-grey space-y-1">
               <span className="block text-dust-tan font-semibold uppercase">
                 Fiza Engineering Corporation
               </span>

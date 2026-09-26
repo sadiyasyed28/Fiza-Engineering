@@ -61,7 +61,7 @@ export default function CapabilitiesPage() {
 
         <div className="relative z-10 max-w-content mx-auto px-6 md:px-12">
           {/* Breadcrumb */}
-          <nav className="text-label text-oxide-red font-mono uppercase tracking-widest mb-4 flex items-center gap-2">
+          <nav className="text-label text-oxide-red font-sans uppercase tracking-wide mb-4 flex items-center gap-2 font-semibold">
             <Link href="/" className="hover:underline">
               Home
             </Link>
@@ -83,7 +83,7 @@ export default function CapabilitiesPage() {
         aria-label="Services Navigation"
         className="sticky top-[72px] z-20 bg-earth-black text-iron-white border-b border-slab-grey/25 hidden md:block shadow-sm"
       >
-        <div className="max-w-content mx-auto px-6 md:px-12 flex items-center gap-6 py-3.5 text-xs font-mono uppercase tracking-wider overflow-x-auto services-scrollbar">
+        <div className="max-w-content mx-auto px-6 md:px-12 flex items-center gap-6 py-3.5 text-xs font-sans uppercase tracking-wide overflow-x-auto services-scrollbar">
           <span className="text-oxide-red font-semibold shrink-0">Jump To:</span>
           {CAPABILITIES.map((cap) => (
             <a
@@ -101,7 +101,7 @@ export default function CapabilitiesPage() {
       <section className="w-full bg-[#F4F2EC] py-20 md:py-24 border-b border-slab-grey">
         <div className="max-w-content mx-auto px-6 md:px-12 space-y-20">
           <div>
-            <span className="text-label text-oxide-red font-mono uppercase tracking-widest block mb-2">
+            <span className="text-label text-oxide-red font-sans uppercase tracking-wide block mb-2 font-semibold">
               Primary Sectors
             </span>
             <h2 className="text-display-md md:text-display-lg font-medium text-earth-black leading-[0.98]">
@@ -126,7 +126,7 @@ export default function CapabilitiesPage() {
                     className="img-cover"
                   />
                   <div className="absolute inset-0 bg-earth-black/25 pointer-events-none" />
-                  <div className="absolute top-4 left-4 bg-earth-black text-iron-white font-mono text-[11px] tracking-wider px-3 py-1 z-10">
+                  <div className="absolute top-4 left-4 bg-earth-black text-iron-white font-sans text-[11px] uppercase tracking-wide px-3 py-1 z-10 font-semibold">
                     SERVICE 0{idx + 1}
                   </div>
                 </div>
@@ -137,10 +137,10 @@ export default function CapabilitiesPage() {
                     {/* Big Stat Callout */}
                     <div className="mb-6 pb-6 border-b border-slab-grey">
                       <div className="flex items-baseline gap-3">
-                        <span className="font-heading text-4xl sm:text-5xl font-medium text-oxide-red leading-none">
+                        <span className="font-sans text-4xl sm:text-5xl font-semibold text-oxide-red leading-none">
                           {cap.bigStat.value}
                         </span>
-                        <span className="font-mono text-xs uppercase tracking-wider text-quarry-grey">
+                        <span className="font-sans text-xs uppercase tracking-wide text-quarry-grey font-medium">
                           {cap.bigStat.label}
                         </span>
                       </div>
@@ -155,10 +155,10 @@ export default function CapabilitiesPage() {
                     </p>
 
                     <div className="mb-8">
-                      <span className="text-label text-earth-black font-mono uppercase tracking-wider block mb-3 font-semibold">
+                      <span className="text-label text-earth-black font-sans uppercase tracking-wide block mb-3 font-semibold">
                         Operational Scope:
                       </span>
-                      <ul className="space-y-2 font-mono text-xs text-earth-black/85">
+                      <ul className="space-y-2 font-sans text-xs text-earth-black/85">
                         {cap.scope.slice(0, 3).map((item, i) => (
                           <li key={i} className="flex items-start gap-2.5">
                             <span className="w-1.5 h-1.5 bg-oxide-red inline-block mt-1.5 shrink-0" />
@@ -172,13 +172,13 @@ export default function CapabilitiesPage() {
                   <div className="flex flex-wrap items-center gap-4 pt-6 border-t border-slab-grey">
                     <Link
                       href={`/capabilities/${cap.slug}`}
-                      className="btn-primary !bg-oxide-red hover:!bg-earth-black text-iron-white text-xs py-3.5 px-6 font-mono uppercase tracking-wider font-semibold inline-flex items-center gap-2 transition-colors"
+                      className="btn-primary !bg-oxide-red hover:!bg-earth-black text-iron-white text-xs py-3.5 px-6 font-sans uppercase tracking-wide font-semibold inline-flex items-center gap-2 transition-colors"
                     >
                       View service <ArrowRight size={14} />
                     </Link>
                     <Link
                       href={`/contact?type=${cap.slug}`}
-                      className="btn-secondary !border-earth-black !text-earth-black hover:!bg-earth-black hover:!text-iron-white text-xs py-3.5 px-6 font-mono uppercase tracking-wider font-semibold transition-colors"
+                      className="btn-secondary !border-earth-black !text-earth-black hover:!bg-earth-black hover:!text-iron-white text-xs py-3.5 px-6 font-sans uppercase tracking-wide font-semibold transition-colors"
                     >
                       Enquire about this service
                     </Link>
@@ -194,7 +194,7 @@ export default function CapabilitiesPage() {
       <section className="w-full bg-[#EBE8E0] py-20 md:py-24 border-b border-slab-grey">
         <div className="max-w-content mx-auto px-6 md:px-12">
           <div className="mb-14">
-            <span className="text-label text-oxide-red font-mono uppercase tracking-widest block mb-2">
+            <span className="text-label text-oxide-red font-sans uppercase tracking-wide block mb-2 font-semibold">
               Specialized Divisions
             </span>
             <h2 className="text-display-md md:text-display-lg font-medium text-earth-black leading-[0.98]">
@@ -219,7 +219,7 @@ export default function CapabilitiesPage() {
                       className="img-cover"
                     />
                     <div className="absolute inset-0 bg-earth-black/25 pointer-events-none" />
-                    <div className="absolute top-3 left-3 bg-earth-black text-iron-white font-mono text-[10px] tracking-wider px-2 py-0.5 z-10">
+                    <div className="absolute top-3 left-3 bg-earth-black text-iron-white font-sans text-[10px] uppercase tracking-wide px-2 py-0.5 z-10 font-semibold">
                       SERVICE 0{idx + 4}
                     </div>
                   </div>
@@ -227,10 +227,10 @@ export default function CapabilitiesPage() {
                   {/* Big Stat Callout */}
                   <div className="mb-4 pb-3 border-b border-slab-grey">
                     <div className="flex items-baseline justify-between">
-                      <span className="font-heading text-2xl font-semibold text-oxide-red leading-none">
+                      <span className="font-sans text-2xl font-semibold text-oxide-red leading-none">
                         {cap.bigStat.value}
                       </span>
-                      <span className="font-mono text-[10px] uppercase tracking-wider text-quarry-grey">
+                      <span className="font-sans text-[10px] uppercase tracking-wide text-quarry-grey font-medium">
                         {cap.bigStat.label}
                       </span>
                     </div>
@@ -245,10 +245,10 @@ export default function CapabilitiesPage() {
                   </p>
 
                   <div className="mb-6">
-                    <span className="text-[11px] text-earth-black font-mono uppercase tracking-wider block mb-2 font-semibold">
+                    <span className="text-[11px] text-earth-black font-sans uppercase tracking-wide block mb-2 font-semibold">
                       Key Scope:
                     </span>
-                    <ul className="space-y-1.5 font-mono text-xs text-earth-black/85">
+                    <ul className="space-y-1.5 font-sans text-xs text-earth-black/85">
                       {cap.scope.slice(0, 3).map((item, i) => (
                         <li key={i} className="flex items-start gap-2">
                           <span className="w-1.5 h-1.5 bg-oxide-red inline-block mt-1 shrink-0" />
@@ -262,13 +262,13 @@ export default function CapabilitiesPage() {
                 <div className="pt-5 border-t border-slab-grey flex items-center justify-between">
                   <Link
                     href={`/capabilities/${cap.slug}`}
-                    className="text-label font-bold text-oxide-red hover:underline uppercase tracking-wider font-mono inline-flex items-center gap-1"
+                    className="text-label font-bold text-oxide-red hover:underline uppercase tracking-wide font-sans inline-flex items-center gap-1"
                   >
                     View service <ArrowRight size={13} />
                   </Link>
                   <Link
                     href={`/contact?type=${cap.slug}`}
-                    className="text-[11px] font-mono uppercase tracking-wider text-quarry-grey hover:text-earth-black transition-colors"
+                    className="text-[11px] font-sans uppercase tracking-wide text-quarry-grey hover:text-earth-black transition-colors font-medium"
                   >
                     Enquire →
                   </Link>
@@ -283,7 +283,7 @@ export default function CapabilitiesPage() {
       <section className="w-full bg-coal-dark py-20 text-iron-white">
         <div className="max-w-content mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-8">
           <div>
-            <span className="text-label text-dust-tan font-mono uppercase tracking-widest block mb-2">
+            <span className="text-label text-dust-tan font-sans uppercase tracking-wide block mb-2 font-semibold">
               Commercial Tenders & Projects
             </span>
             <h2 className="text-display-md font-medium text-iron-white">
@@ -295,7 +295,7 @@ export default function CapabilitiesPage() {
           </div>
           <Link
             href="/contact?type=mining-services"
-            className="btn-primary !bg-oxide-red hover:!bg-iron-white hover:!text-earth-black text-iron-white text-xs py-4 px-8 font-mono uppercase tracking-wider font-semibold whitespace-nowrap transition-colors inline-flex items-center gap-2"
+            className="btn-primary !bg-oxide-red hover:!bg-iron-white hover:!text-earth-black text-iron-white text-xs py-4 px-8 font-sans uppercase tracking-wide font-semibold whitespace-nowrap transition-colors inline-flex items-center gap-2"
           >
             Tell us about your project <ArrowRight size={14} />
           </Link>

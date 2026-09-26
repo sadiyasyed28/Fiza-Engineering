@@ -179,7 +179,7 @@ export function CustomSelect({
           className={
             variant === "underline"
               ? "form-label cursor-pointer"
-              : "block text-label font-mono text-quarry-grey uppercase tracking-wider mb-1.5 text-[11px]"
+              : "block text-label font-sans text-quarry-grey uppercase tracking-wide mb-1.5 text-[11px] font-semibold"
           }
         >
           {label}
@@ -208,7 +208,7 @@ export function CustomSelect({
         onClick={() => !disabled && setIsOpen((prev) => !prev)}
         onKeyDown={handleKeyDown}
         className={cn(
-          "w-full flex items-center justify-between text-left font-mono text-xs cursor-pointer select-none transition-all duration-150",
+          "w-full flex items-center justify-between text-left font-sans text-xs cursor-pointer select-none transition-all duration-150",
           variant === "underline"
             ? "bg-transparent border-b border-slab-grey py-3 text-earth-black focus:outline-none focus:border-b-oxide-red min-h-[44px]"
             : "bg-[#F4F2EC] hover:bg-[#EFECE4] text-earth-black border border-[#D0CCC2] hover:border-earth-black px-3.5 py-2.5 min-h-[42px] focus:outline-none focus:border-oxide-red focus:ring-1 focus:ring-oxide-red/30",
@@ -221,7 +221,7 @@ export function CustomSelect({
           className
         )}
       >
-        <span className="truncate pr-2 font-mono">{displayLabel}</span>
+        <span className="truncate pr-2 font-sans">{displayLabel}</span>
         <ChevronDown
           size={14}
           className={cn(
@@ -267,7 +267,7 @@ export function CustomSelect({
                 onClick={() => handleSelectOption(opt.value)}
                 onMouseEnter={() => setHighlightedIndex(idx)}
                 className={cn(
-                  "relative flex items-center justify-between px-3.5 py-2.5 text-xs font-mono cursor-pointer transition-colors duration-150 select-none",
+                  "relative flex items-center justify-between px-3.5 py-2.5 text-xs font-sans cursor-pointer transition-colors duration-150 select-none",
                   isSelected
                     ? "bg-[#E6E3DA] text-earth-black font-semibold border-l-2 border-oxide-red pl-[12px]"
                     : isHighlighted
@@ -294,7 +294,7 @@ export function CustomSelect({
           id={errorId}
           role="alert"
           aria-live="polite"
-          className="text-xs text-oxide-red mt-1 font-mono uppercase tracking-wider"
+          className="text-xs text-oxide-red mt-1 font-sans uppercase tracking-wide font-medium"
         >
           {error}
         </span>

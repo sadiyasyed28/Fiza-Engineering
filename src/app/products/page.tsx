@@ -106,7 +106,7 @@ function ProductsContent() {
         </div>
 
         <div className="relative z-10 max-w-content mx-auto px-6 md:px-12">
-          <span className="text-label text-oxide-red font-mono uppercase tracking-[0.2em] block mb-3 font-semibold">
+          <span className="text-label text-oxide-red font-sans uppercase tracking-wide block mb-3 font-semibold">
             {SHOW_PRODUCT_SPECS ? "Equipment & Machinery Catalog" : "Fleet & Equipment"}
           </span>
           <h1 className="text-display-lg sm:text-[3.5rem] md:text-display-xl font-medium text-earth-black leading-[0.95] mb-6">
@@ -125,13 +125,13 @@ function ProductsContent() {
               {EQUIPMENT_CATEGORIES.map((cat) => (
                 <div
                   key={cat.id}
-                  className="p-4 bg-[#F5F3ED] border border-slab-grey font-mono text-xs"
+                  className="p-4 bg-[#F5F3ED] border border-slab-grey font-sans text-xs"
                 >
-                  <span className="font-bold text-earth-black uppercase tracking-wider block mb-1">
+                  <span className="font-bold text-earth-black uppercase tracking-wide block mb-1">
                     {cat.name}
                   </span>
                   {cat.fleetCount && (
-                    <span className="text-oxide-red text-[11px] font-semibold block mb-2">
+                    <span className="text-oxide-red text-[11px] font-semibold block mb-2 font-sans">
                       {cat.fleetCount}
                     </span>
                   )}
@@ -145,7 +145,7 @@ function ProductsContent() {
 
           {/* Horizontal Category Filter */}
           <div className="flex flex-wrap items-center gap-3 mt-10 pt-6 border-t border-slab-grey">
-            <span className="text-label font-mono text-earth-black uppercase tracking-wider mr-2 font-bold text-xs">
+            <span className="text-label font-sans text-earth-black uppercase tracking-wide mr-2 font-bold text-xs">
               Category:
             </span>
             {CATEGORIES.map((cat) => (
@@ -163,7 +163,7 @@ function ProductsContent() {
             ))}
           </div>
 
-          <div className="mt-4 text-xs font-mono text-quarry-grey">
+          <div className="mt-4 text-xs font-sans text-quarry-grey font-medium">
             Showing <span className="font-semibold text-earth-black">{filteredItems.length}</span> of {ALL_CATALOG_ITEMS.length} items
           </div>
         </div>
@@ -173,9 +173,9 @@ function ProductsContent() {
       <section className="w-full bg-[#EBE8E0] py-20 md:py-28">
         <div className="max-w-content mx-auto px-6 md:px-12">
           {filteredItems.length === 0 ? (
-            <div className="text-center py-20 bg-iron-white border border-slab-grey p-12 max-w-lg mx-auto font-mono">
-              <h3 className="text-heading-3 font-sans text-earth-black mb-2">No items found</h3>
-              <p className="text-quarry-grey text-xs mb-6 font-sans">
+            <div className="text-center py-20 bg-iron-white border border-slab-grey p-12 max-w-lg mx-auto font-sans">
+              <h3 className="text-heading-3 font-medium text-earth-black mb-2">No items found</h3>
+              <p className="text-quarry-grey text-xs mb-6">
                 No equipment or mineral items match the selected category.
               </p>
               <button
@@ -211,16 +211,16 @@ function ProductsContent() {
                           <div className="absolute inset-0 bg-blue-900/10 mix-blend-color pointer-events-none" />
                         )}
                         {SHOW_PRODUCT_SPECS && item.modelNumber && (
-                          <div className="absolute top-3 left-3 bg-earth-black text-iron-white font-mono text-[10px] uppercase tracking-wider px-2 py-0.5">
+                          <div className="absolute top-3 left-3 bg-earth-black text-iron-white font-sans text-[10px] uppercase tracking-wide px-2 py-0.5 font-semibold">
                             {item.modelNumber}
                           </div>
                         )}
-                        <div className="absolute top-3 right-3 bg-earth-black/85 text-iron-white font-mono text-[10px] uppercase tracking-wider px-2 py-0.5">
+                        <div className="absolute top-3 right-3 bg-earth-black/85 text-iron-white font-sans text-[10px] uppercase tracking-wide px-2 py-0.5 font-semibold">
                           {item.category}
                         </div>
                       </div>
 
-                      <span className="font-mono text-xs text-oxide-red uppercase tracking-wider block mb-2 font-bold">
+                      <span className="font-sans text-xs text-oxide-red uppercase tracking-wide block mb-2 font-bold">
                         {item.category}
                       </span>
 
@@ -233,7 +233,7 @@ function ProductsContent() {
                       </p>
 
                       {/* 3 Key Specs in a Small Table */}
-                      <table className="w-full text-xs font-mono mb-6 border border-slab-grey/40">
+                      <table className="w-full text-xs font-sans mb-6 border border-slab-grey/40">
                         <tbody>
                           {item.keySpecs.map((spec, i) => (
                             <tr
@@ -243,7 +243,7 @@ function ProductsContent() {
                               <td className="py-2 px-3 font-semibold text-earth-black border-b border-slab-grey/40">
                                 {spec.label}
                               </td>
-                              <td className="py-2 px-3 text-quarry-grey border-b border-slab-grey/40 text-right">
+                              <td className="py-2 px-3 text-quarry-grey border-b border-slab-grey/40 text-right font-medium">
                                 {spec.value}
                               </td>
                             </tr>
@@ -257,12 +257,12 @@ function ProductsContent() {
                       {isMachinery ? (
                         <Link
                           href={detailHref}
-                          className="text-label font-bold text-earth-black hover:text-oxide-red uppercase tracking-wider font-mono text-xs inline-flex items-center gap-1"
+                          className="text-label font-bold text-earth-black hover:text-oxide-red uppercase tracking-wide font-sans text-xs inline-flex items-center gap-1"
                         >
                           View project / details →
                         </Link>
                       ) : (
-                        <span className="text-xs font-mono text-quarry-grey">
+                        <span className="text-xs font-sans text-quarry-grey font-medium">
                           Audited Off-take Supply
                         </span>
                       )}
@@ -289,7 +289,7 @@ export default function ProductsPage() {
   return (
     <Suspense
       fallback={
-        <div className="min-h-screen pt-[100px] text-center font-mono text-xs">
+        <div className="min-h-screen pt-[100px] text-center font-sans text-xs font-medium text-quarry-grey">
           Loading equipment catalog...
         </div>
       }

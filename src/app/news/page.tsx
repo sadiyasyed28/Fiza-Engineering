@@ -84,7 +84,7 @@ function NewsContent() {
         </div>
 
         <div className="relative z-10 max-w-content mx-auto px-6 md:px-12">
-          <span className="text-label text-oxide-red font-mono uppercase tracking-[0.2em] block mb-3 font-semibold">
+          <span className="text-label text-oxide-red font-sans uppercase tracking-wide block mb-3 font-semibold">
             News
           </span>
           <h1 className="text-display-lg sm:text-[3.5rem] md:text-display-xl font-medium text-earth-black leading-[0.95] mb-6">
@@ -96,7 +96,7 @@ function NewsContent() {
 
           {/* Topic Chips with Article Counts */}
           <div className="flex flex-wrap items-center gap-3 mt-10 pt-6 border-t border-slab-grey">
-            <span className="text-label font-mono text-earth-black uppercase tracking-wider mr-2 font-bold text-xs">
+            <span className="text-label font-sans text-earth-black uppercase tracking-wide mr-2 font-bold text-xs">
               Topic:
             </span>
             {NEWS_CATEGORIES.map((topic) => {
@@ -117,7 +117,7 @@ function NewsContent() {
             })}
           </div>
 
-          <div className="mt-4 text-xs font-mono text-quarry-grey">
+          <div className="mt-4 text-xs font-sans text-quarry-grey font-medium">
             Showing <span className="font-semibold text-earth-black">{filteredArticles.length}</span> of {allVisible.length} articles
           </div>
         </div>
@@ -127,9 +127,9 @@ function NewsContent() {
       <section className="w-full bg-[#EBE8E0] py-16 md:py-24">
         <div className="max-w-content mx-auto px-6 md:px-12">
           {filteredArticles.length === 0 ? (
-            <div className="text-center py-20 bg-iron-white border border-slab-grey p-12 max-w-lg mx-auto font-mono">
-              <h3 className="text-heading-3 font-sans text-earth-black mb-2">No articles found</h3>
-              <p className="text-quarry-grey text-xs mb-6 font-sans">
+            <div className="text-center py-20 bg-iron-white border border-slab-grey p-12 max-w-lg mx-auto font-sans">
+              <h3 className="text-heading-3 font-medium text-earth-black mb-2">No articles found</h3>
+              <p className="text-quarry-grey text-xs mb-6">
                 No published articles match the selected topic.
               </p>
               <button
@@ -159,8 +159,8 @@ function NewsContent() {
 
                   <div className="lg:col-span-5 flex flex-col justify-between h-full">
                     <div>
-                      <div className="flex flex-wrap items-center gap-2 text-xs font-mono text-quarry-grey mb-3">
-                        <span className="bg-earth-black text-iron-white px-2 py-0.5 uppercase tracking-wider text-[10px] font-semibold">
+                      <div className="flex flex-wrap items-center gap-2 text-xs font-sans text-quarry-grey mb-3 font-medium">
+                        <span className="bg-earth-black text-iron-white px-2 py-0.5 uppercase tracking-wide text-[10px] font-semibold">
                           {featured.category}
                         </span>
                         <span>·</span>
@@ -177,13 +177,13 @@ function NewsContent() {
                         {featured.summary}
                       </p>
 
-                      <div className="text-xs font-mono text-quarry-grey mb-6">
+                      <div className="text-xs font-sans text-quarry-grey mb-6">
                         By <span className="font-semibold text-earth-black">{featured.author.name}</span>, {featured.author.role}
                       </div>
                     </div>
 
                     <div className="pt-4 border-t border-slab-grey">
-                      <span className="text-label font-bold text-oxide-red uppercase tracking-wider font-mono inline-flex items-center gap-1">
+                      <span className="text-label font-bold text-oxide-red uppercase tracking-wide font-sans inline-flex items-center gap-1">
                         Read article →
                       </span>
                     </div>
@@ -210,8 +210,8 @@ function NewsContent() {
                           />
                         </div>
 
-                        <div className="flex flex-wrap items-center gap-2 text-xs font-mono text-quarry-grey mb-2">
-                          <span className="text-oxide-red font-semibold uppercase">{article.category}</span>
+                        <div className="flex flex-wrap items-center gap-2 text-xs font-sans text-quarry-grey mb-2 font-medium">
+                          <span className="text-oxide-red font-semibold uppercase tracking-wide">{article.category}</span>
                           <span>·</span>
                           <span>{formatDate(article.date)}</span>
                           <span>·</span>
@@ -226,13 +226,13 @@ function NewsContent() {
                           {article.summary}
                         </p>
 
-                        <div className="text-xs font-mono text-quarry-grey mb-6">
+                        <div className="text-xs font-sans text-quarry-grey mb-6">
                           By <span className="font-semibold text-earth-black">{article.author.name}</span>, {article.author.role}
                         </div>
                       </div>
 
                       <div className="pt-4 border-t border-slab-grey">
-                        <span className="text-label font-bold text-earth-black group-hover:text-oxide-red uppercase tracking-wider font-mono inline-flex items-center gap-1 transition-colors">
+                        <span className="text-label font-bold text-earth-black group-hover:text-oxide-red uppercase tracking-wide font-sans inline-flex items-center gap-1 transition-colors">
                           Read article →
                         </span>
                       </div>
@@ -252,7 +252,7 @@ export default function NewsPage() {
   return (
     <Suspense
       fallback={
-        <div className="min-h-screen pt-[100px] text-center font-mono text-xs">
+        <div className="min-h-screen pt-[100px] text-center font-sans text-xs font-medium text-quarry-grey">
           Loading newsroom...
         </div>
       }

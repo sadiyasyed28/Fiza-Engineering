@@ -149,10 +149,10 @@ export function ContactForm() {
         aria-live="polite"
         className="p-8 md:p-10 bg-iron-white border border-slab-grey border-l-4 border-l-earth-black"
       >
-        <span className="text-label text-oxide-red font-mono uppercase tracking-widest block mb-2">
+        <span className="text-label text-oxide-red font-sans uppercase tracking-wide block mb-2 font-semibold">
           Inquiry Transmitted
         </span>
-        <h3 className="font-sans text-heading-2 font-medium text-earth-black mb-3">
+        <h3 className="text-heading-2 font-medium text-earth-black mb-3">
           Thank you for reaching out
         </h3>
         <p className="text-body-md text-quarry-grey leading-relaxed mb-6 font-sans">
@@ -299,7 +299,7 @@ export function ContactForm() {
           type="submit"
           variant="primary"
           disabled={isSubmitting}
-          className="w-full md:w-auto min-h-[44px] px-8 text-xs font-mono uppercase tracking-widest cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed focus-visible:ring-2 focus-visible:ring-earth-black focus-visible:ring-offset-2"
+          className="w-full md:w-auto min-h-[44px] px-8 text-xs font-sans uppercase tracking-wide cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed focus-visible:ring-2 focus-visible:ring-earth-black focus-visible:ring-offset-2 font-semibold"
         >
           {isSubmitting ? "Sending..." : "Send message"}
         </Button>

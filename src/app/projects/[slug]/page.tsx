@@ -112,20 +112,20 @@ export default function ProjectDetailPage({ params }: Props) {
         <div className="relative z-10 max-w-content mx-auto w-full px-6 md:px-12 pb-14">
           <Link
             href="/projects"
-            className="text-label text-dust-tan font-mono uppercase tracking-[0.2em] inline-flex items-center gap-2 mb-4 hover:text-iron-white transition-colors"
+            className="text-label text-dust-tan font-sans uppercase tracking-wide inline-flex items-center gap-2 mb-4 hover:text-iron-white transition-colors font-semibold"
           >
             ← All Projects
           </Link>
 
-          <div className="flex flex-wrap items-center gap-3 mb-3 font-mono text-xs text-iron-white">
+          <div className="flex flex-wrap items-center gap-3 mb-3 font-sans text-xs text-iron-white">
             <Tag active={project.status === "ACTIVE"}>
               {project.status === "IN_DEVELOPMENT" ? "IN DEVELOPMENT" : project.status}
             </Tag>
-            <span className="flex items-center gap-1.5 bg-earth-black/80 px-2.5 py-0.5 uppercase tracking-wider text-[11px]">
+            <span className="flex items-center gap-1.5 bg-earth-black/80 px-2.5 py-0.5 uppercase tracking-wide text-[11px] font-medium">
               <MapPin size={12} className="text-oxide-red" />
               {project.country}
             </span>
-            <span className="flex items-center gap-1.5 bg-earth-black/80 px-2.5 py-0.5 text-[11px]">
+            <span className="flex items-center gap-1.5 bg-earth-black/80 px-2.5 py-0.5 text-[11px] font-medium">
               <Calendar size={12} className="text-dust-tan" />
               {years}
             </span>
@@ -144,7 +144,7 @@ export default function ProjectDetailPage({ params }: Props) {
             {/* Left Column: Summary & Scope (8 Columns) */}
             <div className="lg:col-span-8 space-y-12">
               <div>
-                <span className="text-label text-oxide-red font-mono uppercase tracking-widest block mb-3 font-semibold">
+                <span className="text-label text-oxide-red font-sans uppercase tracking-wide block mb-3 font-semibold">
                   Project Summary
                 </span>
                 <p className="text-body-lg text-earth-black leading-relaxed font-medium">
@@ -154,10 +154,10 @@ export default function ProjectDetailPage({ params }: Props) {
 
               {/* Key Facts List */}
               <div className="border-t border-slab-grey pt-8">
-                <span className="text-label text-earth-black font-mono uppercase tracking-wider block mb-4 font-semibold">
+                <span className="text-label text-earth-black font-sans uppercase tracking-wide block mb-4 font-semibold">
                   Key Operational Facts
                 </span>
-                <ul className="space-y-3 font-mono text-sm text-earth-black/90">
+                <ul className="space-y-3 font-sans text-sm text-earth-black/90">
                   {project.keyFacts.map((fact, idx) => (
                     <li key={idx} className="flex items-start gap-3">
                       <span className="w-2 h-2 bg-oxide-red inline-block mt-1.5 shrink-0" />
@@ -171,7 +171,7 @@ export default function ProjectDetailPage({ params }: Props) {
               {project.challenge && project.solution && (
                 <div className="border-t border-slab-grey pt-8 space-y-6">
                   <div>
-                    <span className="text-label text-earth-black font-mono uppercase tracking-wider block mb-2 font-semibold">
+                    <span className="text-label text-earth-black font-sans uppercase tracking-wide block mb-2 font-semibold">
                       Operational Context
                     </span>
                     <p className="text-body text-quarry-grey leading-relaxed">
@@ -179,7 +179,7 @@ export default function ProjectDetailPage({ params }: Props) {
                     </p>
                   </div>
                   <div>
-                    <span className="text-label text-earth-black font-mono uppercase tracking-wider block mb-2 font-semibold">
+                    <span className="text-label text-earth-black font-sans uppercase tracking-wide block mb-2 font-semibold">
                       Engineering Delivery
                     </span>
                     <p className="text-body text-quarry-grey leading-relaxed">
@@ -193,31 +193,31 @@ export default function ProjectDetailPage({ params }: Props) {
             {/* Right Column: Metadata, Related Service, Related News, CTA (4 Columns) */}
             <aside className="lg:col-span-4 flex flex-col space-y-8">
               {/* Project Meta Card */}
-              <div className="bg-[#EBE8E0] border border-slab-grey p-6 font-mono text-xs space-y-4">
-                <span className="text-label text-earth-black uppercase tracking-wider block pb-2 border-b border-slab-grey font-bold">
+              <div className="bg-[#EBE8E0] border border-slab-grey p-6 font-sans text-xs space-y-4">
+                <span className="text-label text-earth-black uppercase tracking-wide block pb-2 border-b border-slab-grey font-bold">
                   Project Data
                 </span>
                 <div>
-                  <span className="block text-quarry-grey uppercase text-[10px] mb-0.5">Sector</span>
+                  <span className="block text-quarry-grey uppercase text-[10px] mb-0.5 font-medium tracking-wide">Sector</span>
                   <span className="font-semibold text-earth-black text-sm">{project.sector}</span>
                 </div>
                 <div>
-                  <span className="block text-quarry-grey uppercase text-[10px] mb-0.5">Country / Location</span>
+                  <span className="block text-quarry-grey uppercase text-[10px] mb-0.5 font-medium tracking-wide">Country / Location</span>
                   <span className="font-semibold text-earth-black text-sm">{project.country}</span>
                 </div>
                 <div>
-                  <span className="block text-quarry-grey uppercase text-[10px] mb-0.5">Operational Status</span>
+                  <span className="block text-quarry-grey uppercase text-[10px] mb-0.5 font-medium tracking-wide">Operational Status</span>
                   <span className="font-semibold text-earth-black text-sm">
                     {project.status === "IN_DEVELOPMENT" ? "IN DEVELOPMENT" : project.status}
                   </span>
                 </div>
                 <div>
-                  <span className="block text-quarry-grey uppercase text-[10px] mb-0.5">Timeline</span>
+                  <span className="block text-quarry-grey uppercase text-[10px] mb-0.5 font-medium tracking-wide">Timeline</span>
                   <span className="font-semibold text-earth-black text-sm">{years}</span>
                 </div>
                 {project.client && (
                   <div>
-                    <span className="block text-quarry-grey uppercase text-[10px] mb-0.5">Contracting Entity</span>
+                    <span className="block text-quarry-grey uppercase text-[10px] mb-0.5 font-medium tracking-wide">Contracting Entity</span>
                     <span className="font-semibold text-earth-black text-sm">{project.client}</span>
                   </div>
                 )}
@@ -226,7 +226,7 @@ export default function ProjectDetailPage({ params }: Props) {
               {/* Related Service Link */}
               {project.relatedServiceSlug && (
                 <div className="bg-iron-white border border-slab-grey p-6">
-                  <div className="flex items-center gap-2 mb-2 text-oxide-red font-mono text-xs uppercase tracking-wider font-semibold">
+                  <div className="flex items-center gap-2 mb-2 text-oxide-red font-sans text-xs uppercase tracking-wide font-semibold">
                     <Layers size={14} />
                     <span>Related Service</span>
                   </div>
@@ -235,7 +235,7 @@ export default function ProjectDetailPage({ params }: Props) {
                   </h4>
                   <Link
                     href={`/capabilities/${project.relatedServiceSlug}`}
-                    className="text-label font-bold text-oxide-red uppercase tracking-wider font-mono inline-flex items-center gap-1 hover:underline"
+                    className="text-label font-bold text-oxide-red uppercase tracking-wide font-sans inline-flex items-center gap-1 hover:underline"
                   >
                     View service details <ArrowRight size={13} />
                   </Link>
@@ -245,7 +245,7 @@ export default function ProjectDetailPage({ params }: Props) {
               {/* Related News Link (only rendered if news article exists) */}
               {project.relatedNewsSlug && (
                 <div className="bg-iron-white border border-slab-grey p-6">
-                  <div className="flex items-center gap-2 mb-2 text-earth-black font-mono text-xs uppercase tracking-wider font-semibold">
+                  <div className="flex items-center gap-2 mb-2 text-earth-black font-sans text-xs uppercase tracking-wide font-semibold">
                     <Newspaper size={14} className="text-oxide-red" />
                     <span>Related Dispatch</span>
                   </div>
@@ -254,7 +254,7 @@ export default function ProjectDetailPage({ params }: Props) {
                   </h4>
                   <Link
                     href={`/news/${project.relatedNewsSlug}`}
-                    className="text-label font-bold text-oxide-red uppercase tracking-wider font-mono inline-flex items-center gap-1 hover:underline"
+                    className="text-label font-bold text-oxide-red uppercase tracking-wide font-sans inline-flex items-center gap-1 hover:underline"
                   >
                     Read official news dispatch <ArrowRight size={13} />
                   </Link>
@@ -273,7 +273,7 @@ export default function ProjectDetailPage({ params }: Props) {
                       ? `/contact?type=${project.relatedServiceSlug}`
                       : "/contact"
                   }
-                  className="btn-primary !bg-oxide-red hover:!bg-iron-white hover:!text-earth-black text-iron-white w-full text-center text-xs py-3 font-mono uppercase tracking-wider font-semibold inline-block transition-colors"
+                  className="btn-primary !bg-oxide-red hover:!bg-iron-white hover:!text-earth-black text-iron-white w-full text-center text-xs py-3 font-sans uppercase tracking-wide font-semibold inline-block transition-colors"
                 >
                   Contact project team →
                 </Link>

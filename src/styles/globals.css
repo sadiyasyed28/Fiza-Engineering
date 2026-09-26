@@ -14,9 +14,9 @@
   --field-green: #4A6741;
   --deep-ore: #8B4D32;
 
-  --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --font-heading: var(--font-heading, 'Newsreader', Georgia, serif);
+  --font-body: var(--font-body, 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  --font-mono: var(--font-mono, 'JetBrains Mono', 'Fira Code', monospace);
 }
 
 /* Strict Design System Reset */
@@ -59,11 +59,18 @@ textarea,
 }
 
 /* Typography Overrides */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
   font-family: var(--font-heading);
   font-weight: 500;
   color: var(--earth-black);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.015em;
+}
+
+h4, h5, h6 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--earth-black);
+  letter-spacing: -0.005em;
 }
 
 p {
@@ -95,9 +102,10 @@ p {
   background: var(--earth-black);
   color: var(--iron-white);
   padding: 14px 32px;
+  font-family: var(--font-body);
   font-size: 0.875rem;
   font-weight: 600;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   border: none;
   border-radius: 0;
@@ -120,9 +128,10 @@ p {
   padding: 12px 30px;
   border: 2px solid var(--earth-black);
   border-radius: 0;
+  font-family: var(--font-body);
   font-size: 0.875rem;
   font-weight: 600;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   cursor: pointer;
   transition: all 200ms ease;
@@ -321,7 +330,7 @@ select.form-input:focus-visible {
   display: block;
   font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.035em;
   text-transform: uppercase;
   color: var(--quarry-grey);
   margin-bottom: 4px;
@@ -339,7 +348,7 @@ select.form-input:focus-visible {
   padding: 4px 12px;
   font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   background: var(--slab-grey);
   color: var(--earth-black);

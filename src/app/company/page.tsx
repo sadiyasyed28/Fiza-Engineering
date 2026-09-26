@@ -94,7 +94,7 @@ export default function CompanyPage() {
         />
         <div className="dark-overlay-heavy" />
         <div className="relative z-10 max-w-content mx-auto w-full px-6 md:px-12 pb-16">
-          <span className="text-label text-dust-tan font-mono uppercase tracking-[0.2em] block mb-3">
+          <span className="text-label text-dust-tan font-sans uppercase tracking-wide block mb-3 font-semibold">
             Company Profile & History
           </span>
           <h1 className="text-display-lg sm:text-[3.5rem] md:text-display-xl font-medium text-iron-white leading-[0.95]">
@@ -113,7 +113,7 @@ export default function CompanyPage() {
             <div className="lg:col-span-7">
               <div className="flex items-center gap-2 mb-3">
                 <span className="w-2 h-2 bg-oxide-red inline-block" />
-                <span className="text-label text-earth-black font-mono tracking-widest font-semibold">
+                <span className="text-label text-earth-black font-sans uppercase tracking-wide font-semibold">
                   Who We Are
                 </span>
               </div>
@@ -140,7 +140,7 @@ export default function CompanyPage() {
                 sizes="(max-width: 1024px) 100vw, 42vw"
                 className="img-cover object-center"
               />
-              <div className="absolute bottom-3 left-3 bg-earth-black text-iron-white px-3 py-1 font-mono text-[10px] uppercase">
+              <div className="absolute bottom-3 left-3 bg-earth-black text-iron-white px-3 py-1 font-sans text-[10px] uppercase tracking-wide font-medium">
                 Engineers reviewing site plans
               </div>
             </div>
@@ -152,7 +152,7 @@ export default function CompanyPage() {
       <section className="w-full bg-iron-white border-t border-b border-slab-grey">
         <div className="max-w-content mx-auto px-6 md:px-12 py-20 md:py-28">
           <div className="mb-14">
-            <span className="text-label text-oxide-red font-mono uppercase tracking-widest block mb-2">
+            <span className="text-label text-oxide-red font-sans uppercase tracking-wide block mb-2 font-semibold">
               Foundational Tenets
             </span>
             <h2 className="text-display-lg font-medium text-earth-black leading-[0.95]">
@@ -217,7 +217,7 @@ export default function CompanyPage() {
       <section className="w-full bg-[#E5E2D9] py-20 md:py-28 border-t border-b border-slab-grey">
         <div className="max-w-content mx-auto px-6 md:px-12">
           <div className="mb-14">
-            <span className="text-label text-oxide-red font-mono uppercase tracking-widest block mb-2">
+            <span className="text-label text-oxide-red font-sans uppercase tracking-wide block mb-2 font-semibold">
               Operational Scale
             </span>
             <h2 className="text-display-lg font-medium text-earth-black leading-[0.95]">
@@ -240,7 +240,7 @@ export default function CompanyPage() {
                         </span>
                       )}
                     </div>
-                    <span className="font-mono text-[10px] text-quarry-grey uppercase tracking-wider block">
+                    <span className="font-sans text-[10px] text-quarry-grey uppercase tracking-wide block font-medium">
                       {item.label}
                     </span>
                   </div>
@@ -261,7 +261,7 @@ export default function CompanyPage() {
       <section className="w-full py-20 md:py-28 bg-iron-white border-b border-slab-grey">
         <div className="max-w-content mx-auto px-6 md:px-12">
           <div className="mb-14">
-            <span className="text-label text-oxide-red font-mono uppercase tracking-widest block mb-2">
+            <span className="text-label text-oxide-red font-sans uppercase tracking-wide block mb-2 font-semibold">
               Operating Methodology
             </span>
             <h2 className="text-display-lg font-medium text-earth-black leading-[0.95]">
@@ -272,7 +272,7 @@ export default function CompanyPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {PROCESS_STEPS.map((step) => (
               <div key={step.step} className="border-t-2 border-earth-black pt-6">
-                <span className="font-mono text-2xl font-bold text-oxide-red block mb-3">
+                <span className="font-sans text-2xl font-bold text-oxide-red block mb-3">
                   {step.step}
                 </span>
                 <h3 className="text-heading-3 font-medium text-earth-black mb-2">
@@ -294,7 +294,7 @@ export default function CompanyPage() {
       <section id="leadership" className="w-full bg-iron-white py-20 md:py-28 border-b border-slab-grey">
         <div className="max-w-content mx-auto px-6 md:px-12">
           <div className="mb-14">
-            <span className="text-label text-oxide-red font-mono uppercase tracking-widest block mb-2">
+            <span className="text-label text-oxide-red font-sans uppercase tracking-wide block mb-2 font-semibold">
               Executive Governance
             </span>
             <h2 className="text-display-lg font-medium text-earth-black leading-[0.95]">
@@ -318,7 +318,7 @@ export default function CompanyPage() {
                 <h3 className="text-heading-2 font-medium text-earth-black mb-1">
                   {FOUNDER_INFO.name}
                 </h3>
-                <span className="text-label text-oxide-red font-mono uppercase tracking-wider block mb-4">
+                <span className="text-label text-oxide-red font-sans uppercase tracking-wide block mb-4 font-semibold">
                   {FOUNDER_INFO.title}
                 </span>
 
@@ -330,7 +330,7 @@ export default function CompanyPage() {
                   <p className="font-heading text-sm sm:text-base italic text-earth-black leading-snug">
                     &ldquo;{FOUNDER_INFO.quote}&rdquo;
                   </p>
-                  <cite className="block text-[11px] font-mono text-quarry-grey uppercase tracking-wider mt-2 not-italic">
+                  <cite className="block text-[11px] font-sans text-quarry-grey uppercase tracking-wide mt-2 not-italic font-medium">
                     — {FOUNDER_INFO.name}, {FOUNDER_INFO.title}
                   </cite>
                 </blockquote>
@@ -346,7 +346,7 @@ export default function CompanyPage() {
           <div className="mb-14">
             <div className="flex items-center gap-2 mb-3">
               <span className="w-2 h-2 bg-oxide-red inline-block" />
-              <span className="text-label text-earth-black font-mono tracking-widest font-semibold">
+              <span className="text-label text-earth-black font-sans uppercase tracking-wide font-semibold">
                 Operating Footprint
               </span>
             </div>
@@ -366,10 +366,10 @@ export default function CompanyPage() {
               >
                 <div>
                   <div className="flex items-center justify-between mb-4 pb-3 border-b border-slab-grey">
-                    <span className="font-mono text-xs font-bold uppercase tracking-wider text-oxide-red">
+                    <span className="font-sans text-xs font-bold uppercase tracking-wide text-oxide-red">
                       {office.country}
                     </span>
-                    <span className="font-mono text-[11px] text-quarry-grey uppercase">
+                    <span className="font-sans text-[11px] text-quarry-grey uppercase tracking-wide font-medium">
                       Operational Hub
                     </span>
                   </div>
@@ -383,7 +383,7 @@ export default function CompanyPage() {
                     {office.type}
                   </p>
 
-                  <div className="space-y-2 text-xs font-mono text-quarry-grey border-t border-slab-grey/40 pt-4">
+                  <div className="space-y-2 text-xs font-sans text-quarry-grey border-t border-slab-grey/40 pt-4 font-medium">
                     <div className="flex items-start gap-2">
                       <MapPin size={14} className="text-oxide-red mt-0.5 shrink-0" />
                       <span>{office.address}</span>
@@ -392,12 +392,12 @@ export default function CompanyPage() {
                 </div>
 
                 <div className="pt-6 mt-6 border-t border-slab-grey flex items-center justify-between">
-                  <span className="font-mono text-[11px] text-earth-black">
+                  <span className="font-sans text-[11px] text-earth-black font-medium">
                     {office.email}
                   </span>
                   <Link
                     href="/contact"
-                    className="text-label font-mono font-bold text-oxide-red uppercase tracking-wider hover:underline"
+                    className="text-label font-sans font-bold text-oxide-red uppercase tracking-wide hover:underline"
                   >
                     Office Details →
                   </Link>

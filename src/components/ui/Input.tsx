@@ -35,7 +35,7 @@ export function Input({ label, error, className, id, ...props }: InputProps) {
           id={errorId}
           role="alert"
           aria-live="polite"
-          className="text-xs text-oxide-red mt-1 font-mono uppercase tracking-wider"
+          className="text-xs text-oxide-red mt-1 font-sans uppercase tracking-wide font-medium"
         >
           {error}
         </span>
@@ -127,7 +127,7 @@ export function Textarea({ label, error, className, id, rows = 4, ...props }: Te
           id={errorId}
           role="alert"
           aria-live="polite"
-          className="text-xs text-oxide-red mt-1 font-mono uppercase tracking-wider"
+          className="text-xs text-oxide-red mt-1 font-sans uppercase tracking-wide font-medium"
         >
           {error}
         </span>

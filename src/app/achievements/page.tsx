@@ -34,16 +34,16 @@ function AchievementCard({ item }: { item: Achievement }) {
         {/* Card Header: Category & Year */}
         <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
           <div className="flex items-center gap-2">
-            <span className="font-mono text-xs text-oxide-red uppercase tracking-wider font-semibold">
+            <span className="font-sans text-xs text-oxide-red uppercase tracking-wide font-semibold">
               {item.category}
             </span>
             {!item.verified && (
-              <span className="text-[10px] font-mono uppercase tracking-wider text-quarry-grey bg-[#EBE8E0] px-2 py-0.5 border border-slab-grey">
+              <span className="text-[10px] font-sans uppercase tracking-wide text-quarry-grey bg-[#EBE8E0] px-2 py-0.5 border border-slab-grey font-medium">
                 Pending Verification
               </span>
             )}
           </div>
-          <span className="font-mono text-xs text-earth-black font-bold">
+          <span className="font-sans text-xs text-earth-black font-bold">
             {item.year}
           </span>
         </div>
@@ -54,7 +54,7 @@ function AchievementCard({ item }: { item: Achievement }) {
         </h3>
 
         {/* Issuer / Auditor */}
-        <div className="text-label text-quarry-grey font-mono uppercase tracking-wider block mb-3">
+        <div className="text-label text-quarry-grey font-sans uppercase tracking-wide block mb-3 font-medium">
           {isMilestone ? (
             <span>Benchmark: {item.issuer}</span>
           ) : (
@@ -69,7 +69,7 @@ function AchievementCard({ item }: { item: Achievement }) {
 
         {/* Certification Details: Certificate Number & PDF link */}
         {isCertification && (
-          <div className="pt-4 border-t border-slab-grey/40 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs font-mono">
+          <div className="pt-4 border-t border-slab-grey/40 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs font-sans">
             <div className="text-quarry-grey">
               <span className="text-earth-black font-semibold">Certificate No: </span>
               <span>{item.certificateNumber || "Pending owner submission"}</span>
@@ -98,7 +98,7 @@ function AchievementCard({ item }: { item: Achievement }) {
 
         {/* Non-certification evidence link if available */}
         {!isCertification && item.evidenceUrl && (
-          <div className="pt-4 border-t border-slab-grey/40 text-xs font-mono">
+          <div className="pt-4 border-t border-slab-grey/40 text-xs font-sans">
             <a
               href={item.evidenceUrl}
               target="_blank"
@@ -200,7 +200,7 @@ export default function AchievementsPage({
         </div>
 
         <div className="relative z-10 max-w-content mx-auto px-6 md:px-12">
-          <span className="text-label text-oxide-red font-mono uppercase tracking-[0.2em] block mb-3">
+          <span className="text-label text-oxide-red font-sans uppercase tracking-wide block mb-3 font-semibold">
             Standards, Accreditations & Milestones
           </span>
           <h1 className="text-display-lg sm:text-[3.5rem] md:text-display-xl font-medium text-earth-black leading-[0.95] mb-6">
@@ -212,7 +212,7 @@ export default function AchievementsPage({
 
           {/* Filter Chips */}
           <div className="flex flex-wrap items-center gap-3 mt-10 pt-6 border-t border-slab-grey">
-            <span className="text-label font-mono text-earth-black uppercase tracking-wider mr-2">
+            <span className="text-label font-sans text-earth-black uppercase tracking-wide mr-2 font-bold text-xs">
               Category:
             </span>
             {ACHIEVEMENT_CATEGORIES.map((cat) => {
@@ -243,11 +243,11 @@ export default function AchievementsPage({
         <div className="max-w-content mx-auto px-6 md:px-12">
           {filteredItems.length === 0 ? (
             /* Empty State */
-            <div className="bg-iron-white border border-slab-grey p-12 text-center max-w-2xl mx-auto my-8 font-mono">
-              <span className="text-label text-oxide-red uppercase tracking-widest block mb-2">
+            <div className="bg-iron-white border border-slab-grey p-12 text-center max-w-2xl mx-auto my-8 font-sans">
+              <span className="text-label text-oxide-red font-sans uppercase tracking-wide block mb-2 font-semibold">
                 No Results Found
               </span>
-              <h3 className="font-sans text-heading-2 font-medium text-earth-black mb-3">
+              <h3 className="text-heading-2 font-medium text-earth-black mb-3">
                 No credentials listed under {selectedCategory}
               </h3>
               <p className="text-body-sm text-quarry-grey mb-6 font-sans">
@@ -268,7 +268,7 @@ export default function AchievementsPage({
               {thirdPartyItems.length > 0 && (
                 <div>
                   <div className="mb-10">
-                    <span className="text-label text-oxide-red font-mono uppercase tracking-widest block mb-1">
+                    <span className="text-label text-oxide-red font-sans uppercase tracking-wide block mb-1 font-semibold">
                       External Governance
                     </span>
                     <h2 className="text-heading-1 font-medium text-earth-black">
@@ -288,7 +288,7 @@ export default function AchievementsPage({
               {milestoneItems.length > 0 && (
                 <div className="pt-8 border-t border-slab-grey/50">
                   <div className="mb-10">
-                    <span className="text-label text-oxide-red font-mono uppercase tracking-widest block mb-1">
+                    <span className="text-label text-oxide-red font-sans uppercase tracking-wide block mb-1 font-semibold">
                       Internal Operations
                     </span>
                     <h2 className="text-heading-1 font-medium text-earth-black">
@@ -311,7 +311,7 @@ export default function AchievementsPage({
             /* Single Category Filtered View */
             <div>
               <div className="mb-10">
-                <span className="text-label text-oxide-red font-mono uppercase tracking-widest block mb-1">
+                <span className="text-label text-oxide-red font-sans uppercase tracking-wide block mb-1 font-semibold">
                   Filter: {selectedCategory}
                 </span>
                 <h2 className="text-heading-1 font-medium text-earth-black">

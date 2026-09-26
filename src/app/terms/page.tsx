@@ -29,7 +29,7 @@ export default function TermsPage() {
       {/* Editorial Header */}
       <section className="bg-iron-white py-16 md:py-24 border-b border-slab-grey">
         <div className="max-w-content mx-auto px-6 md:px-12">
-          <span className="text-label text-oxide-red font-mono uppercase tracking-[0.2em] block mb-3">
+          <span className="text-label text-oxide-red font-sans uppercase tracking-wide block mb-3 font-semibold">
             Commercial Governance
           </span>
           <h1 className="text-display-lg sm:text-[3.25rem] font-medium text-earth-black leading-[0.95] mb-6">
@@ -38,7 +38,7 @@ export default function TermsPage() {
           <p className="text-body-lg text-quarry-grey max-w-3xl leading-relaxed">
             These terms define the operating conditions, procurement standards, and contractual frameworks governing all direct engineering, concession operations, equipment supply, and commodity trading engagements.
           </p>
-          <div className="mt-8 flex items-center gap-4 text-xs font-mono text-quarry-grey">
+          <div className="mt-8 flex items-center gap-4 text-xs font-sans text-quarry-grey">
             <span>Effective Date: January 1, {SITE_FACTS.foundedYear + SITE_FACTS.yearsInBusiness}</span>
             <span>·</span>
             <span>Document Ref: FEC-OPS-COND-04</span>
@@ -58,7 +58,7 @@ export default function TermsPage() {
               <p className="text-body text-quarry-grey leading-relaxed mb-4">
                 Fiza Engineering Corporation undertakes multidisciplinary contracts covering overburden stripping, turnkey plant engineering, heavy-haul railway modernizations, and physical mineral trading. All engagements are executed under formal commercial EPC agreements or bilaterally ratified concessions.
               </p>
-              <div className="p-4 bg-[#F5F3ED] border border-dashed border-slab-grey text-quarry-grey text-sm font-mono">
+              <div className="p-4 bg-[#F5F3ED] border border-dashed border-slab-grey text-quarry-grey text-sm font-sans">
                 [LEGAL TEXT TO BE SUPPLIED: Formal contractual scope definitions, project milestone verification procedures, and turnkey handover acceptance criteria.]
               </div>
             </div>
@@ -71,7 +71,7 @@ export default function TermsPage() {
               <p className="text-body text-quarry-grey leading-relaxed mb-4">
                 Submissions through our digital procurement channels are evaluated on technical capability, safety accreditations, and equipment availability. Proposals submitted do not constitute a binding obligation until formalized by an authorized executive contract.
               </p>
-              <div className="p-4 bg-[#F5F3ED] border border-dashed border-slab-grey text-quarry-grey text-sm font-mono">
+              <div className="p-4 bg-[#F5F3ED] border border-dashed border-slab-grey text-quarry-grey text-sm font-sans">
                 [LEGAL TEXT TO BE SUPPLIED: Bid bonding conditions, performance guarantee requirements, and vendor vetting protocols under international engineering standards.]
               </div>
             </div>
@@ -84,7 +84,7 @@ export default function TermsPage() {
               <p className="text-body text-quarry-grey leading-relaxed mb-4">
                 All personnel, contractor representatives, and third-party inspectors accessing active mine pits, railway tracks, or heavy equipment depots must strictly adhere to ISO 45001 safety mandates and local statutory mining regulations.
               </p>
-              <div className="p-4 bg-[#F5F3ED] border border-dashed border-slab-grey text-quarry-grey text-sm font-mono">
+              <div className="p-4 bg-[#F5F3ED] border border-dashed border-slab-grey text-quarry-grey text-sm font-sans">
                 [LEGAL TEXT TO BE SUPPLIED: Comprehensive liability releases, PPE compliance enforcement, and emergency site evacuation indemnity protocols.]
               </div>
             </div>
@@ -97,7 +97,7 @@ export default function TermsPage() {
               <p className="text-body text-quarry-grey leading-relaxed mb-4">
                 Published equipment specifications, machine tonnages, and engine ratings represent engineered nominal standards under benchmark conditions. Exact operational throughput depends on geotechnical parameters, fuel quality, and site topography.
               </p>
-              <div className="p-4 bg-[#F5F3ED] border border-dashed border-slab-grey text-quarry-grey text-sm font-mono">
+              <div className="p-4 bg-[#F5F3ED] border border-dashed border-slab-grey text-quarry-grey text-sm font-sans">
                 [LEGAL TEXT TO BE SUPPLIED: Technical warranty limitations, OEM equipment tolerances, and wear-part replacement liability terms.]
               </div>
             </div>
@@ -110,16 +110,16 @@ export default function TermsPage() {
               <p className="text-body text-quarry-grey leading-relaxed mb-4">
                 Unless stipulated otherwise in a specific bilateral concession, all commercial agreements and site operations are governed under Dubai International Financial Centre (DIFC) arbitration rules or the International Chamber of Commerce (ICC), Paris.
               </p>
-              <div className="p-4 bg-[#F5F3ED] border border-dashed border-slab-grey text-quarry-grey text-sm font-mono">
+              <div className="p-4 bg-[#F5F3ED] border border-dashed border-slab-grey text-quarry-grey text-sm font-sans">
                 [LEGAL TEXT TO BE SUPPLIED: Arbitration venue specifications, choice of law clauses, and force majeure parameters covering geopolitical and climatic disruptions.]
               </div>
             </div>
 
             <div className="pt-6 border-t border-slab-grey flex items-center justify-between">
-              <Link href="/privacy" className="text-xs font-mono font-bold text-oxide-red uppercase tracking-wider hover:underline">
+              <Link href="/privacy" className="text-xs font-sans font-semibold text-oxide-red uppercase tracking-wide hover:underline">
                 View Privacy Policy →
               </Link>
-              <Link href="/contact" className="text-xs font-mono text-quarry-grey uppercase tracking-wider hover:text-earth-black">
+              <Link href="/contact" className="text-xs font-sans font-medium text-quarry-grey uppercase tracking-wide hover:text-earth-black">
                 Contact Legal Operations
               </Link>
             </div>

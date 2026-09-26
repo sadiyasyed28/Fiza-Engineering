@@ -113,12 +113,12 @@ export default function ArticlePage({ params }: Props) {
         <div className="max-w-content mx-auto px-6 md:px-12">
           <Link
             href="/news"
-            className="text-label text-oxide-red font-mono uppercase tracking-[0.2em] inline-flex items-center gap-2 mb-4 hover:underline"
+            className="text-label text-oxide-red font-sans uppercase tracking-wide inline-flex items-center gap-2 mb-4 hover:underline font-semibold"
           >
             ← Back To News
           </Link>
-          <div className="flex flex-wrap items-center gap-3 text-xs font-mono text-quarry-grey mb-4">
-            <span className="bg-earth-black text-iron-white px-2 py-0.5 uppercase tracking-wider text-[10px] font-semibold">
+          <div className="flex flex-wrap items-center gap-3 text-xs font-sans text-quarry-grey mb-4 font-medium">
+            <span className="bg-earth-black text-iron-white px-2 py-0.5 uppercase tracking-wide text-[10px] font-semibold">
               {article.category}
             </span>
             <span>PUBLISHED {formatDate(article.date)}</span>
@@ -128,7 +128,7 @@ export default function ArticlePage({ params }: Props) {
           <h1 className="text-display-lg sm:text-[3rem] font-medium text-earth-black leading-[1.05] max-w-4xl mb-4">
             {article.title}
           </h1>
-          <div className="text-sm font-mono text-quarry-grey">
+          <div className="text-sm font-sans text-quarry-grey">
             By <span className="font-semibold text-earth-black">{article.author.name}</span>, {article.author.role}
           </div>
         </div>
@@ -146,7 +146,7 @@ export default function ArticlePage({ params }: Props) {
               sizes="100vw"
               className="img-cover"
             />
-            <div className="absolute bottom-3 left-3 bg-earth-black text-iron-white font-mono text-[10px] px-2.5 py-1 uppercase tracking-wider">
+            <div className="absolute bottom-3 left-3 bg-earth-black text-iron-white font-sans text-[10px] px-2.5 py-1 uppercase tracking-wide font-medium">
               OFFICIAL DISPATCH ARCHIVE · {article.category}
             </div>
           </div>
@@ -183,11 +183,11 @@ export default function ArticlePage({ params }: Props) {
 
               {/* Pull Quote */}
               {article.pullQuote && (
-                <div className="pull-quote my-12 p-6 bg-[#F5F3ED] border-l-4 border-oxide-red font-mono">
-                  <p className="text-heading-3 font-medium italic text-earth-black leading-snug font-sans text-lg">
+                <div className="pull-quote my-12 p-6 bg-[#F5F3ED] border-l-4 border-oxide-red font-sans">
+                  <p className="font-heading text-xl md:text-2xl font-normal italic text-earth-black leading-snug">
                     &ldquo;{article.pullQuote.quote}&rdquo;
                   </p>
-                  <span className="block text-label font-mono not-italic text-quarry-grey uppercase tracking-wider mt-3 text-xs">
+                  <span className="block text-label font-sans not-italic text-quarry-grey uppercase tracking-wide mt-3 text-xs font-medium">
                     — {article.pullQuote.author}
                   </span>
                 </div>
@@ -201,8 +201,8 @@ export default function ArticlePage({ params }: Props) {
               </div>
 
               {/* Share Links */}
-              <div className="mt-10 pt-6 border-t border-slab-grey flex flex-wrap items-center justify-between gap-4 font-mono text-xs">
-                <span className="text-earth-black font-semibold uppercase tracking-wider">
+              <div className="mt-10 pt-6 border-t border-slab-grey flex flex-wrap items-center justify-between gap-4 font-sans text-xs">
+                <span className="text-earth-black font-semibold uppercase tracking-wide">
                   Share Dispatch:
                 </span>
                 <div className="flex items-center gap-3">
@@ -236,8 +236,8 @@ export default function ArticlePage({ params }: Props) {
             <aside className="lg:col-span-4 flex flex-col space-y-8">
               {/* Related Project Card */}
               {relatedProject && (
-                <div className="bg-[#EBE8E0] p-6 border border-slab-grey font-mono text-xs">
-                  <span className="text-label text-earth-black uppercase tracking-wider block mb-2 font-bold pb-2 border-b border-slab-grey">
+                <div className="bg-[#EBE8E0] p-6 border border-slab-grey font-sans text-xs">
+                  <span className="text-label text-earth-black uppercase tracking-wide block mb-2 font-bold pb-2 border-b border-slab-grey">
                     Related Project
                   </span>
                   <div className="relative aspect-[16/10] w-full overflow-hidden my-3 border border-slab-grey">
@@ -248,7 +248,7 @@ export default function ArticlePage({ params }: Props) {
                       className="img-cover"
                     />
                   </div>
-                  <span className="font-mono text-[10px] text-oxide-red uppercase tracking-wider block mb-1">
+                  <span className="font-sans text-[10px] text-oxide-red uppercase tracking-wide block mb-1 font-medium">
                     {relatedProject.country} · {relatedProject.sector}
                   </span>
                   <h4 className="text-heading-3 font-medium text-earth-black text-sm mb-3 leading-snug font-sans">
@@ -256,7 +256,7 @@ export default function ArticlePage({ params }: Props) {
                   </h4>
                   <Link
                     href={`/projects/${relatedProject.slug}`}
-                    className="text-label font-bold text-oxide-red uppercase tracking-wider hover:underline block"
+                    className="text-label font-bold text-oxide-red uppercase tracking-wide hover:underline block font-sans"
                   >
                     View project →
                   </Link>
@@ -264,8 +264,8 @@ export default function ArticlePage({ params }: Props) {
               )}
 
               {/* Corporate Dispatches Inquiries */}
-              <div className="bg-[#EBE8E0] p-6 border border-slab-grey font-mono text-xs">
-                <span className="text-label text-earth-black uppercase tracking-wider block mb-3 pb-2 border-b border-slab-grey font-bold">
+              <div className="bg-[#EBE8E0] p-6 border border-slab-grey font-sans text-xs">
+                <span className="text-label text-earth-black uppercase tracking-wide block mb-3 pb-2 border-b border-slab-grey font-bold">
                   Media & Press Desk
                 </span>
                 <p className="text-quarry-grey leading-relaxed mb-4 font-sans text-xs">
@@ -273,7 +273,7 @@ export default function ArticlePage({ params }: Props) {
                 </p>
                 <Link
                   href="/contact"
-                  className="text-label font-bold text-oxide-red uppercase tracking-wider hover:underline block"
+                  className="text-label font-bold text-oxide-red uppercase tracking-wide hover:underline block font-sans"
                 >
                   Media Relations Inquiry →
                 </Link>
@@ -282,7 +282,7 @@ export default function ArticlePage({ params }: Props) {
               {/* Related Stories */}
               {relatedArticles.length > 0 && (
                 <div>
-                  <span className="text-label text-earth-black font-mono uppercase tracking-wider block mb-4 font-bold text-xs">
+                  <span className="text-label text-earth-black font-sans uppercase tracking-wide block mb-4 font-bold text-xs">
                     More News
                   </span>
                   <div className="space-y-4">
@@ -292,7 +292,7 @@ export default function ArticlePage({ params }: Props) {
                         href={`/news/${rel.slug}`}
                         className="group block p-4 border border-slab-grey bg-iron-white hover:border-earth-black transition-colors"
                       >
-                        <span className="font-mono text-[10px] text-oxide-red uppercase tracking-wider block mb-1">
+                        <span className="font-sans text-[10px] text-oxide-red uppercase tracking-wide block mb-1 font-medium">
                           {rel.category}
                         </span>
                         <h4 className="text-heading-3 font-medium text-earth-black text-sm group-hover:text-oxide-red transition-colors leading-snug font-sans">

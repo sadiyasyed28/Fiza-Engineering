@@ -7,7 +7,7 @@ export function GlobalPresenceMap() {
       <div className="max-w-content mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-4">
           <div>
-            <span className="text-label text-oxide-red font-mono uppercase tracking-widest block mb-1 font-semibold">
+            <span className="text-label text-oxide-red font-sans uppercase tracking-wide block mb-1 font-semibold">
               Global Presence & Corridors
             </span>
             <h3 className="text-heading-2 font-medium text-earth-black">
@@ -18,7 +18,7 @@ export function GlobalPresenceMap() {
             <span className="text-display-lg font-medium text-earth-black leading-none block">
               {SITE_FACTS.continents}
             </span>
-            <span className="text-xs font-mono uppercase text-quarry-grey tracking-wider">
+            <span className="text-xs font-sans uppercase text-quarry-grey tracking-wide font-medium">
               Active Continents of Operation
             </span>
           </div>
@@ -28,7 +28,7 @@ export function GlobalPresenceMap() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-4 border-t border-slab-grey">
           <div className="bg-iron-white p-6 border border-slab-grey">
             <div className="flex items-center justify-between mb-3">
-              <span className="font-mono text-xs font-bold uppercase tracking-wider text-earth-black">
+              <span className="font-sans text-xs font-semibold uppercase tracking-wide text-earth-black">
                 West Africa
               </span>
               <span className="w-2 h-2 bg-oxide-red inline-block" />
@@ -41,7 +41,7 @@ export function GlobalPresenceMap() {
 
           <div className="bg-iron-white p-6 border border-slab-grey">
             <div className="flex items-center justify-between mb-3">
-              <span className="font-mono text-xs font-bold uppercase tracking-wider text-earth-black">
+              <span className="font-sans text-xs font-semibold uppercase tracking-wide text-earth-black">
                 Central & Southern Africa
               </span>
               <span className="w-2 h-2 bg-earth-black inline-block" />
@@ -54,7 +54,7 @@ export function GlobalPresenceMap() {
 
           <div className="bg-iron-white p-6 border border-slab-grey">
             <div className="flex items-center justify-between mb-3">
-              <span className="font-mono text-xs font-bold uppercase tracking-wider text-earth-black">
+              <span className="font-sans text-xs font-semibold uppercase tracking-wide text-earth-black">
                 Middle East (HQ)
               </span>
               <span className="w-2 h-2 bg-earth-black inline-block" />
@@ -67,7 +67,7 @@ export function GlobalPresenceMap() {
 
           <div className="bg-iron-white p-6 border border-slab-grey">
             <div className="flex items-center justify-between mb-3">
-              <span className="font-mono text-xs font-bold uppercase tracking-wider text-earth-black">
+              <span className="font-sans text-xs font-semibold uppercase tracking-wide text-earth-black">
                 International Markets
               </span>
               <span className="w-2 h-2 bg-earth-black inline-block" />

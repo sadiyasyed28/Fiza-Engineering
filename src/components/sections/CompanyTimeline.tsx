@@ -180,7 +180,7 @@ export function CompanyTimeline() {
           {/* Section Header */}
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-4 lg:mb-3 gap-4 flex-shrink-0">
             <div>
-              <span className="text-label text-oxide-red font-mono uppercase tracking-widest block mb-1.5 font-semibold text-xs">
+              <span className="text-label text-oxide-red font-sans uppercase tracking-wide block mb-1.5 font-semibold text-xs">
                 Historical Milestones
               </span>
               <h2 className="text-display-lg font-medium text-earth-black leading-[0.95]">
@@ -189,7 +189,7 @@ export function CompanyTimeline() {
             </div>
 
             {/* Stepper Controls in Header */}
-            <div className="flex items-center gap-3 font-mono text-xs uppercase tracking-wider">
+            <div className="flex items-center gap-3 font-sans text-xs uppercase tracking-wide">
               <span className="text-quarry-grey mr-2" aria-live="polite">
                 Milestone <span className="text-earth-black font-bold">{String(activeIdx + 1).padStart(2, "0")}</span> / {String(MILESTONES.length).padStart(2, "0")}
               </span>
@@ -220,7 +220,7 @@ export function CompanyTimeline() {
 
           {/* Architectural Timeline Rail (Desktop) */}
           <div className="hidden lg:block w-full flex-shrink-0 mb-4" onKeyDown={handleKeyDown}>
-            <div className="flex items-center justify-between text-[11px] font-mono uppercase tracking-widest text-quarry-grey mb-2">
+            <div className="flex items-center justify-between text-[11px] font-sans uppercase tracking-wide text-quarry-grey mb-2 font-medium">
               <span className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 bg-oxide-red inline-block" />
                 <span className="text-earth-black font-semibold">1994 Operational Inception</span>
@@ -273,7 +273,7 @@ export function CompanyTimeline() {
                       {/* Year Label: Clean, crisp, no oversized scaling */}
                       <span
                         className={cn(
-                          "font-mono text-xs tracking-wider transition-colors duration-150 mb-1.5",
+                          "font-sans text-xs tracking-wide transition-colors duration-150 mb-1.5",
                           isActive
                             ? "font-bold text-earth-black"
                             : isPassed
@@ -340,7 +340,7 @@ export function CompanyTimeline() {
                           isActive ? "bg-oxide-red" : "bg-slab-grey"
                         )}
                       />
-                      <span className="font-mono text-[11px] uppercase tracking-widest text-quarry-grey">
+                      <span className="font-sans text-[11px] uppercase tracking-wide text-quarry-grey font-medium">
                         REF #{milestone.year}-CORP
                       </span>
                     </div>
@@ -360,17 +360,17 @@ export function CompanyTimeline() {
                           <div className="flex items-baseline gap-3">
                             <span
                               className={cn(
-                                "font-mono text-4xl xl:text-5xl font-bold tracking-tight leading-none transition-colors duration-200",
+                                "font-sans text-4xl xl:text-5xl font-bold tracking-tight leading-none transition-colors duration-200",
                                 isActive ? "text-oxide-red" : "text-earth-black"
                               )}
                             >
                               {milestone.year}
                             </span>
-                            <span className="font-mono text-[11px] uppercase tracking-widest text-quarry-grey px-2 py-0.5 bg-[#EBE8E0] border border-slab-grey/40 font-semibold">
+                            <span className="font-sans text-[11px] uppercase tracking-wide text-quarry-grey px-2 py-0.5 bg-[#EBE8E0] border border-slab-grey/40 font-semibold">
                               0{idx + 1} / 0{MILESTONES.length}
                             </span>
                           </div>
-                          <div className="flex items-center gap-2 font-mono text-[11px] text-quarry-grey uppercase tracking-wider">
+                          <div className="flex items-center gap-2 font-sans text-[11px] text-quarry-grey uppercase tracking-wide font-medium">
                             <span
                               className={cn(
                                 "w-1.5 h-1.5 inline-block transition-colors duration-150",
@@ -391,7 +391,7 @@ export function CompanyTimeline() {
                       </div>
 
                       {/* Technical Meta Footer */}
-                      <div className="pt-4 border-t border-slab-grey/30 flex flex-wrap items-center justify-between text-[11px] font-mono text-quarry-grey uppercase tracking-wider gap-3">
+                      <div className="pt-4 border-t border-slab-grey/30 flex flex-wrap items-center justify-between text-[11px] font-sans text-quarry-grey uppercase tracking-wide gap-3 font-medium">
                         <span>OPERATIONAL STATUS: VERIFIED</span>
                         <span className="text-oxide-red font-semibold">
                           CONTINUOUS CORRIDOR EXECUTION
@@ -414,7 +414,7 @@ export function CompanyTimeline() {
                   type="button"
                   onClick={() => jumpToMilestone(idx)}
                   className={cn(
-                    "px-3 py-1 font-mono text-xs uppercase tracking-wider border transition-colors duration-150 flex-shrink-0",
+                    "px-3 py-1 font-sans text-xs uppercase tracking-wide border transition-colors duration-150 flex-shrink-0 font-medium",
                     isActive
                       ? "bg-earth-black text-iron-white border-earth-black font-bold"
                       : "bg-iron-white text-quarry-grey border-slab-grey hover:border-earth-black hover:text-earth-black"
@@ -440,10 +440,10 @@ export function CompanyTimeline() {
               >
                 <div>
                   <div className="flex items-baseline justify-between gap-4 pb-4 border-b border-slab-grey/40 mb-4">
-                    <span className="font-mono text-4xl font-bold text-oxide-red tracking-tight leading-none">
+                    <span className="font-sans text-4xl font-bold text-oxide-red tracking-tight leading-none">
                       {milestone.year}
                     </span>
-                    <span className="font-mono text-[11px] uppercase tracking-wider text-quarry-grey px-2 py-0.5 bg-[#EBE8E0] border border-slab-grey/40 font-semibold">
+                    <span className="font-sans text-[11px] uppercase tracking-wide text-quarry-grey px-2 py-0.5 bg-[#EBE8E0] border border-slab-grey/40 font-semibold">
                       0{idx + 1} / 0{MILESTONES.length}
                     </span>
                   </div>
@@ -454,7 +454,7 @@ export function CompanyTimeline() {
                     {milestone.description}
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-slab-grey/30 text-[10px] font-mono text-quarry-grey uppercase tracking-wider flex justify-between">
+                <div className="mt-6 pt-4 border-t border-slab-grey/30 text-[10px] font-sans text-quarry-grey uppercase tracking-wide flex justify-between font-medium">
                   <span>ARCHIVE #{milestone.year}</span>
                   <span className="text-oxide-red font-semibold">OPERATIONAL</span>
                 </div>
@@ -469,7 +469,7 @@ export function CompanyTimeline() {
               onClick={() => jumpToMilestone(activeIdx - 1)}
               disabled={activeIdx === 0}
               aria-label="Previous historical milestone"
-              className="inline-flex items-center justify-center gap-2 px-4 py-2 border border-slab-grey bg-iron-white font-mono text-xs uppercase tracking-wider text-earth-black hover:border-earth-black hover:bg-[#E2DFD7] disabled:opacity-30 disabled:pointer-events-none transition-colors duration-150"
+              className="inline-flex items-center justify-center gap-2 px-4 py-2 border border-slab-grey bg-iron-white font-sans text-xs uppercase tracking-wide font-semibold text-earth-black hover:border-earth-black hover:bg-[#E2DFD7] disabled:opacity-30 disabled:pointer-events-none transition-colors duration-150"
             >
               <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -477,7 +477,7 @@ export function CompanyTimeline() {
               <span>Previous Year</span>
             </button>
 
-            <div className="font-mono text-xs text-quarry-grey text-center">
+            <div className="font-sans text-xs text-quarry-grey text-center font-medium">
               <span className="hidden lg:inline">
                 Scroll vertically through timeline or use <kbd className="px-1.5 py-0.5 border border-slab-grey bg-iron-white text-earth-black text-[11px]">←</kbd> and <kbd className="px-1.5 py-0.5 border border-slab-grey bg-iron-white text-earth-black text-[11px]">→</kbd> keys
               </span>
@@ -491,7 +491,7 @@ export function CompanyTimeline() {
               onClick={() => jumpToMilestone(activeIdx + 1)}
               disabled={activeIdx === MILESTONES.length - 1}
               aria-label="Next historical milestone"
-              className="inline-flex items-center justify-center gap-2 px-4 py-2 border border-slab-grey bg-iron-white font-mono text-xs uppercase tracking-wider text-earth-black hover:border-earth-black hover:bg-[#E2DFD7] disabled:opacity-30 disabled:pointer-events-none transition-colors duration-150"
+              className="inline-flex items-center justify-center gap-2 px-4 py-2 border border-slab-grey bg-iron-white font-sans text-xs uppercase tracking-wide font-semibold text-earth-black hover:border-earth-black hover:bg-[#E2DFD7] disabled:opacity-30 disabled:pointer-events-none transition-colors duration-150"
             >
               <span>Next Year</span>
               <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

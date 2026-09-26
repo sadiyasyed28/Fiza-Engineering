@@ -12,7 +12,7 @@ export function PartnersMention() {
               Strategic partnerships with <strong className="font-semibold text-earth-black">AELMET (USA)</strong> and <strong className="font-semibold text-earth-black">Eliixir Traintech (India)</strong> for railway modernization and rolling stock solutions.
             </p>
           </div>
-          <span className="text-[11px] font-mono text-quarry-grey uppercase tracking-wider whitespace-nowrap pl-5 sm:pl-0 border-l sm:border-l-0 border-slab-grey">
+          <span className="text-[11px] font-sans text-quarry-grey uppercase tracking-wide font-medium whitespace-nowrap pl-5 sm:pl-0 border-l sm:border-l-0 border-slab-grey">
             Global Technical Alliances
           </span>
         </div>

@@ -16,7 +16,7 @@ export function DataWall() {
                   className="border-t border-slab-grey/20 pt-6 flex flex-col justify-between"
                 >
                   <div className="mb-2">
-                    <span className="font-heading text-display-lg md:text-[3.25rem] font-medium leading-none block tracking-tight text-iron-white">
+                    <span className="font-sans text-display-lg md:text-[3.25rem] font-semibold leading-none block tracking-tight text-iron-white">
                       <span className={stat.highlight ? "text-oxide-red" : "text-iron-white"}>
                         {stat.value}
                       </span>
@@ -32,7 +32,7 @@ export function DataWall() {
 
           {/* Right Contextual Paragraph (4 Columns) */}
           <div className="lg:col-span-4 border-t lg:border-t-0 lg:border-l border-slab-grey/20 pt-8 lg:pt-0 lg:pl-10">
-            <span className="text-label text-dust-tan font-mono uppercase tracking-widest block mb-3 font-semibold">
+            <span className="text-label text-dust-tan font-sans uppercase tracking-wide block mb-3 font-semibold">
               Operational model
             </span>
             <h3 className="text-heading-2 font-medium text-iron-white mb-4">

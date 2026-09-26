@@ -13,7 +13,7 @@ export function CompanyEditorial() {
           <div className="lg:col-span-7">
             <div className="flex items-center gap-2 mb-3">
               <span className="w-2 h-2 bg-oxide-red inline-block" />
-              <span className="text-label text-earth-black font-mono tracking-widest font-semibold">
+              <span className="text-label text-earth-black font-sans uppercase tracking-wide font-semibold">
                 About Fiza Engineering
               </span>
             </div>
@@ -30,7 +30,7 @@ export function CompanyEditorial() {
             <div className="pt-4 border-t border-slab-grey/60">
               <Link
                 href="/company"
-                className="btn-primary text-xs py-3 px-6 inline-flex items-center gap-2 font-mono uppercase tracking-wider font-semibold"
+                className="btn-primary text-xs py-3 px-6 inline-flex items-center gap-2 font-sans uppercase tracking-wide font-semibold"
               >
                 Read company profile <span>→</span>
               </Link>
@@ -50,10 +50,10 @@ export function CompanyEditorial() {
               <div className="absolute inset-0 bg-gradient-to-t from-earth-black/75 via-transparent to-transparent pointer-events-none" />
 
               <div className="absolute bottom-4 left-4 right-4 bg-earth-black/90 backdrop-blur-sm p-3.5 text-iron-white border border-slab-grey/20">
-                <span className="block font-mono text-[10px] uppercase text-dust-tan tracking-wider">
+                <span className="block font-sans text-[10px] uppercase text-dust-tan tracking-wide font-medium">
                   Our fleet
                 </span>
-                <span className="text-xs font-mono text-iron-white block mt-0.5">
+                <span className="text-xs font-sans text-iron-white block mt-0.5">
                   {SITE_FACTS.fleetSize} company-owned machines active across {SITE_FACTS.continents} continents.
                 </span>
               </div>
@@ -61,8 +61,8 @@ export function CompanyEditorial() {
 
             {/* Asymmetric Floating Established Tag */}
             <div className="hidden sm:block absolute -top-3 -right-3 bg-iron-white border border-slab-grey px-4 py-2.5 shadow-sm">
-              <span className="font-mono text-xl font-bold text-oxide-red block leading-none">{SITE_FACTS.foundedYear}</span>
-              <span className="font-mono text-[9px] uppercase text-quarry-grey tracking-wider mt-0.5 block">Founded</span>
+              <span className="font-sans text-xl font-bold text-oxide-red block leading-none">{SITE_FACTS.foundedYear}</span>
+              <span className="font-sans text-[9px] uppercase text-quarry-grey tracking-wide font-semibold mt-0.5 block">Founded</span>
             </div>
           </div>
         </div>

@@ -27,7 +27,7 @@ export function CapabilitiesGrid() {
           <div>
             <div className="flex items-center gap-2 mb-3">
               <span className="w-2 h-2 bg-oxide-red inline-block" />
-              <span className="text-label text-earth-black font-mono tracking-widest font-semibold">
+              <span className="text-label text-earth-black font-sans uppercase tracking-wide font-semibold">
                 Operational Scope
               </span>
             </div>
@@ -37,7 +37,7 @@ export function CapabilitiesGrid() {
           </div>
           <Link
             href="/capabilities"
-            className="text-label font-bold text-earth-black hover:text-oxide-red uppercase tracking-wider inline-flex items-center gap-2 transition-colors font-mono"
+            className="text-label font-bold text-earth-black hover:text-oxide-red uppercase tracking-wide inline-flex items-center gap-2 transition-colors font-sans"
           >
             See all services <ArrowRight size={14} />
           </Link>
@@ -55,7 +55,7 @@ export function CapabilitiesGrid() {
                   <div className="p-3 bg-[#E8E5DD] border border-slab-grey group-hover:bg-oxide-red group-hover:text-iron-white transition-colors">
                     {DIVISION_ICONS[division.id]}
                   </div>
-                  <span className="text-[11px] font-mono text-oxide-red font-bold uppercase tracking-wider">
+                  <span className="text-[11px] font-sans text-oxide-red font-bold uppercase tracking-wide">
                     Primary Division
                   </span>
                 </div>
@@ -75,7 +75,7 @@ export function CapabilitiesGrid() {
                 {/* Scope Highlights */}
                 <div className="pt-4 border-t border-slab-grey/60 space-y-2 mb-8">
                   {division.scope.slice(0, 3).map((item, idx) => (
-                    <div key={idx} className="flex items-center gap-2 text-xs font-mono text-quarry-grey">
+                    <div key={idx} className="flex items-center gap-2 text-xs font-sans text-quarry-grey font-medium">
                       <span className="w-1.5 h-1.5 bg-oxide-red inline-block flex-shrink-0" />
                       <span className="truncate">{item}</span>
                     </div>
@@ -87,7 +87,7 @@ export function CapabilitiesGrid() {
               <div className="pt-5 border-t border-slab-grey">
                 <Link
                   href={`/capabilities/${division.slug}`}
-                  className="w-full bg-[#EAE7DF] border border-slab-grey hover:bg-earth-black hover:text-iron-white hover:border-earth-black transition-colors font-mono text-xs uppercase font-semibold py-3 px-4 flex items-center justify-between text-earth-black group-hover:bg-oxide-red group-hover:text-iron-white group-hover:border-oxide-red"
+                  className="w-full bg-[#EAE7DF] border border-slab-grey hover:bg-earth-black hover:text-iron-white hover:border-earth-black transition-colors font-sans text-xs uppercase tracking-wide font-semibold py-3 px-4 flex items-center justify-between text-earth-black group-hover:bg-oxide-red group-hover:text-iron-white group-hover:border-oxide-red"
                 >
                   <span>{DIVISION_BUTTON_LABELS[division.id] || "View division details"}</span>
                   <ArrowRight size={14} />

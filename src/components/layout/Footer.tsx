@@ -17,7 +17,7 @@ export function Footer() {
                 </span>
                 <span className="w-2.5 h-2.5 rounded-none bg-oxide-red inline-block" />
               </div>
-              <span className="font-mono text-xs tracking-[0.2em] uppercase text-dust-tan mt-1">
+              <span className="font-sans text-xs tracking-wide uppercase text-dust-tan mt-1 font-semibold">
                 Engineering Corporation
               </span>
             </Link>
@@ -25,10 +25,10 @@ export function Footer() {
               Multidisciplinary heavy engineering, open-pit mining operations, turnkey plant EPC, and heavy-haul railway logistics connecting resource deposits to international markets.
             </p>
             <div className="mt-4 flex items-center gap-3">
-              <span className="bg-earth-black text-dust-tan font-mono text-[11px] uppercase tracking-wider px-2.5 py-1 border border-slab-grey/20">
+              <span className="bg-earth-black text-dust-tan font-sans text-[11px] uppercase tracking-wide px-2.5 py-1 border border-slab-grey/20 font-medium">
                 Established {SITE_FACTS.foundedYear}
               </span>
-              <span className="text-quarry-grey text-xs font-mono">
+              <span className="text-quarry-grey text-xs font-sans">
                 {SITE_FACTS.yearsInBusinessExcellence}
               </span>
             </div>
@@ -36,13 +36,13 @@ export function Footer() {
 
           <div className="lg:col-span-6 flex flex-col justify-between border-t lg:border-t-0 lg:border-l border-slab-grey/20 lg:pl-10 pt-8 lg:pt-0">
             <div>
-              <span className="text-label text-dust-tan uppercase tracking-widest block mb-2 font-mono font-semibold">
+              <span className="text-label text-dust-tan uppercase tracking-wide block mb-2 font-sans font-semibold">
                 Global Footprint & Regional Hubs
               </span>
               <p className="text-body-sm text-iron-white font-medium mb-4">
                 {SITE_FACTS.footprintRegions}
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono text-dust-tan pt-2 border-t border-slab-grey/15">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-sans text-dust-tan pt-2 border-t border-slab-grey/15">
                 <div className="flex items-center gap-2">
                   <Mail size={14} className="text-oxide-red shrink-0" />
                   <a href={`mailto:${SITE_FACTS.contact.primaryEmail}`} className="hover:text-iron-white transition-colors truncate">
@@ -88,7 +88,7 @@ export function Footer() {
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 pb-16">
           {/* Column 1: Company */}
           <div className="flex flex-col space-y-3">
-            <span className="text-label font-mono text-dust-tan tracking-wider uppercase font-semibold">
+            <span className="text-label font-sans text-dust-tan tracking-wide uppercase font-semibold">
               Company
             </span>
             <Link href="/company" className="text-body-sm text-quarry-grey hover:text-iron-white transition-colors">
@@ -107,7 +107,7 @@ export function Footer() {
 
           {/* Column 2: Services / Capabilities */}
           <div className="flex flex-col space-y-3">
-            <span className="text-label font-mono text-dust-tan tracking-wider uppercase font-semibold">
+            <span className="text-label font-sans text-dust-tan tracking-wide uppercase font-semibold">
               Services
             </span>
             <Link href="/capabilities/mining-services" className="text-body-sm text-quarry-grey hover:text-iron-white transition-colors">
@@ -129,7 +129,7 @@ export function Footer() {
 
           {/* Column 3: Projects */}
           <div className="flex flex-col space-y-3">
-            <span className="text-label font-mono text-dust-tan tracking-wider uppercase font-semibold">
+            <span className="text-label font-sans text-dust-tan tracking-wide uppercase font-semibold">
               Projects
             </span>
             <Link href="/projects" className="text-body-sm text-quarry-grey hover:text-iron-white transition-colors">
@@ -148,7 +148,7 @@ export function Footer() {
 
           {/* Column 4: Products */}
           <div className="flex flex-col space-y-3">
-            <span className="text-label font-mono text-dust-tan tracking-wider uppercase font-semibold">
+            <span className="text-label font-sans text-dust-tan tracking-wide uppercase font-semibold">
               Products
             </span>
             <Link href="/products?category=Heavy+Mining+Fleet" className="text-body-sm text-quarry-grey hover:text-iron-white transition-colors">
@@ -167,7 +167,7 @@ export function Footer() {
 
           {/* Column 5: News */}
           <div className="flex flex-col space-y-3">
-            <span className="text-label font-mono text-dust-tan tracking-wider uppercase font-semibold">
+            <span className="text-label font-sans text-dust-tan tracking-wide uppercase font-semibold">
               News
             </span>
             <Link href="/news" className="text-body-sm text-quarry-grey hover:text-iron-white transition-colors">
@@ -183,7 +183,7 @@ export function Footer() {
 
           {/* Column 6: Contact */}
           <div className="flex flex-col space-y-3">
-            <span className="text-label font-mono text-dust-tan tracking-wider uppercase font-semibold">
+            <span className="text-label font-sans text-dust-tan tracking-wide uppercase font-semibold">
               Contact
             </span>
             <Link href="/contact#hq" className="text-body-sm text-quarry-grey hover:text-iron-white transition-colors">
@@ -199,7 +199,7 @@ export function Footer() {
         </div>
 
         {/* Tier 3: Copyright & Policy Links */}
-        <div className="pt-8 border-t border-slab-grey/20 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-xs font-mono text-quarry-grey">
+        <div className="pt-8 border-t border-slab-grey/20 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-xs font-sans text-quarry-grey">
           <div>
             © {SITE_FACTS.foundedYear + SITE_FACTS.yearsInBusiness} {SITE_FACTS.companyName}. Established {SITE_FACTS.foundedYear}. All rights reserved.
           </div>

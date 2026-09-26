@@ -36,7 +36,7 @@ export default function ContactPage() {
         </div>
 
         <div className="relative z-10 max-w-content mx-auto px-6 md:px-12">
-          <span className="text-label text-oxide-red font-mono uppercase tracking-[0.2em] block mb-3">
+          <span className="text-label text-oxide-red font-sans uppercase tracking-wide block mb-3 font-semibold">
             Inquiries & Operational Procurement
           </span>
           <h1 className="text-display-lg sm:text-[3.5rem] md:text-display-xl font-medium text-earth-black leading-[0.95] mb-6">
@@ -56,24 +56,24 @@ export default function ContactPage() {
             <div className="lg:col-span-5 flex flex-col space-y-8">
               {/* Corporate Headquarters */}
               <div id="hq" className="scroll-mt-28">
-                <span className="text-label text-oxide-red font-mono uppercase tracking-widest block mb-2">
+                <span className="text-label text-oxide-red font-sans uppercase tracking-wide block mb-2 font-semibold">
                   Headquarters
                 </span>
                 <h2 className="text-heading-2 font-medium text-earth-black mb-4">
                   Corporate Headquarters
                 </h2>
 
-                <div className="bg-iron-white border border-slab-grey p-6 font-mono">
+                <div className="bg-iron-white border border-slab-grey p-6 font-sans">
                   <div className="flex items-center justify-between mb-2">
-                    <h3 className="font-sans text-heading-3 font-medium text-earth-black">
+                    <h3 className="text-heading-3 font-medium text-earth-black">
                       {hqOffice.city}
                     </h3>
-                    <span className="text-xs text-oxide-red font-bold uppercase">
+                    <span className="text-xs text-oxide-red font-bold uppercase tracking-wide">
                       {hqOffice.country}
                     </span>
                   </div>
 
-                  <span className="text-[11px] text-quarry-grey block mb-3 uppercase">
+                  <span className="text-[11px] text-quarry-grey block mb-3 uppercase tracking-wide font-medium">
                     {hqOffice.type}
                   </span>
 
@@ -89,7 +89,7 @@ export default function ContactPage() {
                           href={hqOffice.mapUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center text-xs font-mono text-oxide-red hover:underline min-h-[32px] py-1"
+                          className="inline-flex items-center text-xs font-sans text-oxide-red hover:underline min-h-[32px] py-1"
                         >
                           View on Google Maps ↗
                         </a>
@@ -123,7 +123,7 @@ export default function ContactPage() {
               {/* Regional Operations Hubs */}
               <div id="offices" className="scroll-mt-28 space-y-6">
                 <div>
-                  <span className="text-label text-oxide-red font-mono uppercase tracking-widest block mb-2">
+                  <span className="text-label text-oxide-red font-sans uppercase tracking-wide block mb-2 font-semibold">
                     Regional Network
                   </span>
                   <h2 className="text-heading-2 font-medium text-earth-black">
@@ -135,18 +135,18 @@ export default function ContactPage() {
                   {regionalOffices.map((office) => (
                     <div
                       key={office.city}
-                      className="bg-iron-white border border-slab-grey p-6 font-mono"
+                      className="bg-iron-white border border-slab-grey p-6 font-sans"
                     >
                       <div className="flex items-center justify-between mb-2">
-                        <h3 className="font-sans text-heading-3 font-medium text-earth-black">
+                        <h3 className="text-heading-3 font-medium text-earth-black">
                           {office.city}
                         </h3>
-                        <span className="text-xs text-oxide-red font-bold uppercase">
+                        <span className="text-xs text-oxide-red font-bold uppercase tracking-wide">
                           {office.country}
                         </span>
                       </div>
 
-                      <span className="text-[11px] text-quarry-grey block mb-3 uppercase">
+                      <span className="text-[11px] text-quarry-grey block mb-3 uppercase tracking-wide font-medium">
                         {office.type}
                       </span>
 
@@ -162,7 +162,7 @@ export default function ContactPage() {
                               href={office.mapUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-flex items-center text-xs font-mono text-oxide-red hover:underline min-h-[32px] py-1"
+                              className="inline-flex items-center text-xs font-sans text-oxide-red hover:underline min-h-[32px] py-1"
                             >
                               View on Google Maps ↗
                             </a>
@@ -199,7 +199,7 @@ export default function ContactPage() {
             {/* Right: Operational Inquiry Form (7 Columns) */}
             <div id="form" className="scroll-mt-28 lg:col-span-7">
               <div className="bg-iron-white border border-slab-grey p-8 md:p-12">
-                <span className="text-label text-oxide-red font-mono uppercase tracking-widest block mb-2">
+                <span className="text-label text-oxide-red font-sans uppercase tracking-wide block mb-2 font-semibold">
                   Direct Intake
                 </span>
                 <h2 className="text-heading-1 font-medium text-earth-black mb-8">
@@ -208,7 +208,7 @@ export default function ContactPage() {
 
                 <Suspense
                   fallback={
-                    <div className="font-mono text-xs text-quarry-grey py-12">
+                    <div className="font-sans text-xs text-quarry-grey py-12 font-medium">
                       Loading inquiry form...
                     </div>
                   }
