@@ -38,7 +38,8 @@ const WHAT_SETS_US_APART = [
   },
   {
     // TODO: OWNER TO VERIFY - 35,000 m² Bamako rebuild workshop footprint
-    metric: SITE_FACTS.rebuildDepotArea,
+    metric: "35,000",
+    suffix: "m²",
     label: "Rebuild Workshops",
     title: "Regional Machine Rebuild Bases",
     desc: `Powertrain overhaul workshops in Bamako support operations and maintain fleet availability at ${SITE_FACTS.fleetAvailability}.`
@@ -228,15 +229,22 @@ export default function CompanyPage() {
             {WHAT_SETS_US_APART.map((item, idx) => (
               <div key={idx} className="bg-iron-white p-8 border border-slab-grey flex flex-col justify-between">
                 <div>
-                  <div className="flex items-baseline justify-between mb-4 pb-3 border-b border-slab-grey">
-                    <span className="text-display-lg font-medium text-earth-black leading-none">
-                      {item.metric}
-                    </span>
-                    <span className="font-mono text-[10px] text-quarry-grey uppercase tracking-wider">
+                  <div className="flex flex-col mb-4 pb-3 border-b border-slab-grey">
+                    <div className="flex items-baseline leading-none whitespace-nowrap mb-2">
+                      <span className="text-display-lg font-medium text-earth-black leading-none">
+                        {item.metric}
+                      </span>
+                      {item.suffix && (
+                        <span className="text-xl sm:text-2xl font-medium text-earth-black ml-1">
+                          {item.suffix}
+                        </span>
+                      )}
+                    </div>
+                    <span className="font-mono text-[10px] text-quarry-grey uppercase tracking-wider block">
                       {item.label}
                     </span>
                   </div>
-                  <h3 className="text-heading-3 font-medium text-earth-black mb-3">
+                  <h3 className="text-heading-3 font-medium text-earth-black mb-3 min-h-[3.6rem] flex items-start">
                     {item.title}
                   </h3>
                   <p className="text-body-sm text-quarry-grey leading-relaxed">
@@ -354,7 +362,7 @@ export default function CompanyPage() {
             {SITE_FACTS.offices.map((office, idx) => (
               <div
                 key={idx}
-                className="bg-iron-white border border-slab-grey p-8 flex flex-col justify-between"
+                className="bg-iron-white border border-slab-grey p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-earth-black"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4 pb-3 border-b border-slab-grey">

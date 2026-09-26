@@ -34,9 +34,32 @@ export default function CapabilitiesPage() {
 
   return (
     <div className="w-full pt-[72px]">
-      {/* Editorial Header with Breadcrumb */}
-      <section className="bg-iron-white py-16 md:py-24 border-b border-slab-grey">
-        <div className="max-w-content mx-auto px-6 md:px-12">
+      {/* Editorial Header with Breadcrumb & Integrated Industrial Imagery */}
+      <section className="relative bg-iron-white py-16 md:py-24 border-b border-slab-grey overflow-hidden">
+        {/* Background Industrial Image Integration */}
+        <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden">
+          <Image
+            src="/images/capabilities/heavy-infrastructure.jpg"
+            alt="Fiza Engineering heavy civil works, industrial infrastructure, and arterial transport corridor operations"
+            fill
+            priority
+            sizes="100vw"
+            className="img-cover object-center lg:object-right opacity-35 lg:opacity-45 mix-blend-multiply"
+          />
+          {/* Subtle Industrial Mesh Texture */}
+          <div
+            className="absolute inset-0 opacity-15 pointer-events-none"
+            style={{
+              backgroundImage: "radial-gradient(rgba(26, 26, 24, 0.25) 1px, transparent 1px)",
+              backgroundSize: "28px 28px",
+            }}
+          />
+          {/* Editorial Gradient Blend: Guarantees 100% Text Readability while revealing real machinery */}
+          <div className="absolute inset-0 bg-gradient-to-r from-iron-white via-iron-white/95 sm:via-iron-white/80 to-iron-white/30 lg:to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-iron-white via-transparent to-iron-white/40" />
+        </div>
+
+        <div className="relative z-10 max-w-content mx-auto px-6 md:px-12">
           {/* Breadcrumb */}
           <nav className="text-label text-oxide-red font-mono uppercase tracking-widest mb-4 flex items-center gap-2">
             <Link href="/" className="hover:underline">

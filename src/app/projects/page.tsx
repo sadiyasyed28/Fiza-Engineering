@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useSearchParams, useRouter } from "next/navigation";
 import { PROJECTS, Project } from "@/lib/projects";
 import { Tag } from "@/components/ui/Tag";
+import { CustomSelect } from "@/components/ui/CustomSelect";
 import { ArrowRight, RotateCcw } from "lucide-react";
 
 const STATUS_CHIPS = ["ALL", "ACTIVE", "IN DEVELOPMENT", "COMPLETED"];
@@ -19,6 +20,17 @@ const SECTORS = [
   "Infrastructure & Mining",
   "Commercial Agriculture"
 ];
+
+const COUNTRY_OPTIONS = COUNTRIES.map((c) => ({
+  value: c,
+  label: c === "ALL" ? "All Countries" : c,
+}));
+
+const SECTOR_OPTIONS = SECTORS.map((s) => ({
+  value: s,
+  label: s === "ALL" ? "All Sectors" : s,
+}));
+
 
 function normalizeStatusParam(param: string | null): string {
   if (!param) return "ALL";
@@ -88,9 +100,32 @@ function ProjectsContent() {
 
   return (
     <div className="w-full pt-[72px]">
-      {/* Editorial Header */}
-      <section className="bg-iron-white py-16 md:py-24 border-b border-slab-grey">
-        <div className="max-w-content mx-auto px-6 md:px-12">
+      {/* Editorial Header with Integrated Industrial Imagery */}
+      <section className="relative bg-iron-white py-16 md:py-24 border-b border-slab-grey overflow-hidden">
+        {/* Background Industrial Image Integration */}
+        <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden">
+          <Image
+            src="/images/projects/project_falea.jpg"
+            alt="Fiza Engineering Falea bauxite corridor heavy earthmoving, open-pit benches, and haul road infrastructure"
+            fill
+            priority
+            sizes="100vw"
+            className="img-cover object-center lg:object-right opacity-35 lg:opacity-45 mix-blend-multiply"
+          />
+          {/* Subtle Industrial Mesh Texture */}
+          <div
+            className="absolute inset-0 opacity-15 pointer-events-none"
+            style={{
+              backgroundImage: "radial-gradient(rgba(26, 26, 24, 0.25) 1px, transparent 1px)",
+              backgroundSize: "28px 28px",
+            }}
+          />
+          {/* Editorial Gradient Blend: Guarantees 100% Text & Filter Readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-iron-white via-iron-white/95 sm:via-iron-white/80 to-iron-white/30 lg:to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-iron-white via-transparent to-iron-white/40" />
+        </div>
+
+        <div className="relative z-10 max-w-content mx-auto px-6 md:px-12">
           {/* Breadcrumb */}
           <nav className="text-label text-oxide-red font-mono uppercase tracking-widest mb-4 flex items-center gap-2">
             <Link href="/" className="hover:underline">
@@ -132,38 +167,25 @@ function ProjectsContent() {
             {/* Country and Sector Dropdowns */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-2">
               <div>
-                <label className="block text-label font-mono text-quarry-grey uppercase tracking-wider mb-1.5 text-[11px]">
-                  Filter by Country
-                </label>
-                <select
+                <CustomSelect
+                  id="filter-country"
+                  label="Filter by Country"
                   value={countryFilter}
-                  onChange={(e) => setCountryFilter(e.target.value)}
-                  className="w-full bg-[#F4F2EC] border border-slab-grey p-2.5 font-mono text-xs text-earth-black focus:outline-none focus:border-earth-black"
-                >
-                  {COUNTRIES.map((c) => (
-                    <option key={c} value={c}>
-                      {c === "ALL" ? "All Countries" : c}
-                    </option>
-                  ))}
-                </select>
+                  onChange={setCountryFilter}
+                  options={COUNTRY_OPTIONS}
+                />
               </div>
 
               <div>
-                <label className="block text-label font-mono text-quarry-grey uppercase tracking-wider mb-1.5 text-[11px]">
-                  Filter by Sector
-                </label>
-                <select
+                <CustomSelect
+                  id="filter-sector"
+                  label="Filter by Sector"
                   value={sectorFilter}
-                  onChange={(e) => setSectorFilter(e.target.value)}
-                  className="w-full bg-[#F4F2EC] border border-slab-grey p-2.5 font-mono text-xs text-earth-black focus:outline-none focus:border-earth-black"
-                >
-                  {SECTORS.map((s) => (
-                    <option key={s} value={s}>
-                      {s === "ALL" ? "All Sectors" : s}
-                    </option>
-                  ))}
-                </select>
+                  onChange={setSectorFilter}
+                  options={SECTOR_OPTIONS}
+                />
               </div>
+
 
               {isFiltered && (
                 <div className="flex items-end">

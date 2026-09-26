@@ -1,7 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { SITE_FACTS } from "@/lib/siteFacts";
+import { SITE_FACTS, yearsInBusinessDecade } from "@/lib/siteFacts";
+import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 
 export function HomeHero() {
   return (
@@ -81,7 +82,7 @@ export function HomeHero() {
               </span>
               <div className="flex items-baseline gap-2">
                 <span className="font-heading text-3xl sm:text-4xl font-semibold text-oxide-red">
-                  {SITE_FACTS.fleetSize}
+                  <AnimatedCounter target={SITE_FACTS.fleetSizeNumber} suffix="+" duration={1800} delay={0} />
                 </span>
                 <span className="text-xs font-mono text-dust-tan">Machines</span>
               </div>
@@ -93,7 +94,7 @@ export function HomeHero() {
               </span>
               <div className="flex items-baseline gap-2">
                 <span className="font-heading text-3xl sm:text-4xl font-semibold text-iron-white">
-                  {SITE_FACTS.countries}
+                  <AnimatedCounter target={SITE_FACTS.countries} duration={1800} delay={120} />
                 </span>
                 <span className="text-xs font-mono text-dust-tan">Countries</span>
               </div>
@@ -105,7 +106,7 @@ export function HomeHero() {
               </span>
               <div className="flex items-baseline gap-2">
                 <span className="font-heading text-3xl sm:text-4xl font-semibold text-iron-white">
-                  {SITE_FACTS.continents}
+                  <AnimatedCounter target={SITE_FACTS.continents} duration={1800} delay={240} />
                 </span>
                 <span className="text-xs font-mono text-dust-tan">Continents</span>
               </div>
@@ -117,7 +118,7 @@ export function HomeHero() {
               </span>
               <div className="flex items-baseline gap-2">
                 <span className="font-heading text-3xl sm:text-4xl font-semibold text-oxide-red">
-                  {SITE_FACTS.yearsInBusinessLabel}
+                  <AnimatedCounter target={yearsInBusinessDecade} suffix="+ Years" duration={1800} delay={360} />
                 </span>
                 <span className="text-xs font-mono text-dust-tan">Experience</span>
               </div>

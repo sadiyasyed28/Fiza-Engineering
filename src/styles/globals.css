@@ -183,6 +183,140 @@ p {
   border-bottom-color: var(--iron-white);
 }
 
+/* ==================================================
+   GLOBAL DROPDOWN & SELECT CONTROLS
+   Fiza Engineering Industrial Theme
+   ================================================== */
+
+select {
+  accent-color: var(--oxide-red);
+  color-scheme: light;
+  font-family: inherit;
+  color: var(--earth-black);
+}
+
+select option {
+  background-color: var(--iron-white);
+  color: var(--earth-black);
+  font-family: inherit;
+  padding: 8px 12px;
+}
+
+select option:checked,
+select option[selected] {
+  background-color: #E2DFD7;
+  color: var(--oxide-red);
+  font-weight: 600;
+}
+
+select option:hover,
+select option:focus {
+  background-color: #EBE8E0;
+  color: var(--earth-black);
+}
+
+/* Base custom appearance for themed select dropdowns */
+.select-theme {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #F4F2EC;
+  color: var(--earth-black);
+  border: 1px solid var(--slab-grey);
+  border-radius: 0;
+  padding: 10px 36px 10px 12px;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B6B63' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+  background-size: 14px;
+  transition: border-color 200ms ease, background-color 200ms ease, box-shadow 200ms ease, background-image 200ms ease;
+}
+
+.select-theme:hover {
+  border-color: var(--earth-black);
+  background-color: #EFECE4;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231A1A18' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+}
+
+.select-theme:focus,
+.select-theme:focus-visible {
+  outline: none;
+  border-color: var(--oxide-red);
+  background-color: #FFFFFF;
+  box-shadow: 0 0 0 1px var(--oxide-red);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23B33D26' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+}
+
+/* Custom Dropdown Glassmorphism Panel Reveal */
+@keyframes dropdownOpen {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-dropdown-open {
+  animation: dropdownOpen 180ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Subtle industrial landing signal for counter (150ms, crisp settle, no bouncy easing) */
+@keyframes counterLand {
+  0% {
+    transform: scale(1);
+    opacity: 0.92;
+  }
+  50% {
+    transform: scale(1.035);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-counter-land {
+  display: inline-block;
+  animation: counterLand 150ms ease-out forwards;
+  will-change: transform;
+  transform-origin: center baseline;
+}
+
+
+
+/* Select element within underline form-input style */
+select.form-input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B6B63' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-position: right 8px center;
+  background-repeat: no-repeat;
+  background-size: 14px;
+  padding-right: 32px;
+  cursor: pointer;
+  transition: border-color 200ms ease, background-image 200ms ease;
+}
+
+select.form-input:hover {
+  border-bottom-color: var(--earth-black);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231A1A18' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+}
+
+select.form-input:focus,
+select.form-input:focus-visible {
+  outline: none;
+  border-bottom-color: var(--oxide-red);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23B33D26' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+}
+
 .form-label {
   display: block;
   font-size: 0.75rem;
