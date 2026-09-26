@@ -44,7 +44,7 @@ export default function CapabilitiesPage() {
             fill
             priority
             sizes="100vw"
-            className="img-cover object-center lg:object-right opacity-75 lg:opacity-90 mix-blend-multiply"
+            className="img-cover object-center lg:object-right opacity-75 lg:opacity-90 mix-blend-multiply transition-opacity duration-1000 ease-in-out motion-safe:animate-ken-burns-gentle"
           />
           {/* Subtle Industrial Mesh Texture */}
           <div
@@ -55,8 +55,8 @@ export default function CapabilitiesPage() {
             }}
           />
           {/* Editorial Gradient Blend: Guarantees 100% Text Readability while revealing real machinery */}
-          <div className="absolute inset-0 bg-gradient-to-r from-iron-white via-iron-white/65 sm:via-iron-white/40 to-iron-white/5 lg:to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-iron-white/55 via-transparent to-iron-white/15" />
+          <div className="absolute inset-0 bg-gradient-to-r from-iron-white via-iron-white/65 sm:via-iron-white/40 to-iron-white/5 lg:to-transparent transition-opacity duration-1000 ease-in-out" />
+          <div className="absolute inset-0 bg-gradient-to-t from-iron-white/55 via-transparent to-iron-white/15 transition-opacity duration-1000 ease-in-out" />
         </div>
 
         <div className="relative z-10 max-w-content mx-auto px-6 md:px-12">

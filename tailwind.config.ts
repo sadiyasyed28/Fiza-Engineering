@@ -64,6 +64,15 @@ const config: Config = {
       borderWidth: {
         3: "3px",
       },
+      keyframes: {
+        "ken-burns-gentle": {
+          "0%": { transform: "scale(1)" },
+          "100%": { transform: "scale(1.04)" },
+        },
+      },
+      animation: {
+        "ken-burns-gentle": "ken-burns-gentle 25s ease-in-out infinite alternate",
+      },
     },
   },
   plugins: [],

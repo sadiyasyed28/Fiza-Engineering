@@ -13,6 +13,10 @@ const HERO_SLIDES = [
     alt: "Fiza Engineering heavy open-pit mining operations with hydraulic excavators and haul fleet",
   },
   {
+    src: "/images/capabilities/mining-services.jpg",
+    alt: "Fiza Engineering mining services and operations",
+  },
+  {
     src: "/images/capabilities/heavy-infrastructure.jpg",
     alt: "Fiza Engineering heavy civil works, industrial infrastructure, and arterial transport corridor operations",
   },
@@ -20,21 +24,16 @@ const HERO_SLIDES = [
     src: "/images/capabilities/railway-solutions.jpg",
     alt: "Fiza Engineering heavy-haul rail logistics, locomotives, and mineral transport operations",
   },
-  {
-    src: "/images/capabilities/turnkey-plants.jpg",
-    alt: "Fiza Engineering turnkey processing plants, modular EPC engineering, and industrial facilities",
-  },
-  {
-    src: "/images/capabilities/equipment-rebuild.jpg",
-    alt: "Fiza Engineering certified heavy machinery rebuild depot, powertrain overhaul, and fleet mobilization",
-  },
 ];
 
 export function HomeHero() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isReducedMotion, setIsReducedMotion] = useState(true);
 
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    setIsReducedMotion(prefersReducedMotion);
+    
     if (prefersReducedMotion) return;
 
     let timer: NodeJS.Timeout | null = null;
@@ -68,6 +67,12 @@ export function HomeHero() {
 
   return (
     <div className="w-full">
+      <style>{`
+        @keyframes progress-fill {
+          0% { width: 0%; }
+          100% { width: 100%; }
+        }
+      `}</style>
       {/* 1. Hero Main Frame */}
       <section className="relative w-full min-h-[580px] lg:h-[82vh] max-h-[880px] flex flex-col justify-end overflow-hidden bg-coal-dark">
         {/* Background Slideshow: subtle automatic crossfade & Ken Burns effect */}
@@ -78,7 +83,7 @@ export function HomeHero() {
               <div
                 key={slide.src}
                 className={cn(
-                  "absolute inset-0 w-full h-full transition-opacity duration-[1800ms] ease-in-out",
+                  "absolute inset-0 w-full h-full transition-opacity duration-[1200ms] ease-in-out",
                   isActive ? "opacity-100 z-[1]" : "opacity-0 z-0 pointer-events-none"
                 )}
                 aria-hidden={!isActive}
@@ -91,8 +96,8 @@ export function HomeHero() {
                   sizes="100vw"
                   className={cn(
                     "img-cover object-center will-change-transform",
-                    "transition-transform duration-[7000ms] ease-out motion-reduce:transform-none motion-reduce:transition-none",
-                    isActive ? "scale-[1.05]" : "scale-[1.01]"
+                    "transition-transform duration-[6000ms] ease-out motion-reduce:transform-none motion-reduce:transition-none",
+                    isActive && !isReducedMotion ? "scale-[1.08]" : "scale-100"
                   )}
                 />
               </div>
@@ -112,7 +117,7 @@ export function HomeHero() {
         </div>
 
         {/* Hero Copy & Actions */}
-        <div className="relative z-10 max-w-content mx-auto w-full px-6 md:px-12 pb-14 md:pb-20 pt-32">
+        <div className="relative z-10 max-w-content mx-auto w-full px-6 md:px-12 pb-14 md:pb-20 pt-40 md:pt-48">
           <div className="max-w-3xl">
             {/* Overline with established date from siteFacts */}
             <div className="flex items-center gap-2.5 mb-5">
@@ -148,6 +153,33 @@ export function HomeHero() {
               </Link>
             </div>
           </div>
+        </div>
+
+        {/* Progress Bar */}
+        <div className="absolute bottom-6 left-0 right-0 z-20 flex px-6 md:px-12 gap-2 max-w-content mx-auto w-full">
+          {HERO_SLIDES.map((_, idx) => {
+            const isActive = idx === currentSlide;
+            const isPast = idx < currentSlide;
+            
+            return (
+              <div key={idx} className="h-[3px] flex-1 bg-iron-white/20 rounded-full overflow-hidden">
+                <div
+                  key={`${currentSlide}-${idx}`}
+                  className={cn(
+                    "h-full bg-oxide-red",
+                    isPast ? "w-full" : "w-0"
+                  )}
+                  style={
+                    isActive && !isReducedMotion
+                      ? {
+                          animation: "progress-fill 6s linear forwards",
+                        }
+                      : {}
+                  }
+                />
+              </div>
+            );
+          })}
         </div>
       </section>
 
