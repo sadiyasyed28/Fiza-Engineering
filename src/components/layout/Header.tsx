@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, ArrowRight, ChevronDown } from "lucide-react";
@@ -19,6 +19,8 @@ export function Header() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [companyDropdownOpen, setCompanyDropdownOpen] = useState(false);
+  const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,7 +32,44 @@ export function Header() {
 
   useEffect(() => {
     setMobileMenuOpen(false);
+    setCompanyDropdownOpen(false);
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+    }
   }, [pathname]);
+
+  useEffect(() => {
+    return () => {
+      if (dropdownTimeoutRef.current) {
+        clearTimeout(dropdownTimeoutRef.current);
+      }
+    };
+  }, []);
+
+  const handleMouseEnter = () => {
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+      dropdownTimeoutRef.current = null;
+    }
+    setCompanyDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+    }
+    dropdownTimeoutRef.current = setTimeout(() => {
+      setCompanyDropdownOpen(false);
+    }, 120);
+  };
+
+  const handleCloseDropdown = () => {
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+      dropdownTimeoutRef.current = null;
+    }
+    setCompanyDropdownOpen(false);
+  };
 
   const isHome = pathname === "/";
 
@@ -40,26 +79,40 @@ export function Header() {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 h-[72px] transition-all duration-300 px-6 md:px-12 flex items-center justify-between",
           scrolled || !isHome
-            ? "bg-iron-white/95 backdrop-blur-md border-b border-slab-grey text-earth-black shadow-sm"
-            : "bg-transparent text-iron-white border-b border-white/10"
+            ? "bg-iron-white/55 backdrop-blur-xl backdrop-saturate-150 border-b border-white/50 text-earth-black shadow-sm"
+            : "bg-earth-black/25 backdrop-blur-xl backdrop-saturate-150 border-b border-white/15 text-iron-white"
         )}
       >
         {/* Brand Wordmark */}
-        <Link href="/" className="flex flex-col group select-none">
-          <div className="flex items-center gap-1.5 leading-none">
-            <span className="font-heading text-xl md:text-2xl font-semibold tracking-tight uppercase">
-              FIZA
-            </span>
-            <span className="w-2 h-2 rounded-none bg-oxide-red inline-block" />
-          </div>
-          <span
-            className={cn(
-              "font-mono text-[9px] md:text-[10px] tracking-[0.2em] uppercase leading-tight mt-0.5",
-              scrolled || !isHome ? "text-quarry-grey" : "text-slab-grey"
-            )}
+        <Link href="/" className="flex items-center gap-2.5 md:gap-3 group select-none">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 32 32"
+            className="w-8 h-8 md:w-9 md:h-9 shrink-0 shadow-sm"
+            aria-hidden="true"
           >
-            Engineering Corporation
-          </span>
+            <rect width="32" height="32" fill="#1A1A18" />
+            <text x="7" y="24" fontFamily="sans-serif" fontWeight="800" fontSize="22" fill="#F2F0EB">
+              F
+            </text>
+            <rect x="22" y="22" width="6" height="6" fill="#B33D26" />
+          </svg>
+          <div className="flex flex-col">
+            <div className="flex items-center gap-1.5 leading-none">
+              <span className="font-heading text-xl md:text-2xl font-semibold tracking-tight uppercase">
+                FIZA
+              </span>
+              <span className="w-2 h-2 rounded-none bg-oxide-red inline-block" />
+            </div>
+            <span
+              className={cn(
+                "font-mono text-[9px] md:text-[10px] tracking-[0.2em] uppercase leading-tight mt-0.5",
+                scrolled || !isHome ? "text-quarry-grey" : "text-slab-grey"
+              )}
+            >
+              Engineering Corporation
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Navigation Links */}
@@ -72,9 +125,15 @@ export function Header() {
 
             if (isCompany) {
               return (
-                <div key={link.href} className="relative group py-2">
+                <div
+                  key={link.href}
+                  className="relative py-2"
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
                   <Link
                     href="/company"
+                    onClick={handleCloseDropdown}
                     className={cn(
                       "text-body-sm font-medium tracking-[0.05em] uppercase transition-colors duration-200 flex items-center gap-1 relative py-1",
                       isActive
@@ -85,35 +144,45 @@ export function Header() {
                     )}
                   >
                     <span>{link.label}</span>
-                    <ChevronDown size={14} className="opacity-70 group-hover:rotate-180 transition-transform duration-200" />
+                    <ChevronDown
+                      size={14}
+                      className={cn(
+                        "opacity-70 transition-transform duration-200",
+                        companyDropdownOpen && "rotate-180"
+                      )}
+                    />
                     {isActive && (
                       <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-oxide-red" />
                     )}
                   </Link>
 
                   {/* Dropdown for About / Company Section */}
-                  <div className="absolute top-full left-0 pt-2 hidden group-hover:block group-focus-within:block z-50 animate-fade-in min-w-[240px]">
-                    <div className="bg-iron-white border border-slab-grey shadow-lg p-2 font-mono">
-                      <Link
-                        href="/company"
-                        className="block px-3 py-2 text-xs text-earth-black hover:bg-[#EBE8E0] hover:text-oxide-red transition-colors"
-                      >
-                        <span className="font-semibold block uppercase">Company Overview</span>
-                        <span className="text-[10px] text-quarry-grey font-sans block mt-0.5">
-                          Profile, leadership & footprint
-                        </span>
-                      </Link>
-                      <Link
-                        href="/achievements"
-                        className="block px-3 py-2 text-xs text-earth-black hover:bg-[#EBE8E0] hover:text-oxide-red transition-colors border-t border-slab-grey/40"
-                      >
-                        <span className="font-semibold block uppercase">Certifications & Awards</span>
-                        <span className="text-[10px] text-quarry-grey font-sans block mt-0.5">
-                          ISO accreditations & milestones
-                        </span>
-                      </Link>
+                  {companyDropdownOpen && (
+                    <div className="absolute top-full left-0 pt-2 z-50 animate-fade-in min-w-[240px]">
+                      <div className="bg-iron-white border border-slab-grey shadow-lg p-2 font-mono">
+                        <Link
+                          href="/company"
+                          onClick={handleCloseDropdown}
+                          className="block px-3 py-2 text-xs text-earth-black hover:bg-[#EBE8E0] hover:text-oxide-red transition-colors"
+                        >
+                          <span className="font-semibold block uppercase">Company Overview</span>
+                          <span className="text-[10px] text-quarry-grey font-sans block mt-0.5">
+                            Profile, leadership & footprint
+                          </span>
+                        </Link>
+                        <Link
+                          href="/achievements"
+                          onClick={handleCloseDropdown}
+                          className="block px-3 py-2 text-xs text-earth-black hover:bg-[#EBE8E0] hover:text-oxide-red transition-colors border-t border-slab-grey/40"
+                        >
+                          <span className="font-semibold block uppercase">Certifications & Awards</span>
+                          <span className="text-[10px] text-quarry-grey font-sans block mt-0.5">
+                            ISO accreditations & milestones
+                          </span>
+                        </Link>
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
               );
             }

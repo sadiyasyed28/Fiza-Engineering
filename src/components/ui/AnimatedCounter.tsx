@@ -32,6 +32,7 @@ export function AnimatedCounter({
   const [isLanded, setIsLanded] = useState<boolean>(false);
   const elementRef = useRef<HTMLSpanElement | null>(null);
   const hasAnimatedRef = useRef<boolean>(false);
+  const isAnimatingRef = useRef<boolean>(false);
   const animationFrameRef = useRef<number | null>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -47,8 +48,26 @@ export function AnimatedCounter({
       return;
     }
 
+    const resetAnimation = () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+        timeoutRef.current = null;
+      }
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+        animationFrameRef.current = null;
+      }
+      isAnimatingRef.current = false;
+      hasAnimatedRef.current = false;
+      setCurrent(0);
+      setIsLanded(false);
+    };
+
     const startAnimation = () => {
-      if (hasAnimatedRef.current) return;
+      // Guard against double-triggering or overlapping animations while still intersecting
+      if (isAnimatingRef.current || hasAnimatedRef.current) return;
+      isAnimatingRef.current = true;
+      setIsLanded(false);
 
       timeoutRef.current = setTimeout(() => {
         const startTime = performance.now();
@@ -67,6 +86,7 @@ export function AnimatedCounter({
             setCurrent(target);
             setIsLanded(true);
             hasAnimatedRef.current = true;
+            isAnimatingRef.current = false;
           }
         };
 
@@ -76,7 +96,11 @@ export function AnimatedCounter({
 
     // If explicit trigger prop is passed
     if (trigger !== undefined) {
-      if (trigger) startAnimation();
+      if (trigger) {
+        startAnimation();
+      } else {
+        resetAnimation();
+      }
       return () => {
         if (timeoutRef.current) clearTimeout(timeoutRef.current);
         if (animationFrameRef.current) cancelAnimationFrame(animationFrameRef.current);
@@ -86,26 +110,19 @@ export function AnimatedCounter({
     const element = elementRef.current;
     if (!element) {
       startAnimation();
-      return;
-    }
-
-    // Check if element is already in or near viewport on mount
-    if (typeof window !== "undefined") {
-      const rect = element.getBoundingClientRect();
-      const inViewport = rect.top < window.innerHeight && rect.bottom > 0;
-      if (inViewport) {
-        startAnimation();
-        return () => {
-          if (timeoutRef.current) clearTimeout(timeoutRef.current);
-          if (animationFrameRef.current) cancelAnimationFrame(animationFrameRef.current);
-        };
-      }
+      return () => {
+        if (timeoutRef.current) clearTimeout(timeoutRef.current);
+        if (animationFrameRef.current) cancelAnimationFrame(animationFrameRef.current);
+      };
     }
 
     // Fallback if IntersectionObserver is not available
     if (typeof IntersectionObserver === "undefined") {
       startAnimation();
-      return;
+      return () => {
+        if (timeoutRef.current) clearTimeout(timeoutRef.current);
+        if (animationFrameRef.current) cancelAnimationFrame(animationFrameRef.current);
+      };
     }
 
     const observer = new IntersectionObserver(
@@ -113,7 +130,8 @@ export function AnimatedCounter({
         const [entry] = entries;
         if (entry.isIntersecting) {
           startAnimation();
-          observer.disconnect();
+        } else {
+          resetAnimation();
         }
       },
       { threshold: 0, rootMargin: "0px 0px 50px 0px" }

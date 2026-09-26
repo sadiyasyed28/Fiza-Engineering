@@ -75,13 +75,13 @@ export function HomeHero() {
       {/* 2. Single Stats Row directly under the hero (Kept ONCE on the page, imported from siteFacts) */}
       <section className="w-full bg-[#181816] border-b border-slab-grey/20 text-iron-white py-5 md:py-6">
         <div className="max-w-content mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 divide-y md:divide-y-0 md:divide-x divide-slab-grey/15">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-5 sm:gap-6 md:gap-8 divide-y md:divide-y-0 md:divide-x divide-slab-grey/15">
             <div className="pt-4 md:pt-0">
               <span className="font-mono text-xs uppercase tracking-wider text-quarry-grey block mb-1">
                 Fleet Capacity
               </span>
               <div className="flex items-baseline gap-2">
-                <span className="font-heading text-3xl sm:text-4xl font-semibold text-oxide-red">
+                <span className="font-heading text-2xl sm:text-4xl font-semibold text-oxide-red">
                   <AnimatedCounter target={SITE_FACTS.fleetSizeNumber} suffix="+" duration={1800} delay={0} />
                 </span>
                 <span className="text-xs font-mono text-dust-tan">Machines</span>
@@ -93,7 +93,7 @@ export function HomeHero() {
                 Jurisdictions
               </span>
               <div className="flex items-baseline gap-2">
-                <span className="font-heading text-3xl sm:text-4xl font-semibold text-iron-white">
+                <span className="font-heading text-2xl sm:text-4xl font-semibold text-iron-white">
                   <AnimatedCounter target={SITE_FACTS.countries} duration={1800} delay={120} />
                 </span>
                 <span className="text-xs font-mono text-dust-tan">Countries</span>
@@ -105,7 +105,7 @@ export function HomeHero() {
                 Global Footprint
               </span>
               <div className="flex items-baseline gap-2">
-                <span className="font-heading text-3xl sm:text-4xl font-semibold text-iron-white">
+                <span className="font-heading text-2xl sm:text-4xl font-semibold text-iron-white">
                   <AnimatedCounter target={SITE_FACTS.continents} duration={1800} delay={240} />
                 </span>
                 <span className="text-xs font-mono text-dust-tan">Continents</span>
@@ -117,7 +117,7 @@ export function HomeHero() {
                 Track Record
               </span>
               <div className="flex items-baseline gap-2">
-                <span className="font-heading text-3xl sm:text-4xl font-semibold text-oxide-red">
+                <span className="font-heading text-2xl sm:text-4xl font-semibold text-oxide-red">
                   <AnimatedCounter target={yearsInBusinessDecade} suffix="+ Years" duration={1800} delay={360} />
                 </span>
                 <span className="text-xs font-mono text-dust-tan">Experience</span>

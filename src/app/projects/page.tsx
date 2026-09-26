@@ -110,7 +110,7 @@ function ProjectsContent() {
             fill
             priority
             sizes="100vw"
-            className="img-cover object-center lg:object-right opacity-35 lg:opacity-45 mix-blend-multiply"
+            className="img-cover object-center lg:object-right opacity-75 lg:opacity-90 mix-blend-multiply"
           />
           {/* Subtle Industrial Mesh Texture */}
           <div
@@ -121,8 +121,8 @@ function ProjectsContent() {
             }}
           />
           {/* Editorial Gradient Blend: Guarantees 100% Text & Filter Readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-iron-white via-iron-white/95 sm:via-iron-white/80 to-iron-white/30 lg:to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-iron-white via-transparent to-iron-white/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-iron-white via-iron-white/65 sm:via-iron-white/40 to-iron-white/5 lg:to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-iron-white/55 via-transparent to-iron-white/15" />
         </div>
 
         <div className="relative z-10 max-w-content mx-auto px-6 md:px-12">

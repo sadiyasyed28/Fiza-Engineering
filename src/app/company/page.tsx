@@ -85,7 +85,7 @@ export default function CompanyPage() {
       <section className="relative w-full h-[60vh] min-h-[460px] flex items-end overflow-hidden bg-coal-dark">
         {/* // TODO: REPLACE WITH REAL FIZA PHOTO */}
         <Image
-          src={SITE_IMAGES.company.hero.src}
+          src="/images/capabilities/mining-services.jpg"
           alt="Aerial view of large-scale open-pit mining operations and mineral excavation benches"
           fill
           priority
