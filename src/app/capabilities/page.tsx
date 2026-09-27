@@ -78,18 +78,18 @@ export default function CapabilitiesPage() {
         </div>
       </section>
 
-      {/* Sticky Jump-Link Navigation Bar (hidden on mobile if it overflows) */}
+      {/* Sticky Jump-Link Navigation Bar */}
       <nav
         aria-label="Services Navigation"
-        className="sticky top-[72px] z-20 bg-earth-black text-iron-white border-b border-slab-grey/25 hidden md:block shadow-sm"
+        className="sticky top-[72px] z-20 bg-earth-black text-iron-white border-b border-slab-grey/25 block shadow-sm"
       >
-        <div className="max-w-content mx-auto px-6 md:px-12 flex items-center gap-6 py-3.5 text-xs font-sans uppercase tracking-wide overflow-x-auto services-scrollbar">
+        <div className="max-w-content mx-auto px-4 sm:px-6 md:px-12 flex items-center gap-4 sm:gap-6 py-3.5 text-xs font-sans uppercase tracking-wide overflow-x-auto services-scrollbar">
           <span className="text-oxide-red font-semibold shrink-0">Jump To:</span>
           {CAPABILITIES.map((cap) => (
             <a
               key={cap.id}
               href={`#${cap.slug}`}
-              className="text-dust-tan/85 hover:text-iron-white transition-colors whitespace-nowrap"
+              className="text-dust-tan/85 hover:text-iron-white transition-colors whitespace-nowrap shrink-0"
             >
               {cap.title}
             </a>
@@ -295,7 +295,7 @@ export default function CapabilitiesPage() {
           </div>
           <Link
             href="/contact?type=mining-services"
-            className="btn-primary !bg-oxide-red hover:!bg-iron-white hover:!text-earth-black text-iron-white text-xs py-4 px-8 font-sans uppercase tracking-wide font-semibold whitespace-nowrap transition-colors inline-flex items-center gap-2"
+            className="btn-primary !bg-oxide-red hover:!bg-iron-white hover:!text-earth-black text-iron-white text-xs py-4 px-8 font-sans uppercase tracking-wide font-semibold whitespace-normal sm:whitespace-nowrap transition-colors inline-flex items-center gap-2"
           >
             Tell us about your project <ArrowRight size={14} />
           </Link>

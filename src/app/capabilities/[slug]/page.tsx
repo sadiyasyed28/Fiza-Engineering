@@ -327,7 +327,7 @@ export default function CapabilityDetailPage({ params }: Props) {
           </div>
           <Link
             href={`/contact?type=${capability.slug}`}
-            className="btn-primary !bg-oxide-red hover:!bg-iron-white hover:!text-earth-black text-iron-white text-xs py-4 px-8 font-sans uppercase tracking-wide font-semibold whitespace-nowrap transition-colors"
+            className="btn-primary !bg-oxide-red hover:!bg-iron-white hover:!text-earth-black text-iron-white text-xs py-4 px-8 font-sans uppercase tracking-wide font-semibold whitespace-normal sm:whitespace-nowrap transition-colors"
           >
             Tell us about your project →
           </Link>

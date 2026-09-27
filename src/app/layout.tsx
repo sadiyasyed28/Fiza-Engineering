@@ -71,7 +71,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} ${newsreader.variable}`}>
-      <body className="bg-iron-white text-earth-black antialiased flex flex-col min-h-screen">
+      <body className="bg-iron-white text-earth-black antialiased flex flex-col min-h-screen overflow-x-hidden">
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />

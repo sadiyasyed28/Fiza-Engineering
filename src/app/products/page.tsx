@@ -269,7 +269,7 @@ function ProductsContent() {
 
                       <Link
                         href={quoteHref}
-                        className="btn-primary !bg-oxide-red hover:!bg-earth-black text-xs py-2.5 px-4 whitespace-nowrap"
+                        className="btn-primary !bg-oxide-red hover:!bg-earth-black text-xs py-2.5 px-4 whitespace-normal sm:whitespace-nowrap"
                       >
                         Request quote →
                       </Link>

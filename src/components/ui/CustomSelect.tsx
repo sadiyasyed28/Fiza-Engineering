@@ -221,7 +221,7 @@ export function CustomSelect({
           className
         )}
       >
-        <span className="truncate pr-2 font-sans">{displayLabel}</span>
+        <span className="whitespace-normal break-words text-left pr-2 font-sans line-clamp-2">{displayLabel}</span>
         <ChevronDown
           size={14}
           className={cn(
@@ -275,7 +275,7 @@ export function CustomSelect({
                     : "bg-transparent text-earth-black hover:bg-[#EBE7DE] border-l-2 border-transparent pl-[12px]"
                 )}
               >
-                <span className="truncate">{opt.label}</span>
+                <span className="whitespace-normal break-words text-left pr-2">{opt.label}</span>
                 {isSelected && (
                   <Check
                     size={13}

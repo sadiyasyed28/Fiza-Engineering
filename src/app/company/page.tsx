@@ -358,24 +358,24 @@ export default function CompanyPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {SITE_FACTS.offices.map((office, idx) => (
               <div
                 key={idx}
-                className="bg-iron-white border border-slab-grey p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-earth-black"
+                className="bg-iron-white border border-slab-grey p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 active:border-earth-black lg:hover:-translate-y-1 lg:hover:shadow-md lg:hover:border-earth-black"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4 pb-3 border-b border-slab-grey">
                     <span className="font-sans text-xs font-bold uppercase tracking-wide text-oxide-red">
                       {office.country}
                     </span>
-                    <span className="font-sans text-[11px] text-quarry-grey uppercase tracking-wide font-medium">
+                    <span className="font-sans text-[10px] sm:text-[11px] text-quarry-grey uppercase tracking-wide font-medium">
                       Operational Hub
                     </span>
                   </div>
 
-                  <h3 className="text-heading-2 font-medium text-earth-black mb-2 flex items-center gap-2">
-                    <Building2 size={20} className="text-oxide-red shrink-0" />
+                  <h3 className="text-heading-3 sm:text-heading-2 font-medium text-earth-black mb-2 flex items-center gap-2">
+                    <Building2 size={18} className="text-oxide-red shrink-0 sm:w-5 sm:h-5" />
                     <span>{office.city}</span>
                   </h3>
 
@@ -386,18 +386,18 @@ export default function CompanyPage() {
                   <div className="space-y-2 text-xs font-sans text-quarry-grey border-t border-slab-grey/40 pt-4 font-medium">
                     <div className="flex items-start gap-2">
                       <MapPin size={14} className="text-oxide-red mt-0.5 shrink-0" />
-                      <span>{office.address}</span>
+                      <span className="leading-relaxed">{office.address}</span>
                     </div>
                   </div>
                 </div>
 
-                <div className="pt-6 mt-6 border-t border-slab-grey flex items-center justify-between">
-                  <span className="font-sans text-[11px] text-earth-black font-medium">
+                <div className="pt-5 mt-5 sm:pt-6 sm:mt-6 border-t border-slab-grey flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0">
+                  <span className="font-sans text-[11px] text-earth-black font-medium break-all sm:break-normal">
                     {office.email}
                   </span>
                   <Link
                     href="/contact"
-                    className="text-label font-sans font-bold text-oxide-red uppercase tracking-wide hover:underline"
+                    className="text-label font-sans font-bold text-oxide-red uppercase tracking-wide hover:underline active:text-earth-black"
                   >
                     Office Details →
                   </Link>

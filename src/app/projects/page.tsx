@@ -125,7 +125,7 @@ function ProjectsContent() {
           <div className="absolute inset-0 bg-gradient-to-t from-iron-white/55 via-transparent to-iron-white/15 transition-opacity duration-1000 ease-in-out" />
         </div>
 
-        <div className="relative z-10 max-w-content mx-auto px-6 md:px-12">
+        <div className="relative z-10 max-w-content mx-auto px-4 sm:px-6 md:px-12">
           {/* Breadcrumb */}
           <nav className="text-label text-oxide-red font-sans uppercase tracking-wide mb-4 flex items-center gap-2 font-semibold">
             <Link href="/" className="hover:underline">
@@ -135,25 +135,25 @@ function ProjectsContent() {
             <span className="text-earth-black font-semibold">Projects</span>
           </nav>
 
-          <h1 className="text-display-lg sm:text-[3.5rem] md:text-display-xl font-medium text-earth-black leading-[0.95] mb-6">
+          <h1 className="text-5xl sm:text-[3.5rem] md:text-display-xl font-medium text-earth-black leading-[1.05] sm:leading-[0.95] mb-4 sm:mb-6">
             Projects
           </h1>
-          <p className="text-body-lg text-quarry-grey max-w-2xl leading-relaxed font-normal">
+          <p className="text-base sm:text-body-lg text-quarry-grey max-w-2xl leading-relaxed font-normal">
             Mining, rail, plant and infrastructure projects in Mali, the DRC and Madagascar.
           </p>
 
           {/* Interactive Filters: Status Chips + Dropdowns */}
-          <div className="mt-10 pt-6 border-t border-slab-grey space-y-6">
+          <div className="mt-8 sm:mt-10 pt-6 border-t border-slab-grey space-y-6">
             {/* Status Chips */}
-            <div className="flex flex-wrap items-center gap-2 sm:gap-3">
-              <span className="text-label font-sans text-earth-black uppercase tracking-wide mr-2 font-semibold">
+            <div className="flex overflow-x-auto no-scrollbar items-center gap-2 sm:gap-3 pb-2 sm:pb-0 -mx-4 px-4 sm:mx-0 sm:px-0">
+              <span className="text-label font-sans text-earth-black uppercase tracking-wide mr-1 sm:mr-2 font-semibold flex-shrink-0">
                 Status:
               </span>
               {STATUS_CHIPS.map((chip) => (
                 <button
                   key={chip}
                   onClick={() => handleStatusChange(chip)}
-                  className={`tag cursor-pointer font-sans text-xs uppercase tracking-wide font-medium transition-colors ${
+                  className={`tag cursor-pointer font-sans text-xs uppercase tracking-wide font-medium transition-colors whitespace-nowrap flex-shrink-0 ${
                     statusFilter === chip
                       ? "tag--active !bg-earth-black !text-iron-white"
                       : "bg-[#EBE8E0] text-earth-black hover:bg-earth-black hover:text-iron-white"
@@ -165,7 +165,7 @@ function ProjectsContent() {
             </div>
 
             {/* Country and Sector Dropdowns */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-2">
+            <div className="flex flex-col sm:grid sm:grid-cols-2 md:grid-cols-3 gap-4 pt-2">
               <div>
                 <CustomSelect
                   id="filter-country"
@@ -209,8 +209,8 @@ function ProjectsContent() {
       </section>
 
       {/* Projects Grid */}
-      <section className="w-full bg-[#EBE8E0] py-20 md:py-28 min-h-[400px]">
-        <div className="max-w-content mx-auto px-6 md:px-12">
+      <section className="w-full bg-[#EBE8E0] py-16 sm:py-20 md:py-28 min-h-[400px]">
+        <div className="max-w-content mx-auto px-4 sm:px-6 md:px-12">
           {filteredProjects.length === 0 ? (
             /* Plain empty-state message with Clear filters button */
             <div className="bg-iron-white border border-slab-grey p-12 text-center max-w-lg mx-auto">

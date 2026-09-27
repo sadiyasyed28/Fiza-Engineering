@@ -89,7 +89,7 @@ export default function ProductDetailPage({ params }: Props) {
             </div>
             <Link
               href={quoteHref}
-              className="btn-primary !bg-oxide-red hover:!bg-earth-black text-xs py-3 px-6 whitespace-nowrap self-start md:self-auto"
+              className="btn-primary !bg-oxide-red hover:!bg-earth-black text-xs py-3 px-6 whitespace-normal sm:whitespace-nowrap self-start md:self-auto"
             >
               Request quote →
             </Link>
@@ -269,7 +269,7 @@ export default function ProductDetailPage({ params }: Props) {
           </div>
           <Link
             href={quoteHref}
-            className="btn-primary !bg-earth-black hover:!bg-oxide-red text-xs py-3 px-6 whitespace-nowrap"
+            className="btn-primary !bg-earth-black hover:!bg-oxide-red text-xs py-3 px-6 whitespace-normal sm:whitespace-nowrap"
           >
             Request quote →
           </Link>

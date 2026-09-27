@@ -176,7 +176,7 @@ export function CompanyTimeline() {
         ref={viewportRef}
         className="lg:sticky lg:top-0 lg:h-screen lg:flex lg:flex-col lg:justify-between py-8 lg:py-10 overflow-hidden"
       >
-        <div className="max-w-content mx-auto px-6 md:px-12 w-full flex flex-col justify-between h-full">
+        <div className="max-w-content mx-auto px-4 sm:px-6 md:px-12 w-full flex flex-col justify-between h-full">
           {/* Section Header */}
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-4 lg:mb-3 gap-4 flex-shrink-0">
             <div>
@@ -414,7 +414,7 @@ export function CompanyTimeline() {
                   type="button"
                   onClick={() => jumpToMilestone(idx)}
                   className={cn(
-                    "px-3 py-1 font-sans text-xs uppercase tracking-wide border transition-colors duration-150 flex-shrink-0 font-medium",
+                    "px-4 py-2 sm:py-3 font-sans text-xs uppercase tracking-wide border transition-colors duration-150 flex-shrink-0 font-medium min-h-[44px] min-w-[44px] flex items-center justify-center",
                     isActive
                       ? "bg-earth-black text-iron-white border-earth-black font-bold"
                       : "bg-iron-white text-quarry-grey border-slab-grey hover:border-earth-black hover:text-earth-black"

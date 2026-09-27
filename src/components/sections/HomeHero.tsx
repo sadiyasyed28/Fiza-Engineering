@@ -117,37 +117,37 @@ export function HomeHero() {
         </div>
 
         {/* Hero Copy & Actions */}
-        <div className="relative z-10 max-w-content mx-auto w-full px-6 md:px-12 pb-14 md:pb-20 pt-40 md:pt-48">
+        <div className="relative z-10 max-w-content mx-auto w-full px-4 sm:px-6 md:px-12 pb-14 md:pb-20 pt-40 md:pt-48">
           <div className="max-w-3xl">
             {/* Overline with established date from siteFacts */}
-            <div className="flex items-center gap-2.5 mb-5">
-              <span className="w-2.5 h-2.5 bg-oxide-red inline-block" />
-              <span className="font-sans text-xs uppercase tracking-wide text-dust-tan font-semibold">
+            <div className="flex items-center gap-2 mb-4 md:mb-5">
+              <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 bg-oxide-red flex-shrink-0" />
+              <span className="font-sans text-[10px] sm:text-xs uppercase tracking-wide text-dust-tan font-semibold">
                 Est. {SITE_FACTS.foundedYear} · {SITE_FACTS.yearsInBusinessLabel} Direct Execution
               </span>
             </div>
 
             {/* Specific Headline naming actual operations */}
-            <h1 className="text-display-lg sm:text-[3.25rem] md:text-[3.75rem] font-medium text-iron-white tracking-tight leading-[0.96] mb-5">
+            <h1 className="text-display-sm sm:text-[3.25rem] md:text-[3.75rem] font-medium text-iron-white tracking-tight leading-[1] sm:leading-[0.96] mb-4 md:mb-5">
               Mining, rail and heavy civil works across Africa.
             </h1>
 
             {/* Concise Subtext: exactly 16 words (max 20 words) */}
-            <p className="text-body-lg text-dust-tan max-w-2xl mb-8 leading-relaxed font-normal">
+            <p className="text-base sm:text-lg md:text-body-lg text-dust-tan max-w-2xl mb-6 md:mb-8 leading-relaxed font-normal">
               Direct open-pit concessions, heavy-haul railway corridors, and turnkey processing plants operating across key African resource jurisdictions.
             </p>
 
             {/* Specific, Non-Duplicate CTA Buttons */}
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
               <Link
                 href="/projects"
-                className="btn-primary !bg-oxide-red hover:!bg-earth-black text-iron-white text-xs py-3.5 px-7 font-sans uppercase tracking-wide font-semibold shadow-sm transition-colors"
+                className="btn-primary !bg-oxide-red hover:!bg-earth-black text-iron-white text-xs py-3.5 px-6 sm:px-7 font-sans uppercase tracking-wide font-semibold shadow-sm transition-colors text-center whitespace-normal sm:whitespace-nowrap"
               >
                 View active projects
               </Link>
               <Link
                 href="/capabilities"
-                className="btn-secondary !border-iron-white !text-iron-white hover:!bg-iron-white hover:!text-earth-black text-xs py-3.5 px-7 font-sans uppercase tracking-wide font-semibold transition-colors"
+                className="btn-secondary !border-iron-white !text-iron-white hover:!bg-iron-white hover:!text-earth-black text-xs py-3.5 px-6 sm:px-7 font-sans uppercase tracking-wide font-semibold transition-colors text-center whitespace-normal sm:whitespace-nowrap"
               >
                 See our services
               </Link>
@@ -156,7 +156,7 @@ export function HomeHero() {
         </div>
 
         {/* Progress Bar */}
-        <div className="absolute bottom-6 left-0 right-0 z-20 flex px-6 md:px-12 gap-2 max-w-content mx-auto w-full">
+        <div className="absolute bottom-6 left-0 right-0 z-20 flex px-4 sm:px-6 md:px-12 gap-1.5 sm:gap-2 max-w-content mx-auto w-full">
           {HERO_SLIDES.map((_, idx) => {
             const isActive = idx === currentSlide;
             const isPast = idx < currentSlide;
@@ -184,51 +184,51 @@ export function HomeHero() {
       </section>
 
       {/* 2. Single Stats Row directly under the hero (Kept ONCE on the page, imported from siteFacts) */}
-      <section className="w-full bg-[#181816] border-b border-slab-grey/20 text-iron-white py-5 md:py-6">
-        <div className="max-w-content mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-5 sm:gap-6 md:gap-8 divide-y md:divide-y-0 md:divide-x divide-slab-grey/15">
-            <div className="pt-4 md:pt-0">
-              <span className="font-sans text-xs uppercase tracking-wide text-quarry-grey block mb-1 font-semibold">
+      <section className="w-full bg-[#181816] border-b border-slab-grey/20 text-iron-white py-6 md:py-6 overflow-hidden">
+        <div className="max-w-content mx-auto px-4 sm:px-6 md:px-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-6 sm:gap-y-8 gap-x-4 md:gap-8 md:divide-x divide-slab-grey/15">
+            <div className="md:pt-0">
+              <span className="font-sans text-[11px] sm:text-xs uppercase tracking-wide text-quarry-grey block mb-1 font-semibold">
                 Fleet Capacity
               </span>
               <div className="flex items-baseline gap-2">
-                <span className="font-sans text-2xl sm:text-4xl font-semibold text-oxide-red">
+                <span className="font-sans text-3xl sm:text-4xl font-semibold text-oxide-red whitespace-nowrap">
                   <AnimatedCounter target={SITE_FACTS.fleetSizeNumber} suffix="+" duration={1800} delay={0} />
                 </span>
                 <span className="text-xs font-sans text-dust-tan font-medium">Machines</span>
               </div>
             </div>
 
-            <div className="pt-4 md:pt-0 md:pl-8">
-              <span className="font-sans text-xs uppercase tracking-wide text-quarry-grey block mb-1 font-semibold">
+            <div className="md:pt-0 md:pl-8">
+              <span className="font-sans text-[11px] sm:text-xs uppercase tracking-wide text-quarry-grey block mb-1 font-semibold">
                 Jurisdictions
               </span>
               <div className="flex items-baseline gap-2">
-                <span className="font-sans text-2xl sm:text-4xl font-semibold text-iron-white">
+                <span className="font-sans text-3xl sm:text-4xl font-semibold text-iron-white whitespace-nowrap">
                   <AnimatedCounter target={SITE_FACTS.countries} duration={1800} delay={120} />
                 </span>
                 <span className="text-xs font-sans text-dust-tan font-medium">Countries</span>
               </div>
             </div>
 
-            <div className="pt-4 md:pt-0 md:pl-8">
-              <span className="font-sans text-xs uppercase tracking-wide text-quarry-grey block mb-1 font-semibold">
+            <div className="md:pt-0 md:pl-8">
+              <span className="font-sans text-[11px] sm:text-xs uppercase tracking-wide text-quarry-grey block mb-1 font-semibold">
                 Global Footprint
               </span>
               <div className="flex items-baseline gap-2">
-                <span className="font-sans text-2xl sm:text-4xl font-semibold text-iron-white">
+                <span className="font-sans text-3xl sm:text-4xl font-semibold text-iron-white whitespace-nowrap">
                   <AnimatedCounter target={SITE_FACTS.continents} duration={1800} delay={240} />
                 </span>
                 <span className="text-xs font-sans text-dust-tan font-medium">Continents</span>
               </div>
             </div>
 
-            <div className="pt-4 md:pt-0 md:pl-8">
-              <span className="font-sans text-xs uppercase tracking-wide text-quarry-grey block mb-1 font-semibold">
+            <div className="md:pt-0 md:pl-8">
+              <span className="font-sans text-[11px] sm:text-xs uppercase tracking-wide text-quarry-grey block mb-1 font-semibold">
                 Track Record
               </span>
               <div className="flex items-baseline gap-2">
-                <span className="font-sans text-2xl sm:text-4xl font-semibold text-oxide-red">
+                <span className="font-sans text-3xl sm:text-4xl font-semibold text-oxide-red whitespace-nowrap">
                   <AnimatedCounter target={yearsInBusinessDecade} suffix="+ Years" duration={1800} delay={360} />
                 </span>
                 <span className="text-xs font-sans text-dust-tan font-medium">Experience</span>
